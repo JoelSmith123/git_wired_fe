@@ -1,3 +1,11 @@
+.App-loggedIn {
+  background-color: #666
+}
+
+.App-loggedOut {
+  background-color: #fff;
+}
+
 .welcome-content {
   background-color: #4c4c4c;
   height: 800px;
