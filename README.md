@@ -1,3 +1,34 @@
+## Git Wired
+
+**Git Wired** is a tool for Developers and Managers to visualize the current state of completeness of a project by individually recognizing the state of each wireframe element. It serves as a simple wireframe visualization of [GitHub Project Cards](https://help.github.com/articles/about-project-boards/) for *features* in relation to one another. It also provides visuals for quickly conveying the completeness of a project, as well as other custom states of features based on the card column. The intention is merely a tool for organization, especially on smaller and simpler projects where communication is less formal and features may be forgotten or overlooked. This app will not allow you to add special and specific characteristics to the elements, such as sizes, fonts, or colors, but expects that this type of information is stored in a project card. This is not intended to be a comprehensive wireframe, but rather a quick visual of the basic structure and the state of completeness.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
