@@ -24,4 +24,19 @@ describe('UserSession', () => {
     done();
   });
 
+  it.skip('should fetch the user token', done => {
+    // CANNOT TEST THIS because of login with Github
+  });
+
+  it.skip('can grab the token from the API response', done => {
+    let data = {
+      'id': 1,
+      'userToken': '123'
+    }
+    let token = user.getToken(data)
+    expect(token).to.equal('123');
+    done();
+  });
+
+
 });
