@@ -5,7 +5,7 @@
 export default class UserSession {
 
   constructor(){
-    this.tokenKey = 'gitWiredToken'
+    this.tokenKey = 'userToken'
   }
 
   setGitWiredToken(token) {
@@ -21,7 +21,8 @@ export default class UserSession {
   }
 
 
-  
+  // Make Fetch /login call
+  // receive userToken
 
 
 
