@@ -32,10 +32,14 @@ export default class App extends Component {
   }
 
   toggleAppBackground = () => {
-    if (this.state.template === '') {
-      return 'App-white-background'
+    if (this.state.loggedIn) {
+      if (this.state.template === '') {
+        return 'App-white-background'
+      } else {
+        return 'App-grey-background'
+      }      
     } else {
-      return 'App-grey-background'
+      return 'App-white-background'
     }
   }
 

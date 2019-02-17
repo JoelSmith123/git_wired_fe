@@ -1,0 +1,29 @@
+.profile-select-options {
+  background-color: #4c4c4c;
+  height: 200px;
+  margin: 40px auto;
+  text-align: center;
+  width: 80%;
+}
+
+.profile-select-options-title {
+  color: #fff;
+  padding-top: 60px;
+}
+
+.profile-select-options-btn-container {
+  margin-top: 50px;
+}
+
+.recent-projects-container {
+  background-color: #4c4c4c;  
+  height: 600px;
+  margin: 0 auto 70px;
+  text-align: center;  
+  width: 80%;
+}
+
+.recent-projects-container-title {
+  color: #fff;
+  padding-top: 20px;
+}
