@@ -31,10 +31,9 @@ export default class App extends Component {
                 changeLoggedInState={this.changeLoggedInState}
                 selectTemplate={this.selectTemplate}
         />
-
         {
           this.state.loggedIn ?
-
+      
             <TemplateContainer currentTemplate={this.state.template}/>
 
           :

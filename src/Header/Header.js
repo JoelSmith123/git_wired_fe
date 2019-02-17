@@ -21,7 +21,7 @@ export default class Header extends Component {
     this.setState({ showDropdown: false })
     this.props.selectTemplate(event, templateName)
   }
-
+  
   render() {
     if (this.props.loggedIn) {
       return (
