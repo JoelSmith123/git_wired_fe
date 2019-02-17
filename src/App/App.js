@@ -46,7 +46,23 @@ export default class App extends Component {
   viewProfile = (event) => {
     event.preventDefault()
 
-    this.setState({ viewProfile: true })
+    this.setState({ 
+      viewProfile: true,
+      template: '' 
+    })
+  }
+
+  selectComponentRender = () => {
+    if (this.state.loggedIn) {
+      if (this.state.template !== '') {
+        return <TemplateContainer currentTemplate={this.state.template}/>
+      } else {
+        // return <ProjectCard project={this.state.stubCard} />
+        return <Profile />        
+      }
+    } else {
+      return <Welcome />
+    }
   }
 
   render() {
@@ -57,24 +73,7 @@ export default class App extends Component {
                 selectTemplate={this.selectTemplate}
                 viewProfile={this.viewProfile}
         />
-        {
-          this.state.loggedIn ?
-
-            // TO DO - We want to render Recent Projects (the collection of project cards)
-            //         when the BE endpoint is functional
-            // <RecentProjects />
-            //  use this to stub a card
-            <ProjectCard project={this.state.stubCard} />
-
-            // TO DO - This should only be available on a project page
-            // <TemplateContainer currentTemplate={this.state.template}/>
-
-          :
-
-          <Welcome />
-
-        }
-
+        { this.selectComponentRender() }
         <div className='footer'>
         </div>
       </div>
