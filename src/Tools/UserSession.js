@@ -28,11 +28,11 @@ export default class UserSession {
   //  - CONFIRM endpoint
   //  - CONFIRM RESPONSE STRUCTURE
   loginUser() {
-    url = 'https://git-wired-be.herokuapp.com/login'
+    let url = 'https://git-wired-be.herokuapp.com/login'
     fetch(url)
       .then(response => response.json())
-      .then(data     => getToken(data))
-      .then(token    => setGitWiredToken(token))
+      .then(data     => this.getToken(data).bind(this))
+      .then(token    => this.setGitWiredToken(token).bind(this))
       .catch(error   => { console.log(error); });
   }
 

@@ -1,14 +1,32 @@
 import React, { Component } from 'react';
+
+import './App.css';
+
 import Header from '../Header/Header.js';
 import TemplateContainer from '../TemplateContainer/TemplateContainer.js'
-import './App.css';
+// import RecentProjects from '../Projects/RecentProjects.js'
+
+// ---- TO DO - DELETE THIS PORTION ----
+// Only for demonstrating functionality while BE API is not built
+import ProjectCard from '../Projects/ProjectCard.js'
+// --------------------------------------
+
+
+
 
 export default class App extends Component {
   constructor() {
     super()
     this.state = {
       loggedIn: false,
-      template: ''
+      template: '',
+      // This attribute is temporary until API is functional
+      stubCard: {
+            'projectTitle': 'Title1',
+            'repoName':     'RepoName1',
+            'createdAt':    'Created1',
+            'updatedAt':    'Updated1',
+        },
     }
   }
 
@@ -33,11 +51,18 @@ export default class App extends Component {
         />
         {
           this.state.loggedIn ?
-      
-            <TemplateContainer currentTemplate={this.state.template}/>
+
+            // TO DO - We want to render Recent Projects (the collection of project cards)
+            //         when the BE endpoint is functional
+            // <RecentProjects />
+            //  use this to stub a card
+            <ProjectCard project={this.state.stubCard} />
+
+            // TO DO - This should only be available on a project page
+            // <TemplateContainer currentTemplate={this.state.template}/>
 
           :
-            
+
           <div className='welcome-content'>
             <h2 className='welcome-content-description-title'>Description</h2>
             <p className='welcome-content-description'>
@@ -69,4 +94,3 @@ export default class App extends Component {
     );
   }
 }
-
