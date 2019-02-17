@@ -15,6 +15,13 @@ export default class Header extends Component {
     this.setState({ showDropdown: !this.state.showDropdown })
   }
 
+  handleTemplateSelection = (event, templateName) => {
+    event.preventDefault()
+
+    this.setState({ showDropdown: false })
+    this.props.selectTemplate(event, templateName)
+  }
+
   render() {
     if (this.props.loggedIn) {
       return (
@@ -31,17 +38,17 @@ export default class Header extends Component {
                   <div className='header-recent-projects-btn-dropdown'>
                     <button className='header-recent-projects-btn-dropdown-btn' 
                             name='card-page-template'
-                            onClick={(event) => this.props.selectTemplate(event, event.target.name)}
+                            onClick={(event) => this.handleTemplateSelection(event, event.target.name)}
                     >card page template
                     </button>
                     <button className='header-recent-projects-btn-dropdown-btn' 
-                            name='blog page template'
-                            onClick={(event) => this.props.selectTemplate(event, event.target.name)}
+                            name='blog-page-template'
+                            onClick={(event) => this.handleTemplateSelection(event, event.target.name)}
                     >blog page template
                     </button>
                     <button className='header-recent-projects-btn-dropdown-btn' 
                             name='blog-post-template'
-                            onClick={(event) => this.props.selectTemplate(event, event.target.name)}
+                            onClick={(event) => this.handleTemplateSelection(event, event.target.name)}
                     >blog post template
                     </button>
                   </div>

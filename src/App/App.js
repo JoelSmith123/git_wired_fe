@@ -14,7 +14,7 @@ export default class App extends Component {
 
   selectTemplate = (event, template) => {
     event.preventDefault()
-    
+
     this.setState({ template })
   }
 
@@ -35,7 +35,7 @@ export default class App extends Component {
         {
           this.state.loggedIn ?
 
-            <TemplateContainer />
+            <TemplateContainer currentTemplate={this.state.template}/>
 
           :
             
