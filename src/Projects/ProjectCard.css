@@ -1,1 +1,45 @@
 
+
+.ProjectCard {
+  margin:  3%;
+  padding: 3%;
+  width:   30%;
+  height:  auto;
+  background-color: #BDCCD8;
+
+  display:         flex;
+  flex-direction:  column;
+  flex-wrap:       wrap;
+  justify-content: center;
+  align-items:     stretch;
+
+  text-align: center;
+}
+
+.ProjectTitle {
+  font-size:   150%;
+  color:       black;
+  font-weight: bolder;
+  text-align:  center;
+}
+
+.RepoName {
+  font-size:  85%;
+  color:      #454545;
+  text-align: center;
+  /* font-weight: bolder; */
+}
+
+.Updated {
+  font-size:   85%;
+  color:       #454545;
+  font-weight: bolder;
+  text-align:  center;
+}
+
+.Created {
+  font-size:   70%;
+  color:       #454545;
+  text-align:  center;
+  /* font-weight: bolder; */
+}

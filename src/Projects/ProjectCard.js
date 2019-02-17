@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ProjectCard.css'
 
 
 export default class ProjectCard extends Component {
