@@ -13,13 +13,10 @@ export default class TemplateContainer extends Component {
     switch(template) {
       case 'card-page-template':
         return <CardPageTemplate />
-        break;
       case 'blog-page-template':
         return <BlogPageTemplate />
-        break;
       case 'blog-post-template':
         return <BlogPostTemplate />
-        break;
       default:
         return <h2>Please select a template type from the Recent Projects dropdown menu</h2>
     }
