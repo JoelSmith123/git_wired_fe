@@ -22,7 +22,7 @@ export default class RecentProjects extends Component {
 
   render() {
     <div className='RecentProjects'>
-      { renderProjectCard() }
+      { renderProjectCards() }
     </div>
   }
 
