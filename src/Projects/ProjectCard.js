@@ -11,7 +11,7 @@ export default class ProjectCard extends Component {
 
   renderTitle(){
     return (
-      <div className='ProjectTitle'> { getTitle() } </div>
+      <div className='ProjectTitle'> { this.getTitle() } </div>
     )
   }
 
@@ -23,7 +23,7 @@ export default class ProjectCard extends Component {
 
   renderRepo(){
     return (
-      <div className='RepoName'> { getRepo() } </div>
+      <div className='RepoName'> { this.getRepo() } </div>
     )
   }
 
@@ -35,7 +35,7 @@ export default class ProjectCard extends Component {
 
   renderUpdated(){
     return (
-      <div className='Updated'> { getUpdated() } </div>
+      <div className='Updated'> { this.getUpdated() } </div>
     )
   }
 
@@ -47,7 +47,7 @@ export default class ProjectCard extends Component {
 
   renderCreated(){
     return (
-      <div className='Created'> { getCreated() } </div>
+      <div className='Created'> { this.getCreated() } </div>
     )
   }
 
@@ -61,10 +61,10 @@ export default class ProjectCard extends Component {
   render() {
     return (
       <span class='ProjectCard'>
-        { renderTitle()   }
-        { renderRepo()    }
-        { renderUpdated() }
-        { renderCreated() }
+        { this.renderTitle()   }
+        { this.renderRepo()    }
+        { this.renderUpdated() }
+        { this.renderCreated() }
       </span>
     )
   }

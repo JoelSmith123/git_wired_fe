@@ -20,7 +20,7 @@ export default class RecentProjects extends Component {
         body: JSON.stringify(user.getGitWiredToken()),
     })
     .then(response => response.json() )
-    .then(data     => renderProjectCards(data))
+    .then(data     => this.renderProjectCards(data).bind(this))
     .catch(error   => console.error('Error:', error));
   }
 
@@ -42,7 +42,7 @@ export default class RecentProjects extends Component {
   render() {
     return (
       <div className='RecentProjects'>
-        { renderProjectCards() }
+        { this.renderProjectCards() }
       </div>
     )
   }
