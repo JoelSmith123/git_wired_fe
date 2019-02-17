@@ -1,8 +1,10 @@
-.CardPageTemplate {
+.CardPageTemplate,
+.BlogPostTemplate {
   height: 100%;
 }
 
-.CardPageTemplate * {
+.CardPageTemplate * ,
+.BlogPostTemplate {
   background-color: #f2f2f2;
   border: 1px solid #000;
   box-sizing: border-box;
