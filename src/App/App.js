@@ -12,10 +12,10 @@ export default class App extends Component {
     }
   }
 
-  selectTemplate = (event) => {
+  selectTemplate = (event, template) => {
     event.preventDefault()
-
-
+    
+    this.setState({ template })
   }
 
   changeLoggedInState = (event) => {

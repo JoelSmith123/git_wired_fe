@@ -29,10 +29,21 @@ export default class Header extends Component {
               {
                 this.state.showDropdown ? (
                   <div className='header-recent-projects-btn-dropdown'>
-                    <button className='header-recent-projects-btn-dropdown-btn'></button>
-                    <button className='header-recent-projects-btn-dropdown-btn'></button>
-                    <button className='header-recent-projects-btn-dropdown-btn'></button>
-                    <button className='header-recent-projects-btn-dropdown-btn'></button>                    
+                    <button className='header-recent-projects-btn-dropdown-btn' 
+                            name='card-page-template'
+                            onClick={(event) => this.props.selectTemplate(event, event.target.name)}
+                    >card page template
+                    </button>
+                    <button className='header-recent-projects-btn-dropdown-btn' 
+                            name='blog page template'
+                            onClick={(event) => this.props.selectTemplate(event, event.target.name)}
+                    >blog page template
+                    </button>
+                    <button className='header-recent-projects-btn-dropdown-btn' 
+                            name='blog-post-template'
+                            onClick={(event) => this.props.selectTemplate(event, event.target.name)}
+                    >blog post template
+                    </button>
                   </div>
                 ) : (
                   null
