@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import CardPageTemplate from '../Templates/CardPageTemplate.js'
+import CardPageTemplate from '../Templates/CardPageTemplate.js';
+import BlogPageTemplate from '../Templates/BlogPageTemplate.js';
+import BlogPostTemplate from '../Templates/BlogPostTemplate.js';
 import './TemplateContainer.css';
 
 export default class TemplateContainer extends Component {
@@ -7,10 +9,25 @@ export default class TemplateContainer extends Component {
     super()
   }
 
+  renderCurrentTemplate = (template) => {
+    switch(template) {
+      case 'card-page-template':
+        return <CardPageTemplate />
+      case 'blog-page-template':
+        return <BlogPageTemplate />
+      case 'blog-post-template':
+        return <BlogPostTemplate />
+      default:
+        return <h2>Please select a template type from the Recent Projects dropdown menu</h2>
+    }
+  }
+
   render() {
     return (
       <div className='TemplateContainer'>
-        <CardPageTemplate />
+        {
+          this.renderCurrentTemplate(this.props.currentTemplate)
+        }
       </div>
     )
   }

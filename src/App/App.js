@@ -7,8 +7,15 @@ export default class App extends Component {
   constructor() {
     super()
     this.state = {
-      loggedIn: false
+      loggedIn: false,
+      template: ''
     }
+  }
+
+  selectTemplate = (event, template) => {
+    event.preventDefault()
+
+    this.setState({ template })
   }
 
   changeLoggedInState = (event) => {
@@ -20,12 +27,14 @@ export default class App extends Component {
   render() {
     return (
       <div className={this.state.loggedIn ? 'App App-loggedIn' : 'App App-loggedOut'}>
-        <Header loggedIn={this.state.loggedIn} changeLoggedInState={this.changeLoggedInState}/>
-
+        <Header loggedIn={this.state.loggedIn}
+                changeLoggedInState={this.changeLoggedInState}
+                selectTemplate={this.selectTemplate}
+        />
         {
           this.state.loggedIn ?
-
-            <TemplateContainer />
+      
+            <TemplateContainer currentTemplate={this.state.template}/>
 
           :
             

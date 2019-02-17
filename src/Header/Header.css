@@ -15,6 +15,23 @@
   width: 100px;
 }
 
+.header-recent-projects-btn-dropdown-container {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  width: 100px;
+}
+
+.header-recent-projects-btn-dropdown {
+  position: relative;
+  z-index: 1;
+}
+
+.header-recent-projects-btn-dropdown-btn {
+  height: 40px;
+  width: 150px;
+}
+
 .header-home-btn {
   border-right: 1px solid #fff;
 }
