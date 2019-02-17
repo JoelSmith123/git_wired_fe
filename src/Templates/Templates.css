@@ -1,0 +1,63 @@
+.CardPageTemplate {
+  height: 100%;
+}
+
+.CardPageTemplate * {
+  background-color: #f2f2f2;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+.pseudo-btn-space {
+  border: none;
+  height: 100%;
+  width: 40px;
+}
+
+.fa-plus-square {
+  border: none;
+  margin-right: 10px;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.template-header-btn {
+  background: transparent; 
+  box-sizing: border-box;
+  border: 1px solid #000;
+  color: #6666ff;
+  font-size: 1rem;
+  margin: 10px 10px 10px 0;
+  vertical-align: middle;
+  min-width: 80px;
+}
+
+.template-header {
+  display: flex;
+  height: 100px;
+  position: relative;
+  width: 100%;
+}
+
+.template-card-container {
+  align-content: center;
+  background-color: #fff;
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100% - 200px);
+  justify-content: center;
+}
+
+.template-card {
+  height: 200px;
+  margin: 30px;
+  width: 300px;
+}
+
+.template-footer {
+  height: 100px;
+  width: 100%;
+}

@@ -1,0 +1,58 @@
+.Header {
+  background-color: #4c4c4c;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.header-btn {
+  background: transparent; 
+  border: none;
+  color: #6666ff;
+  font-size: 1rem;
+  height: 100%;
+  vertical-align: middle;
+  width: 100px;
+}
+
+.header-home-btn {
+  border-right: 1px solid #fff;
+}
+
+.header-help-btn {
+  border-right: 1px solid #fff;
+}
+
+.header-recent-projects-btn {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;  
+}
+
+.header-login-btn {
+  border-left: 1px solid #fff;
+}
+
+.header-register-btn {
+  border-left: 1px solid #fff;
+}
+
+.header-logout-btn {
+  border-left: 1px solid #fff;
+}
+
+.header-title-container {
+  text-align: center;
+}
+
+.header-main-title {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 15px;
+}
+
+.header-sub-title {
+  color: #fff;
+  margin-top: 5px;
+}
+
