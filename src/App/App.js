@@ -31,6 +31,14 @@ export default class App extends Component {
     }
   }
 
+  toggleAppBackground = () => {
+    if (this.state.template === '') {
+      return 'App-white-background'
+    } else {
+      return 'App-grey-background'
+    }
+  }
+
   selectTemplate = (event, template) => {
     event.preventDefault()
 
@@ -67,7 +75,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className={this.state.loggedIn ? 'App App-loggedIn' : 'App App-loggedOut'}>
+      <div className={this.toggleAppBackground()}>
         <Header loggedIn={this.state.loggedIn}
                 changeLoggedInState={this.changeLoggedInState}
                 selectTemplate={this.selectTemplate}
