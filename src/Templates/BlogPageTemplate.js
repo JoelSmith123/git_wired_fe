@@ -34,7 +34,8 @@ export default class BlogPageTemplate extends Component {
           }
         </div>
         <div className='template-card-container'>
-          
+          <div className='template-page-section'></div>
+          <div className='template-page-section'></div>        
         </div>
         <div className='template-footer'></div>
       </div>

@@ -61,6 +61,12 @@
   width: 300px;
 }
 
+.template-page-section {
+  height: 200px;
+  margin: 30px;
+  width: calc(90% - 5px);
+}
+
 .template-footer {
   height: 100px;
   width: 100%;
