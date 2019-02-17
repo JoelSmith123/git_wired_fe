@@ -67,6 +67,24 @@
   width: calc(90% - 5px);
 }
 
+.template-post-main {
+  height: 300px;
+  margin: 30px;
+  width: calc(70% - 5px);
+}
+
+.template-post-sub-container {
+  height: 200px;
+  margin: 30px;
+  width: calc(90% - 5px);
+}
+
+.template-post-sub {
+  height: 70px;
+  margin: 20px auto;
+  width: calc(90% - 5px);
+}
+
 .template-footer {
   height: 100px;
   width: 100%;

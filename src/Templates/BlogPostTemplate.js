@@ -34,7 +34,11 @@ export default class BlogPostTemplate extends Component {
           }
         </div>
         <div className='template-card-container'>
-          
+          <div className='template-post-main'></div>
+          <div className='template-post-sub-container'>
+            <div className='template-post-sub'></div>
+            <div className='template-post-sub'></div>            
+          </div>
         </div>
         <div className='template-footer'></div>
       </div>
