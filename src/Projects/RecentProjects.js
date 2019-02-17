@@ -20,10 +20,6 @@ export default class RecentProjects extends Component {
     }
   }
 
-  renderProjectCard(project) {
-
-  }
-
   render() {
     <div className='RecentProjects'>
       { renderProjectCard() }
