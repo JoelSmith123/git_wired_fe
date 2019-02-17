@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import 'Profile.css';
+// import 'Profile.css';
 
 export default class Profile extends Component {
   constructor() {

@@ -57,7 +57,7 @@ export default class Header extends Component {
                 )
               }
             </div>
-            <button className='header-btn header-profile-btn'>Profile</button>            
+            <button className='header-btn header-profile-btn' onClick={this.props.viewProfile}>Profile</button>            
             <button className='header-btn header-logout-btn' onClick={this.props.changeLoggedInState}>Logout</button>
           </span>
         </div>
