@@ -13,11 +13,9 @@ export default class RecentProjects extends Component {
     // TO DO - Confirm ENDPOINT
     let url = 'https://git-wired-be.herokuapp.com/api/v1/projects'
     fetch(url, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user.getGitWiredToken()),
+        method:  "GET",
+        headers: { "Content-Type": "application/json", },
+        body:    JSON.stringify(user.getGitWiredToken()),
     })
     .then(response => response.json() )
     .then(data     => this.renderProjectCards(data).bind(this))
@@ -30,7 +28,7 @@ export default class RecentProjects extends Component {
 
   // TO DO - TEST ME
   renderProjectCards(data){
-    let projects = projects(data)
+    let projects = this.projects(data)
     let l = projects.length
     for(let i = 0; i < l; i++) {
       let card = projects[i]
