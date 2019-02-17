@@ -30,7 +30,7 @@ export default class ProjectCard extends Component {
   // --- Updated ---
 
   getUpdated() {
-    return this.props.project['lastUpdated']
+    return this.props.project['updatedAt']
   }
 
   renderUpdated(){
@@ -42,7 +42,7 @@ export default class ProjectCard extends Component {
   // --- Created ---
 
   getCreated() {
-    return this.props.project['lastCreated']
+    return this.props.project['createdAt']
   }
 
   renderCreated(){
