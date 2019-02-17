@@ -1,0 +1,28 @@
+.Welcome {
+  background-color: #4c4c4c;
+  height: 800px;
+  margin: 50px auto;
+  width: 80%;
+}
+
+.welcome-content-description-title {
+  color: #fff;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.welcome-content-description {
+  color: #fff;
+  margin: 30px;
+}
+
+.welcome-content-instructions-title {
+  color: #fff;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.welcome-content-instructions {
+  color: #fff;
+  margin: 30px;
+}
