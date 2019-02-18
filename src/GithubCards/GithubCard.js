@@ -71,15 +71,28 @@ export default class GithubCard extends Component {
   // TO DO - determines & Displays if card is connected to wireframe element
 
 
+  // --- SHOW MORE / LESS ---
+
+  //  TO DO - add a button to toggle display of  card description
+
 
   render() {
     return (
       <span className='GithubCard'>
-        { this.renderTitle()       }
-        { this.renderDescription() }
-        { this.renderNumber()      }
-        { this.renderStatus()      }
-        { this.renderColumn()      }
+        <div className='GithubCardMinimum'>
+          <span className='GithubCardHeaders'>
+            { this.renderTitle()       }
+            { this.renderNumber()      }
+          </span>
+          <span className='GithubCardLabels'>
+            { this.renderStatus()      }
+            { this.renderColumn()      }
+          </span>
+        </div>
+        <div className='GithubCardBody'>
+          { this.renderDescription() }
+        </div>
+        <div>TO DO - See More / Less</div>
       </span>
     )
   }
