@@ -42,7 +42,7 @@ export default class GithubCard extends Component {
   renderNumber = () => {
     return (
       <div className='CardNumber'>
-        <a src={ this.getCardURL() }>
+        <a href={ this.getCardURL() }>
           #{ this.getNumber() }
         </a>
       </div>
