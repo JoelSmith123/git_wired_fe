@@ -35,10 +35,6 @@
   text-align:      left;
 }
 
-.GithubCardHeaders div {
-
-}
-
 .GithubCardLabels {
   width:           40%;
   display:         flex;
@@ -46,8 +42,7 @@
   flex-wrap:       nowrap;
   align-items:     stretch;
   text-align:      center;
-  /* font-size:       70%; */
-    font-size:     1.2vw;
+  font-size:     1.2vw;
 }
 
 .GithubCardLabels div {
