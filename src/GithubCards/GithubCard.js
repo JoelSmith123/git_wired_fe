@@ -31,13 +31,21 @@ export default class GithubCard extends Component {
 
   // --- Card Number ---
 
+  getCardURL = () => {
+    return this.props.card['cardURL']
+  }
+
   getNumber = () => {
     return this.props.card['cardNumber']
   }
 
   renderNumber = () => {
     return (
-      <div className='CardNumber'> { this.getNumber() } </div>
+      <div className='CardNumber'>
+        <a src={ this.getCardURL() }>
+          #{ this.getNumber() }
+        </a>
+      </div>
     )
   }
 
@@ -79,6 +87,7 @@ export default class GithubCard extends Component {
   render() {
     return (
       <span className='GithubCard'>
+
         <div className='GithubCardMinimum'>
           <span className='GithubCardHeaders'>
             { this.renderTitle()       }
@@ -89,9 +98,11 @@ export default class GithubCard extends Component {
             { this.renderColumn()      }
           </span>
         </div>
+
         <div className='GithubCardBody'>
           { this.renderDescription() }
         </div>
+
         <div>TO DO - See More / Less</div>
       </span>
     )
