@@ -13,7 +13,7 @@ export default class GithubCard extends Component {
 
   renderTitle = () => {
     return (
-      <div className='CardTitle'> { this.getTitle() } </div>
+      <div className='CardTitle'>{ this.getTitle() }</div>
     )
   }
 
@@ -25,7 +25,7 @@ export default class GithubCard extends Component {
 
   renderDescription = () => {
     return (
-      <div className='CardDescription'> { this.getDescription() } </div>
+      <div className='CardDescription'>{ this.getDescription() }</div>
     )
   }
 
@@ -42,9 +42,7 @@ export default class GithubCard extends Component {
   renderNumber = () => {
     return (
       <div className='CardNumber'>
-        <a href={ this.getCardURL() }>
-          #{ this.getNumber() }
-        </a>
+        <a href={ this.getCardURL() }>#{ this.getNumber() }</a>
       </div>
     )
   }
@@ -57,7 +55,7 @@ export default class GithubCard extends Component {
 
   renderStatus = () => {
     return (
-      <div className='CardStatus'> { this.getStatus() } </div>
+      <div className='CardStatus'>{ this.getStatus() }</div>
     )
   }
 
@@ -69,7 +67,7 @@ export default class GithubCard extends Component {
 
   renderColumn = () => {
     return (
-      <div className='CardColumn'> { this.getColumn() } </div>
+      <div className='CardColumn'>{ this.getColumn() }</div>
     )
   }
 
@@ -98,12 +96,7 @@ export default class GithubCard extends Component {
             { this.renderColumn()      }
           </span>
         </div>
-
-        <div className='GithubCardBody'>
-          { this.renderDescription() }
-        </div>
-
-        <div>TO DO - See More / Less</div>
+        { this.renderDescription() }
       </span>
     )
   }
