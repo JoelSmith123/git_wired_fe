@@ -1,0 +1,85 @@
+
+
+.GithubCard {
+  width:   90%;
+  margin:  2%;
+  padding: 2%;
+  width:   30%;
+  height:  auto;
+  background-color: #BDCCD8;
+
+  display:         flex;
+  flex-direction:  column;
+  flex-wrap:       wrap;
+  justify-content: center;
+  align-items:     stretch;
+  text-align:      center;
+}
+
+.GithubCardMinimum {
+  display:         flex;
+  flex-direction:  row;
+  flex-wrap:       wrap;
+  justify-content: space-between;
+  align-items:     stretch;
+  text-align:      center;
+}
+
+.GithubCardHeaders {
+  width:           60%;
+  display:         flex;
+  flex-direction:  column;
+  flex-wrap:       nowrap;
+  justify-content: space-around;
+  align-items:     stretch;
+  text-align:      left;
+}
+
+.GithubCardHeaders div {
+
+}
+
+.GithubCardLabels {
+  width:           40%;
+  display:         flex;
+  flex-direction:  column;
+  flex-wrap:       nowrap;
+  align-items:     stretch;
+  text-align:      center;
+  /* font-size:       70%; */
+    font-size:     1.2vw;
+}
+
+.GithubCardLabels div {
+  width:            100%;
+  background-color: white;
+  padding:          1%;
+  margin:           1%;
+  text-overflow: ellipsis;
+  overflow:      hidden;
+  white-space:   nowrap;
+}
+
+.CardTitle {
+  font-size:   2vw;
+  font-weight: bold;
+  margin:      1%;
+  text-overflow: ellipsis;
+  overflow:      hidden;
+  white-space:   nowrap;
+}
+
+.CardNumber {
+  font-size:   1.7vw;
+  font-weight: bolder;
+}
+
+.CardDescription {
+  font-size:        1.7vw;
+  margin-top:       3%;
+  text-align:       left;
+  background-color: lightgrey;
+  width:            90%;
+  padding:          2%;
+  align-self:       center;
+}
