@@ -1,6 +1,8 @@
 
 import React, { Component } from 'react';
 
+import './GithubCardContainer.css'
+
 import GithubCard from './GithubCard.js'
 
 

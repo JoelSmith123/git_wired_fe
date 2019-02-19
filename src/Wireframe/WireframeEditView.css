@@ -1,0 +1,57 @@
+
+.WireframeEditView {
+  width:   100%;
+  margin:  1%;
+  padding: 1%;
+  height:  auto;
+  align-self: center;
+  /* background-color: #BDCCD8; */
+  background-color: #4C4C4C;
+
+  display:         flex;
+  flex-direction:  column;
+  flex-wrap:       wrap;
+  justify-content: center;
+  align-items:     stretch;
+  text-align:      center;
+}
+
+.WireframeHeaderContainer {
+  margin:  1%;
+  padding: 1%;
+  align-self: center;
+  display:         flex;
+  flex-direction:  row;
+  flex-wrap:       wrap;
+  justify-content: space-around;
+  align-items:     stretch;
+  text-align:      center;
+}
+
+.Timestamps {
+  display:         flex;
+  flex-direction:  column;
+  flex-wrap:       wrap;
+  justify-content: center;
+  align-items:     stretch;
+  text-align:      center;
+}
+
+.GithubLinks {
+  display:         flex;
+  flex-direction:  column;
+  flex-wrap:       wrap;
+  justify-content: center;
+  align-items:     stretch;
+  text-align:      center;
+}
+
+.WireframeEditContent {
+  width:           96%;
+  display:         flex;
+  flex-direction:  row;
+  flex-wrap:       nowrap;
+  justify-content: space-around;
+  align-items:     stretch;
+  /* text-align:      center; */
+}

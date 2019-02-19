@@ -5,6 +5,8 @@ import TemplateContainer   from '../TemplateContainer/TemplateContainer.js'
 import GithubCardContainer from '../GithubCards/GithubCardContainer.js'
 import WireframeService    from './WireframeService.js'
 
+import './WireframeEditView.css'
+
 
 export default class WireframeEditView extends Component {
 
@@ -55,6 +57,7 @@ export default class WireframeEditView extends Component {
     if (this.state == null || undefined) { return null }
     return (
       <div className='WireframeEditView'>
+
         <div className='WireframeHeaderContainer'>
 
           <span className='WireframeTitle'>{ this.state.wireframeTitle }</span>
@@ -63,7 +66,7 @@ export default class WireframeEditView extends Component {
             <span className='CreatedTimestamp'>{ this.state.wireframeCreated }</span>
           </span>
 
-          <span className='Timestamps'>
+          <span className='GithubLinks'>
             <span className='RepoName'>
               <a href={this.state.repo['url']}>{ this.state.repo['name'] }</a>
             </span>
