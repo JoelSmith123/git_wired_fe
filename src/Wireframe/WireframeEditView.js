@@ -50,9 +50,13 @@ export default class WireframeEditView extends Component {
   }
 
   filterCardsAndTemplateElementsByStatus = (status) => {
-    const filteredCards = this.state.cards.filter(card => card.cardStatus === status)
+    if (status) {
+      const filteredCards = this.state.cards.filter(card => card.cardStatus === status)
 
-    this.setState({ filteredCards })
+      this.setState({ filteredCards })      
+    } else {
+      this.setState({ filteredCards: null })
+    }
   }
 
 
