@@ -1,6 +1,6 @@
 
 .WireframeEditView {
-  width:   100%;
+  width:   96%;
   margin:  1%;
   padding: 1%;
   height:  auto;
@@ -16,33 +16,60 @@
 }
 
 .WireframeHeaderContainer {
-  margin:  1%;
-  padding: 1%;
-  align-self: center;
+  width:           96%;
+  margin:          1%;
+  padding:         1%;
+  align-self:      center;
   display:         flex;
   flex-direction:  row;
-  flex-wrap:       wrap;
+  flex-wrap:       nowrap;
   justify-content: space-around;
   align-items:     stretch;
-  text-align:      center;
+}
+
+.WireframeTitle {
+  width:      40%;
+  word-wrap:  normal;
+  align-self: flex-start;
+  text-align: left;
+  color:      #BDCCD8;
+  font-size:  5vw;
 }
 
 .Timestamps {
+  width:           19%;
   display:         flex;
   flex-direction:  column;
-  flex-wrap:       wrap;
+  flex-wrap:       nowrap;
   justify-content: center;
   align-items:     stretch;
-  text-align:      center;
+  text-align:      right;
+}
+
+.UpdatedTimestamp {
+  font-size:   2vw;
+  font-weight: bold;
+  color:       #d3d3d3;
+}
+
+.CreatedTimestamp {
+  font-size:   1.8vw;
+  color:       #d3d3d3;
+}
+
+.RepoName a, .ProjectName a{
+  font-size:   2vw;
+  color:       #d3d3d3;
 }
 
 .GithubLinks {
+  width:           41%;
+  text-align:      center;
   display:         flex;
   flex-direction:  column;
-  flex-wrap:       wrap;
+  flex-wrap:       nowrap;
   justify-content: center;
   align-items:     stretch;
-  text-align:      center;
 }
 
 .WireframeEditContent {
