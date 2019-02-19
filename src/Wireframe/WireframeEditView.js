@@ -59,6 +59,14 @@ export default class WireframeEditView extends Component {
     }
   }
 
+  getFilteredCardIdsToFilterElements = () => {
+    if (this.state.filteredCards) {
+      return this.state.filteredCards.map(card => card.cardNumber)      
+    } else {
+      return null
+    }
+  }
+
 
   render() {
     if (this.state == null || undefined) { return null }
@@ -85,7 +93,9 @@ export default class WireframeEditView extends Component {
         </div>
 
         <div className='WireframeEditContent'>
-          <TemplateContainer currentTemplate={this.props.template} />
+          <TemplateContainer currentTemplate={this.props.template}
+                             cardIds={this.getFilteredCardIdsToFilterElements()}
+           />
           <GithubCardContainer cards={ this.state.filteredCards ?  this.state.filteredCards : this.state.cards } 
                                filterCardsAndTemplateElementsByStatus={this.filterCardsAndTemplateElementsByStatus}
           />

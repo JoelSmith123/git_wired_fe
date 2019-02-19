@@ -9,14 +9,18 @@ export default class TemplateContainer extends Component {
     super()
   }
 
+  updateChildrenState = () => {
+    return this.props.cardIds
+  }
+
   renderCurrentTemplate = (template) => {
     switch(template) {
       case 'card-page-template':
-        return <CardPageTemplate />
+        return <CardPageTemplate cardIds={this.updateChildrenState()}/>
       case 'blog-page-template':
-        return <BlogPageTemplate />
+        return <BlogPageTemplate cardIds={this.updateChildrenState()}/>
       case 'blog-post-template':
-        return <BlogPostTemplate />
+        return <BlogPostTemplate cardIds={this.updateChildrenState()}/>
       default:
         return <h2>Please select a template type from the Recent Projects dropdown menu</h2>
     }

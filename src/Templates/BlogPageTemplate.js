@@ -10,8 +10,31 @@ export default class BlogPageTemplate extends Component {
     }
   }
 
+  componentDidUpdate = () => { 
+    this.findElementChildrenToHide(this.refs.BlogPageTemplate)  
+  }
+
+  findElementChildrenToHide = (element) => {
+    if (element.children) {
+      Object.values(element.children).forEach(child => {
+        if (this.props.cardIds) {
+          if (this.props.cardIds.includes(parseInt(child.id))) {
+            child.classList.add('hideTemplateElement')
+          } else {
+            child.classList.remove('hideTemplateElement')            
+          }            
+        } else {
+          child.classList.remove('hideTemplateElement')                      
+        }
+
+        this.findElementChildrenToHide(child)
+      })
+    }      
+  }
+
   addBtnToHeader = (event) => {
     event.preventDefault()
+
     this.setState({ headerButtons: this.state.headerButtons + 1 })
   }
 
@@ -23,10 +46,11 @@ export default class BlogPageTemplate extends Component {
     return btnArr
   }
 
+
   render() {
     return (
-      <div className='BlogPageTemplate'>
-        <div className='template-header'>
+      <div className='BlogPageTemplate' ref='BlogPageTemplate'>
+        <div className='template-header' id='11'>
         <div className='pseudo-btn-space'></div>
           <i className="far fa-plus-square" onClick={this.addBtnToHeader}></i>
           {
@@ -34,10 +58,10 @@ export default class BlogPageTemplate extends Component {
           }
         </div>
         <div className='template-card-container'>
-          <div className='template-page-section'></div>
-          <div className='template-page-section'></div>        
+          <div className='template-page-section' id='12'></div>
+          <div className='template-page-section' id='13'></div>        
         </div>
-        <div className='template-footer'></div>
+        <div className='template-footer' id='14'></div>
       </div>
     )
   }
