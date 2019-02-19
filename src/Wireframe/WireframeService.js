@@ -1,7 +1,11 @@
 
+import UserSession from '../tools/UserSession.js'
 
 export default class WireframeService {
 
+  constructor() {
+    this.user = new UserSession
+  }
 
   stubGithub() {
     let stub =  {
