@@ -15,6 +15,10 @@
   width: 100%;
 }
 
+.github-cards-container-header * {
+  display: inline-block;
+}
+
 .github-title {
   font-size:     3vw;
   text-align:    center;
