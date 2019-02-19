@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import RecentProjectsService from './RecentProjectsService.js'
-import ProjectCard           from './ProjectCard.js'
 import ProjectCard from './ProjectCard.js'
 import UserSession from '../Tools/UserSession.js'
 
