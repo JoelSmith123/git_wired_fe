@@ -30,7 +30,8 @@ export default class GithubCardContainer extends Component {
 
   cardsStatusSelect = (event, statusName) => {
     event.preventDefault()
-
+    
+    this.props.filterCardsAndTemplateElementsByStatus(statusName)
     this.setState({ showDropdown: false, statusName })
   }
 

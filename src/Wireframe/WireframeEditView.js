@@ -49,6 +49,12 @@ export default class WireframeEditView extends Component {
     } )
   }
 
+  filterCardsAndTemplateElementsByStatus = (status) => {
+    const filteredCards = this.state.cards.filter(card => card.cardStatus === status)
+
+    this.setState({ filteredCards })
+  }
+
 
   render() {
     if (this.state == null || undefined) { return null }
@@ -76,7 +82,9 @@ export default class WireframeEditView extends Component {
 
         <div className='WireframeEditContent'>
           <TemplateContainer currentTemplate={this.props.template} />
-          <GithubCardContainer cards={ this.state.cards } />
+          <GithubCardContainer cards={ this.state.filteredCards ?  this.state.filteredCards : this.state.cards } 
+                               filterCardsAndTemplateElementsByStatus={this.filterCardsAndTemplateElementsByStatus}
+          />
         </div>
 
       </div>
