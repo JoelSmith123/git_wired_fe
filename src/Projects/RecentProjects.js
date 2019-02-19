@@ -1,12 +1,11 @@
-
 import React, { Component } from 'react';
-
 import RecentProjectsService from './RecentProjectsService.js'
 import ProjectCard           from './ProjectCard.js'
+import ProjectCard from './ProjectCard.js'
+import UserSession from '../Tools/UserSession.js'
 
 
 export default class RecentProjects extends Component {
-
   componentDidMount() {
     const recents = new RecentProjectsService
     // ------- API call HERE ----------
@@ -36,8 +35,4 @@ export default class RecentProjects extends Component {
       </div>
     )
   }
-
-
-
-
 }

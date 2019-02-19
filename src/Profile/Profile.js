@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import RecentProjects from '../Projects/RecentProjects.js'
 import './Profile.css';
 
 export default class Profile extends Component {
@@ -20,10 +21,7 @@ export default class Profile extends Component {
         <div className='recent-projects-container'>
           <h2 className='recent-projects-container-title'>Recent Projects</h2>
           <div className='recent-projects-card-container'>
-            <div className='recent-projects-card'></div>
-            <div className='recent-projects-card'></div>
-            <div className='recent-projects-card'></div>
-            <div className='recent-projects-card'></div>
+          { /* <RecentProjects /> */}
           </div>
         </div>
       </div>

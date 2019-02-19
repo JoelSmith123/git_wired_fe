@@ -1,10 +1,5 @@
-
-
-
-
 export default class UserSession {
-
-  constructor(){
+  constructor() {
     this.tokenKey = 'userToken'
   }
 
