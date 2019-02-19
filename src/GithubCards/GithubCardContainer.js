@@ -13,7 +13,7 @@ export default class GithubCardContainer extends Component {
   // TO DO - TEST ME
   renderGithubCards = () => {
     let cards = this.props.cards
-    return cards.map( (card) => <GithubCard card={card} /> )
+    return cards.map( (card, index) => <GithubCard card={card} key={index} /> )
   }
 
   // TO DO - TEST ME

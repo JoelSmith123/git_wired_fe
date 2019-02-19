@@ -1,5 +1,4 @@
-
-import UserSession from '../tools/UserSession.js'
+import UserSession from '../Tools/UserSession.js'
 
 
 export default class RecentProjectsService {

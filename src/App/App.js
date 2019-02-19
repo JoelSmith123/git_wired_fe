@@ -42,18 +42,6 @@ export default class App extends Component {
     }
   }
 
-  toggleAppBackground = () => {
-    if (this.state.loggedIn) {
-      if (this.state.template === '') {
-        return 'App-white-background'
-      } else {
-        return 'App-grey-background'
-      }
-    } else {
-      return 'App-white-background'
-    }
-  }
-
   selectTemplate = (event, template) => {
     event.preventDefault()
 
@@ -77,16 +65,7 @@ export default class App extends Component {
 
   selectComponentRender = () => {
     if (this.state.loggedIn) {
-      if (this.state.template !== '') {
-        return <TemplateContainer currentTemplate={this.state.template}/>
-      } else {
-        // KT - TO DO - REMOVE THIS
-        // return <RecentProjects />
-        return <WireframeEditView template={this.state.template}/>
-        // return <GithubCard card={this.state.stubGithubCard}/>
-        // return <ProjectCard project={this.state.stubCard} />
-        // return <Profile />
-      }
+      return <WireframeEditView template={this.state.template}/>
     } else {
       return <Welcome />
     }
@@ -94,7 +73,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className={this.toggleAppBackground()}>
+      <div className='App'>
         <Header loggedIn={this.state.loggedIn}
                 changeLoggedInState={this.changeLoggedInState}
                 selectTemplate={this.selectTemplate}

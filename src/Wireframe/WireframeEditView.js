@@ -1,10 +1,7 @@
-
 import React, { Component } from 'react';
-
 import TemplateContainer   from '../TemplateContainer/TemplateContainer.js'
 import GithubCardContainer from '../GithubCards/GithubCardContainer.js'
 import WireframeService    from './WireframeService.js'
-
 import './WireframeEditView.css'
 
 
@@ -46,9 +43,9 @@ export default class WireframeEditView extends Component {
     let project = info['project']
     let cards   = info['cards']
     this.setState( {
-      repo:    repo,
-      project: project,
-      cards:   cards
+      repo,
+      project,
+      cards
     } )
   }
 
