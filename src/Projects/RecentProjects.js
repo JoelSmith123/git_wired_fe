@@ -3,10 +3,13 @@ import React, { Component } from 'react';
 import ProjectCard from './ProjectCard.js'
 
 import UserSession from '../tools/UserSession.js'
-const user = new UserSession
 
 
 export default class RecentProjects extends Component {
+
+  constructor = () => {
+    this.user = new UserSession
+  }
 
   // TO DO - TEST ME
   getProjects() {
@@ -15,7 +18,7 @@ export default class RecentProjects extends Component {
     fetch(url, {
         method:  "GET",
         headers: { "Content-Type": "application/json", },
-        body:    JSON.stringify(user.getGitWiredToken()),
+        body:    JSON.stringify(this.user.getGitWiredToken()),
     })
     .then(response => response.json() )
     .then(data     => this.renderProjectCards(data).bind(this))

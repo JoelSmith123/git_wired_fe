@@ -1,6 +1,15 @@
 
+import React, { Component } from 'react';
+import GithubCard from './GithubCard.js'
+
+import UserSession from '../tools/UserSession.js'
+
 
 export default class GithubCardContainer {
+
+  constructor = () => {
+    this.user = new UserSession
+  }
 
   // TO DO - we need a way to pass the project ID to this view and the fetch call
 
@@ -10,7 +19,7 @@ export default class GithubCardContainer {
     fetch(url, {
         method:  "GET",
         headers: { "Content-Type": "application/json", },
-        body:    JSON.stringify(user.getGitWiredToken()),
+        body:    JSON.stringify(this.user.getGitWiredToken()),
     })
     .then(response => response.json() )
     .then(data     => this.renderGithubCards(data).bind(this))
