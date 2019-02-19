@@ -61,7 +61,7 @@ export default class ProjectCard extends Component {
 
   render() {
     return (
-      <span class='ProjectCard'>
+      <span className='ProjectCard'>
         { this.renderTitle()   }
         { this.renderRepo()    }
         { this.renderUpdated() }

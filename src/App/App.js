@@ -8,7 +8,10 @@ import TemplateContainer from '../TemplateContainer/TemplateContainer.js'
 
 // ---- TO DO - DELETE THIS PORTION ----
 // Only for demonstrating functionality while BE API is not built
-import ProjectCard from '../Projects/ProjectCard.js'
+// import ProjectCard        from '../Projects/ProjectCard.js'
+// import GithubCard         from '../GithubCards/GithubCard.js'
+import RecentProjects     from '../Projects/RecentProjects.js'
+import WireframeEditView  from '../Wireframe/WireframeEditView.js'
 // --------------------------------------
 import Profile from '../Profile/Profile.js';
 import Welcome from '../Welcome/Welcome.js'
@@ -21,12 +24,20 @@ export default class App extends Component {
       loggedIn: false,
       template: '',
       // This attribute is temporary until API is functional
-      stubCard: {
-            'projectTitle': 'Title1',
-            'repoName':     'RepoName1',
-            'createdAt':    'Created1',
-            'updatedAt':    'Updated1',
-        },
+      // stubCard: {
+      //       'projectTitle': 'Title1',
+      //       'repoName':     'RepoName1',
+      //       'createdAt':    'Created1',
+      //       'updatedAt':    'Updated1',
+      //   },
+      //   stubGithubCard: {
+      //     'cardTitle':       'This is the title',
+      //     'cardDescription': 'This is lots of long text from the body of my issue',
+      //     'cardNumber':       13,
+      //     'cardURL':         'https://github.com/JoelSmith123/git_wired_fe/issues/23',
+      //     'cardStatus':      'Open',
+      //     'cardColumn':      'Custom Column',
+      //   },
       viewProfile: false
     }
   }
@@ -37,7 +48,7 @@ export default class App extends Component {
         return 'App-white-background'
       } else {
         return 'App-grey-background'
-      }      
+      }
     } else {
       return 'App-white-background'
     }
@@ -58,9 +69,9 @@ export default class App extends Component {
   viewProfile = (event) => {
     event.preventDefault()
 
-    this.setState({ 
+    this.setState({
       viewProfile: true,
-      template: '' 
+      template: ''
     })
   }
 
@@ -69,8 +80,12 @@ export default class App extends Component {
       if (this.state.template !== '') {
         return <TemplateContainer currentTemplate={this.state.template}/>
       } else {
+        // KT - TO DO - REMOVE THIS
+        // return <RecentProjects />
+        return <WireframeEditView template={this.state.template}/>
+        // return <GithubCard card={this.state.stubGithubCard}/>
         // return <ProjectCard project={this.state.stubCard} />
-        return <Profile />        
+        // return <Profile />
       }
     } else {
       return <Welcome />
