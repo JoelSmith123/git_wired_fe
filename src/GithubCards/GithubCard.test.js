@@ -26,7 +26,6 @@ describe('GithubCard', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<GithubCard card={ data } />, div);
-    let r = ReactDOM.render(<GithubCard card={ data } />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
