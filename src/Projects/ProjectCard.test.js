@@ -16,14 +16,7 @@ describe('ProjectCard', () => {
 
   describe('Title', () => {
     it.skip('gets project title', done => {
-
-      // TO DO - TEST HERE
-
-      // let card = new ProjectCard
-      // card.props.project = stubProject
-      // let card  = <ProjectCard project={stubProject} />
-      // let title = card.getTitle()
-      // expect(title).to.equal('Title1')
+      
       done();
     });
     it.skip('renders project title', done => {
