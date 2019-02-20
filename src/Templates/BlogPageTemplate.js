@@ -12,7 +12,7 @@ export default class BlogPageTemplate extends Component {
 
   componentDidUpdate = () => { 
     this.findElementChildrenToHide(this.refs.BlogPageTemplate)  
-    this.props.buildElementObjectForBackend(this.state.templateObj)
+    this.buildTemplateObject()
   }
 
 
@@ -51,7 +51,8 @@ export default class BlogPageTemplate extends Component {
   buildTemplateObject = () => {
     let templateObj = {}
     this.findElementChildrenToAddToObject(this.refs.BlogPageTemplate, templateObj)
-    this.setState({ templateObj })
+    this.props.buildElementObjectForBackend(templateObj)
+    
   }
 
   findElementChildrenToAddToObject = (element, templateObj) => {
@@ -117,7 +118,7 @@ export default class BlogPageTemplate extends Component {
 
   render() {
     return (
-      <div className='BlogPageTemplate' ref='BlogPageTemplate' onClick={this.buildTemplateObject}>
+      <div className='BlogPageTemplate' ref='BlogPageTemplate'>
         <div className='template-header' id='11'>
         <div className='pseudo-btn-space'></div>
           <i className="far fa-plus-square" onClick={this.addBtnToHeader}></i>

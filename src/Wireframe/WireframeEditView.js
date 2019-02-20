@@ -68,8 +68,8 @@ export default class WireframeEditView extends Component {
   }
 
   buildElementObjectForBackend = (templateObj) => {
-    console.log('RAN')
-    // this.postTemplateToBackend(templateObj)
+    console.log(templateObj)
+    // this.postTemplateToBackend(JSON.stringify(templateObj))
   }
 
   // postTemplateToBackend = async () => {
