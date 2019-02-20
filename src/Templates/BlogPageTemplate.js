@@ -6,12 +6,14 @@ export default class BlogPageTemplate extends Component {
     super()
 
     this.state = {
-      headerButtons: 0
+      headerButtons: 0,
+      templateObj: {}
     }
   }
 
   componentDidUpdate = () => { 
     this.findElementChildrenToHide(this.refs.BlogPageTemplate)  
+    this.props.buildElementObjectForBackend(this.state.templateObj)
   }
 
   findElementChildrenToHide = (element) => {
@@ -45,6 +47,18 @@ export default class BlogPageTemplate extends Component {
     }
     return btnArr
   }
+
+
+  // {
+  //   ref:           "BlogPageTemplate", 
+  //   header:        { label: 'label', desc: 'longer description', card: 0 },
+  //   headerButton1: { label: 'label', desc: 'longer description', card: 0 },
+  //   headerButton2: { label: 'label', desc: 'longer description', card: 0 },
+  //   headerButton3: { label: 'label', desc: 'longer description', card: 0 },
+  //   pageSection1:  { label: 'label', desc: 'longer description', card: 0 },  
+  //   pageSection2:  { label: 'label', desc: 'longer description', card: 0 },  
+  //   footer:        { label: 'label', desc: 'longer description', card: 0 }  
+  // }
 
 
   render() {

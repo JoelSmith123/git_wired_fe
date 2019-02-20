@@ -67,6 +67,26 @@ export default class WireframeEditView extends Component {
     }
   }
 
+  buildElementObjectForBackend = (templateObj) => {
+    this.setState({ templateObj })
+  }
+
+  postTemplateToBackend = async () => {
+    const url = ''
+    const data = this.state.templateObj
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+      })      
+    } catch(error) {
+      console.log(error)
+    }
+  }
+
 
   render() {
     if (this.state == null || undefined) { return null }
@@ -88,6 +108,7 @@ export default class WireframeEditView extends Component {
             <span className='ProjectName'>
               <a href={this.state.project['url']}>{ this.state.project['name'] }</a>
             </span>
+            <button onClick={this.postTemplateToBackend}>SAVE</button>
           </span>
 
         </div>
@@ -95,6 +116,7 @@ export default class WireframeEditView extends Component {
         <div className='WireframeEditContent'>
           <TemplateContainer currentTemplate={this.props.template}
                              cardIds={this.getFilteredCardIdsToFilterElements()}
+                             buildElementObjectForBackend={this.buildElementObjectForBackend}
            />
           <GithubCardContainer cards={ this.state.filteredCards ?  this.state.filteredCards : this.state.cards } 
                                filterCardsAndTemplateElementsByStatus={this.filterCardsAndTemplateElementsByStatus}
