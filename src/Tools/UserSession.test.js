@@ -24,17 +24,23 @@ describe('UserSession', () => {
     done();
   });
 
-  it.skip('should fetch the user token', done => {
-    // CANNOT TEST THIS because of login with Github
+  it('should create a boolean value for if a user is logged in', done => {
+    user.logout()
+    expect(user.isLoggedIn()).to.be(false)
+    let token = '123'
+    user.setGitWiredToken(token)
+    expect(user.isLoggedIn()).to.be(true)
+    done();
   });
 
-  it.skip('can grab the token from the API response', done => {
-    let data = {
-      'id': 1,
-      'userToken': '123'
-    }
-    let token = user.getToken(data)
-    expect(token).to.equal('123');
+  it.skip('should obtain the token from the URL upon redirect from BE authorization page', done => {
+    // TO DO - TEST ME
+    // MOCK URL
+  });
+
+  it.skip('log a user in', done => {
+    // TO DO - TEST ME
+    // Mock URL
     done();
   });
 
