@@ -1,5 +1,5 @@
 
-.GithubCardsContainer {
+.github-cards-container {
   width:            35%;
   display:          flex;
   flex-direction:   column;
@@ -10,7 +10,26 @@
   background-color: #eaf2f2
 }
 
-.GithubTitle {
+.github-cards-container-header {
+  height: 50px;
+  width: 100%;
+}
+
+.github-cards-container-header * {
+  display: inline-block;
+}
+
+.github-title {
   font-size:     3vw;
   text-align:    center;
+}
+
+.github-cards-container-status-dropdown {
+  position: relative;
+  z-index: 1; 
+}
+
+.github-cards-container-status-dropdown {
+  height: 40px;
+  width: 150px; 
 }

@@ -4,6 +4,10 @@
   height: 100%;
 }
 
+.hideTemplateElement {
+  visibility: hidden;
+}
+
 .CardPageTemplate * ,
 .BlogPostTemplate * ,
 .BlogPageTemplate * {
