@@ -15,6 +15,7 @@ import WireframeEditView  from '../Wireframe/WireframeEditView.js'
 // --------------------------------------
 import Profile from '../Profile/Profile.js';
 import Welcome from '../Welcome/Welcome.js'
+
 import './App.css';
 
 export default class App extends Component {
@@ -51,7 +52,8 @@ export default class App extends Component {
   changeLoggedInState = (event) => {
     event.preventDefault()
 
-    this.setState({ loggedIn: !this.state.loggedIn })
+    // this.setState({ loggedIn: !this.state.loggedIn })
+    this.setState({ loggedIn: this.props.user.isLoggedIn() })
   }
 
   viewProfile = (event) => {
