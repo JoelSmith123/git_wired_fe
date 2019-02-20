@@ -71,6 +71,11 @@
   display: initial;
 }
 
+.save-info-btn {
+  background-color: #fff;
+  color: #000;
+}
+
 .template-card-container {
   align-content: center;
   background-color: #fff;

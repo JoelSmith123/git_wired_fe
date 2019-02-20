@@ -9,7 +9,7 @@ export default class BlogPageTemplate extends Component {
       headerButtons: 0,
       templateObj: {
         ref:           "BlogPageTemplate", 
-        header:        { label: 'label', desc: 'longer description', card: 0 },
+        header:        { label: '', desc: 'longer description', card: 0 },
         pageSections: {
                          1: { label: 'label', desc: 'longer description', card: 0 },
                          2: { label: 'label', desc: 'longer description', card: 0 }                        
@@ -136,6 +136,20 @@ export default class BlogPageTemplate extends Component {
     this.setState({ templateObj })
   }
 
+  handleChange= (event) => {
+    event.preventDefault()
+
+    const inputLabel = event.target
+    const inputDesc = event.target
+
+    let templateObj = {...this.state.templateObj}
+    templateObj[inputLabel.name] = inputLabel.value
+    this.setState({
+      templateObj
+    })
+    console.log(this.state[inputLabel.name])
+  }
+
 
   render() {
     const templateObj = this.state.templateObj
@@ -143,8 +157,16 @@ export default class BlogPageTemplate extends Component {
       <div className='BlogPageTemplate' ref='BlogPageTemplate'>
         <div className='template-header' id={templateObj.header.card}>
         <div className='template-info'>
-          <h5>{templateObj.header.label}</h5>
-          <h5>{templateObj.header.desc}</h5>
+          <form onSubmit={this.handleClick}>
+            <input onChange={this.handleChange} 
+                   type='text' 
+                   name='header[label]'
+                   placeholder='Header Label'
+            >
+            </input>
+            <input type='text' value={templateObj.header.desc}></input>
+            <button className='save-info-btn'>save</button>
+          </form>
         </div>
         <div className='pseudo-btn-space'></div>
           <i className="far fa-plus-square" onClick={this.addBtnToHeader}></i>
@@ -155,21 +177,21 @@ export default class BlogPageTemplate extends Component {
         <div className='template-card-container'>
           <div className='template-page-section' id={templateObj.pageSections[1].card}>
             <div className='template-info'>
-              <h5>{templateObj.pageSections[1].label}</h5>
-              <h5>{templateObj.pageSections[1].desc}</h5>
+              <input type='text' value={templateObj.pageSections[1].label}></input>
+              <input type='text' value={templateObj.pageSections[1].desc}></input>
             </div>
           </div>
           <div className='template-page-section' id={templateObj.pageSections[2].card}>
             <div className='template-info'>
-              <h5>{templateObj.pageSections[2].label}</h5>
-              <h5>{templateObj.pageSections[2].desc}</h5>
+              <input type='text' value={templateObj.pageSections[2].label}></input>
+              <input type='text' value={templateObj.pageSections[2].desc}></input>
             </div>
           </div>        
         </div>
         <div className='template-footer' id={templateObj.footer.card}>
           <div className='template-info'>
-            <h5>{templateObj.footer.label}</h5>
-            <h5>{templateObj.footer.desc}</h5>
+            <input type='text' value={templateObj.footer.label}></input>
+            <input type='text' value={templateObj.footer.desc}></input>
           </div>
         </div>
       </div>
