@@ -68,7 +68,8 @@ export default class WireframeEditView extends Component {
   }
 
   buildElementObjectForBackend = (templateObj) => {
-    this.setState({ templateObj })
+    console.log('RAN')
+    // this.postTemplateToBackend(templateObj)
   }
 
   // postTemplateToBackend = async () => {
@@ -108,9 +109,7 @@ export default class WireframeEditView extends Component {
             <span className='ProjectName'>
               <a href={this.state.project['url']}>{ this.state.project['name'] }</a>
             </span>
-            <button onClick={this.postTemplateToBackend}>SAVE</button>
           </span>
-
         </div>
 
         <div className='WireframeEditContent'>

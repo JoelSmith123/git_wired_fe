@@ -12,7 +12,7 @@ export default class BlogPageTemplate extends Component {
 
   componentDidUpdate = () => { 
     this.findElementChildrenToHide(this.refs.BlogPageTemplate)  
-    // this.props.buildElementObjectForBackend(this.state.templateObj)
+    this.props.buildElementObjectForBackend(this.state.templateObj)
   }
 
 
@@ -113,22 +113,6 @@ export default class BlogPageTemplate extends Component {
       this.findElementChildrenToAddToObject(child, templateObj)
     })
   }
-
-
-  // {
-  //   ref:           "BlogPageTemplate", 
-  //   header:        { label: 'label', desc: 'longer description', card: 0 },
-  //   headerButtons: {
-  //                    1: { label: 'label', desc: 'longer description', card: 0 },
-  //                    2: { label: 'label', desc: 'longer description', card: 0 },
-  //                    3: { label: 'label', desc: 'longer description', card: 0 },
-  //                  },
-  //   pageSections: {
-  //                    1: { label: 'label', desc: 'longer description', card: 0 },
-  //                    2: { label: 'label', desc: 'longer description', card: 0 }                        
-  //                 },
-  //   footer:        { label: 'label', desc: 'longer description', card: 0 }  
-  // }
 
 
   render() {
