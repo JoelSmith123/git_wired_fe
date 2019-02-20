@@ -61,15 +61,20 @@ export default class GithubCard extends Component {
 
   // --- Card Column ---
 
-  getColumn = () => {
-    return this.props.card['cardColumn']
-  }
+  // TO DO - Github APIs cannot yet supply this information
+  // therefore - is not part of MVP
 
-  renderColumn = () => {
-    return (
-      <div className='CardColumn'>{ this.getColumn() }</div>
-    )
-  }
+  // getColumn = () => {
+  //   return this.props.card['cardColumn']
+  // }
+  //
+  // renderColumn = () => {
+  //   return (
+  //     <div className='CardColumn'>{ this.getColumn() }</div>
+  //   )
+  // }
+
+  // removed from render  --> // { this.renderColumn()      }
 
 
   // --- Card Connection ---
@@ -93,7 +98,6 @@ export default class GithubCard extends Component {
           </span>
           <span className='GithubCardLabels'>
             { this.renderStatus()      }
-            { this.renderColumn()      }
           </span>
         </div>
         { this.renderDescription() }
