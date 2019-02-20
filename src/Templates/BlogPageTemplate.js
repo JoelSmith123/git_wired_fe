@@ -10,6 +10,10 @@ export default class BlogPageTemplate extends Component {
     }
   }
 
+  componentDidMount = () => {
+    this.buildTemplateObject()
+  }
+
   componentDidUpdate = () => { 
     this.findElementChildrenToHide(this.refs.BlogPageTemplate)  
     this.buildTemplateObject()
@@ -56,6 +60,8 @@ export default class BlogPageTemplate extends Component {
   }
 
   findElementChildrenToAddToObject = (element, templateObj) => {
+    templateObj['ref'] = 'BlogPageTemplate'
+
     Object.values(element.children).forEach(child => {
       if (Object.values(child.classList).includes('template-header')) {
         templateObj['header'] = {
