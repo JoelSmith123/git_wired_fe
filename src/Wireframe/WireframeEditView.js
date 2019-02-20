@@ -113,7 +113,7 @@ export default class WireframeEditView extends Component {
             <span className='UpdatedTimestamp'>{ this.state.wireframeUpdated }</span>
             <span className='CreatedTimestamp'>{ this.state.wireframeCreated }</span>
           </span>
-          <button>LOAD WIREFRAME TEST</button>
+          <button>LOAD FETCHED WIREFRAME</button>
           <span className='GithubLinks'>
             <span className='RepoName'>
               <a href={this.state.repo['url']}>{ this.state.repo['name'] }</a>
@@ -128,6 +128,7 @@ export default class WireframeEditView extends Component {
           <TemplateContainer currentTemplate={this.props.template}
                              cardIds={this.getFilteredCardIdsToFilterElements()}
                              buildElementObjectForBackend={this.buildElementObjectForBackend}
+                             fetchTemplateObjectFromBackend={this.fetchTemplateObjectFromBackend}
            />
           <GithubCardContainer cards={ this.state.filteredCards ?  this.state.filteredCards : this.state.cards } 
                                filterCardsAndTemplateElementsByStatus={this.filterCardsAndTemplateElementsByStatus}

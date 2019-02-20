@@ -49,6 +49,28 @@
   width: 100%;
 }
 
+.template-info {
+  display: none;
+  background-color: #4c4c4c;
+  color: #fff;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: 50px;
+  z-index: 1;
+}
+
+.template-info * {
+  background-color: #4c4c4c;  
+  border: none;
+}
+
+.template-header:hover .template-info,
+.template-page-section:hover .template-info,
+.template-footer:hover .template-info {
+  display: initial;
+}
+
 .template-card-container {
   align-content: center;
   background-color: #fff;

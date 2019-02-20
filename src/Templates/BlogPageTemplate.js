@@ -6,7 +6,16 @@ export default class BlogPageTemplate extends Component {
     super()
 
     this.state = {
-      headerButtons: 0
+      headerButtons: 0,
+      templateObj: {
+        ref:           "BlogPageTemplate", 
+        header:        { label: 'label', desc: 'longer description', card: 0 },
+        pageSections: {
+                         1: { label: 'label', desc: 'longer description', card: 0 },
+                         2: { label: 'label', desc: 'longer description', card: 0 }                        
+                      },
+        footer:        { label: 'label', desc: 'longer description', card: 0 }  
+      }
     }
   }
 
@@ -121,11 +130,22 @@ export default class BlogPageTemplate extends Component {
     })
   }
 
+  addFetchedTemplateObjectToWireframe = () => {
+    const templateObj = this.props.fetchTemplateObjectFromBackend()
+
+    this.setState({ templateObj })
+  }
+
 
   render() {
+    const templateObj = this.state.templateObj
     return (
       <div className='BlogPageTemplate' ref='BlogPageTemplate'>
-        <div className='template-header' id='11'>
+        <div className='template-header' id={templateObj.header.card}>
+        <div className='template-info'>
+          <h5>{templateObj.header.label}</h5>
+          <h5>{templateObj.header.desc}</h5>
+        </div>
         <div className='pseudo-btn-space'></div>
           <i className="far fa-plus-square" onClick={this.addBtnToHeader}></i>
           {
@@ -133,10 +153,25 @@ export default class BlogPageTemplate extends Component {
           }
         </div>
         <div className='template-card-container'>
-          <div className='template-page-section' id='12'></div>
-          <div className='template-page-section' id='13'></div>        
+          <div className='template-page-section' id={templateObj.pageSections[1].card}>
+            <div className='template-info'>
+              <h5>{templateObj.pageSections[1].label}</h5>
+              <h5>{templateObj.pageSections[1].desc}</h5>
+            </div>
+          </div>
+          <div className='template-page-section' id={templateObj.pageSections[2].card}>
+            <div className='template-info'>
+              <h5>{templateObj.pageSections[2].label}</h5>
+              <h5>{templateObj.pageSections[2].desc}</h5>
+            </div>
+          </div>        
         </div>
-        <div className='template-footer' id='14'></div>
+        <div className='template-footer' id={templateObj.footer.card}>
+          <div className='template-info'>
+            <h5>{templateObj.footer.label}</h5>
+            <h5>{templateObj.footer.desc}</h5>
+          </div>
+        </div>
       </div>
     )
   }
