@@ -6,15 +6,15 @@ export default class BlogPageTemplate extends Component {
     super()
 
     this.state = {
-      headerButtons: 0,
-      templateObj: {}
+      headerButtons: 0
     }
   }
 
   componentDidUpdate = () => { 
     this.findElementChildrenToHide(this.refs.BlogPageTemplate)  
-    this.props.buildElementObjectForBackend(this.state.templateObj)
+    // this.props.buildElementObjectForBackend(this.state.templateObj)
   }
+
 
   findElementChildrenToHide = (element) => {
     if (element.children) {
@@ -50,8 +50,13 @@ export default class BlogPageTemplate extends Component {
 
   buildTemplateObject = () => {
     let templateObj = {}
-    Object.values(this.refs.BlogPageTemplate).forEach(child => {
-      if (child.classList.includes('template-header')) {
+    this.findElementChildrenToAddToObject(this.refs.BlogPageTemplate, templateObj)
+    this.setState({ templateObj })
+  }
+
+  findElementChildrenToAddToObject = (element, templateObj) => {
+    Object.values(element.children).forEach(child => {
+      if (Object.values(child.classList).includes('template-header')) {
         templateObj['header'] = {
           label: 'header label',
           desc: 'header description',
@@ -59,7 +64,7 @@ export default class BlogPageTemplate extends Component {
         }
       }
 
-      if (child.classList.includes('template-header-btn')) {
+      if (Object.values(child.classList).includes('template-header-btn')) {
         if (!templateObj.headerButtons) {
           templateObj['headerButtons'] = {
             1: {
@@ -72,13 +77,13 @@ export default class BlogPageTemplate extends Component {
           let headerButtonID = Object.keys(templateObj.headerButtons).length + 1
           templateObj.headerButtons[headerButtonID] = {
             label: `headerButton${headerButtonID} label`,
-            desc: `headerButton${headerButtonID} description,`
+            desc: `headerButton${headerButtonID} description`,
             card: child.id
           }
         }
       }
 
-      if (child.classList.includes('template-page-section')) {
+      if (Object.values(child.classList).includes('template-page-section')) {
         if (!templateObj.pageSections) {
           templateObj['pageSections'] = {
             1: {
@@ -91,20 +96,21 @@ export default class BlogPageTemplate extends Component {
           let pageSectionID = Object.keys(templateObj.pageSections).length + 1
           templateObj.pageSections[pageSectionID] = {
             label: `pageSection${pageSectionID} label`,
-            desc: `pageSection${pageSectionID} description,`
+            desc: `pageSection${pageSectionID} description`,
             card: child.id
           }
         }
       }
 
-      if (child.classList.includes('template-footer')) {
+      if (Object.values(child.classList).includes('template-footer')) {
         templateObj['footer'] = {
           label: 'footer label',
           desc: 'footer description',
           card: child.id
-        }
+        } 
       }
 
+      this.findElementChildrenToAddToObject(child, templateObj)
     })
   }
 
@@ -127,7 +133,7 @@ export default class BlogPageTemplate extends Component {
 
   render() {
     return (
-      <div className='BlogPageTemplate' ref='BlogPageTemplate'>
+      <div className='BlogPageTemplate' ref='BlogPageTemplate' onClick={this.buildTemplateObject}>
         <div className='template-header' id='11'>
         <div className='pseudo-btn-space'></div>
           <i className="far fa-plus-square" onClick={this.addBtnToHeader}></i>

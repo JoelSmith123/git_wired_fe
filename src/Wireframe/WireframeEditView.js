@@ -71,21 +71,21 @@ export default class WireframeEditView extends Component {
     this.setState({ templateObj })
   }
 
-  postTemplateToBackend = async () => {
-    const url = ''
-    const data = this.state.templateObj
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data)
-      })      
-    } catch(error) {
-      console.log(error)
-    }
-  }
+  // postTemplateToBackend = async () => {
+  //   const url = ''
+  //   const data = this.state.templateObj
+  //   try {
+  //     const response = await fetch(url, {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(data)
+  //     })      
+  //   } catch(error) {
+  //     console.log(error)
+  //   }
+  // }
 
 
   render() {
