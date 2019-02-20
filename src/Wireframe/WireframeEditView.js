@@ -72,9 +72,8 @@ export default class WireframeEditView extends Component {
     // this.postTemplateToBackend(JSON.stringify(templateObj))
   }
 
-  // postTemplateToBackend = async () => {
+  // postTemplateToBackend = async (data) => {
   //   const url = ''
-  //   const data = this.state.templateObj
   //   try {
   //     const response = await fetch(url, {
   //       method: 'POST',
@@ -87,6 +86,19 @@ export default class WireframeEditView extends Component {
   //     console.log(error)
   //   }
   // }
+
+  fetchTemplateObjectFromBackend = async () => {
+    const url = ''
+    try {
+      const response = await fetch(url)
+      const fetchedTemplateObj = response.json()
+      return fetchedTemplateObj
+    } catch(error) {
+      console.log(error)
+    }
+  }
+
+
 
 
   render() {
@@ -101,7 +113,7 @@ export default class WireframeEditView extends Component {
             <span className='UpdatedTimestamp'>{ this.state.wireframeUpdated }</span>
             <span className='CreatedTimestamp'>{ this.state.wireframeCreated }</span>
           </span>
-
+          <button>LOAD WIREFRAME TEST</button>
           <span className='GithubLinks'>
             <span className='RepoName'>
               <a href={this.state.repo['url']}>{ this.state.repo['name'] }</a>
