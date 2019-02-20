@@ -7,7 +7,6 @@ import * as serviceWorker from './serviceWorker';
 
 import UserSession from './Tools/UserSession.js'
 
-// TO DO - REMOVE THIS --> // ReactDOM.render(<App user:{ user }/>, document.getElementById('root'));
 ReactDOM.render(<App user={ new UserSession }/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
