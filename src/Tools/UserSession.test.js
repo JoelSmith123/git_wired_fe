@@ -26,10 +26,10 @@ describe('UserSession', () => {
 
   it('should create a boolean value for if a user is logged in', done => {
     user.logout()
-    expect(user.isLoggedIn()).to.be(false)
+    expect(user.isLoggedIn()).to.be.false
     let token = '123'
     user.setGitWiredToken(token)
-    expect(user.isLoggedIn()).to.be(true)
+    expect(user.isLoggedIn()).to.be.true
     done();
   });
 
