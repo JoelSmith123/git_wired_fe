@@ -48,15 +48,79 @@ export default class BlogPageTemplate extends Component {
     return btnArr
   }
 
+  buildTemplateObject = () => {
+    let templateObj = {}
+    Object.values(this.refs.BlogPageTemplate).forEach(child => {
+      if (child.classList.includes('template-header')) {
+        templateObj['header'] = {
+          label: 'header label',
+          desc: 'header description',
+          card: child.id
+        }
+      }
+
+      if (child.classList.includes('template-header-btn')) {
+        if (!templateObj.headerButtons) {
+          templateObj['headerButtons'] = {
+            1: {
+              label: 'headerButton1 label',
+              desc: 'headerButton1 description',
+              card: child.id
+            }
+          }
+        } else {
+          let headerButtonID = Object.keys(templateObj.headerButtons).length + 1
+          templateObj.headerButtons[headerButtonID] = {
+            label: `headerButton${headerButtonID} label`,
+            desc: `headerButton${headerButtonID} description,`
+            card: child.id
+          }
+        }
+      }
+
+      if (child.classList.includes('template-page-section')) {
+        if (!templateObj.pageSections) {
+          templateObj['pageSections'] = {
+            1: {
+              label: 'pageSection1 label',
+              desc: 'pageSection1 description',
+              card: child.id
+            }
+          }
+        } else {
+          let pageSectionID = Object.keys(templateObj.pageSections).length + 1
+          templateObj.pageSections[pageSectionID] = {
+            label: `pageSection${pageSectionID} label`,
+            desc: `pageSection${pageSectionID} description,`
+            card: child.id
+          }
+        }
+      }
+
+      if (child.classList.includes('template-footer')) {
+        templateObj['footer'] = {
+          label: 'footer label',
+          desc: 'footer description',
+          card: child.id
+        }
+      }
+
+    })
+  }
+
 
   // {
   //   ref:           "BlogPageTemplate", 
   //   header:        { label: 'label', desc: 'longer description', card: 0 },
-  //   headerButton1: { label: 'label', desc: 'longer description', card: 0 },
-  //   headerButton2: { label: 'label', desc: 'longer description', card: 0 },
-  //   headerButton3: { label: 'label', desc: 'longer description', card: 0 },
-  //   pageSection1:  { label: 'label', desc: 'longer description', card: 0 },  
-  //   pageSection2:  { label: 'label', desc: 'longer description', card: 0 },  
+  //   headerButtons: {
+  //                    1: { label: 'label', desc: 'longer description', card: 0 },
+  //                    2: { label: 'label', desc: 'longer description', card: 0 },
+  //                    3: { label: 'label', desc: 'longer description', card: 0 },
+  //                  },
+  //   pageSections: {
+  //                    1: { label: 'label', desc: 'longer description', card: 0 },
+  //                    2: { label: 'label', desc: 'longer description', card: 0 }                        
+  //                 },
   //   footer:        { label: 'label', desc: 'longer description', card: 0 }  
   // }
 
