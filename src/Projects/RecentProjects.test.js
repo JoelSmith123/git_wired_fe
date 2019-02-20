@@ -29,7 +29,7 @@ const data = {
 
 describe('RecentProjects', () => {
 
-  it('return projects', done => {
+  xit('return projects', done => {
     let recents  = new RecentProjects
     let projects = recents.projects(data)
     let card     = projects[0]
