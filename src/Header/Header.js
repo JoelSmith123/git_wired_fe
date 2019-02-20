@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Header.css';
 
+import SessionButton from './SessionButton.js'
+
 export default class Header extends Component {
   constructor() {
     super()
@@ -21,7 +23,7 @@ export default class Header extends Component {
     this.setState({ showDropdown: false })
     this.props.selectTemplate(event, templateName)
   }
-  
+
   render() {
     if (this.props.loggedIn) {
       return (
@@ -36,17 +38,17 @@ export default class Header extends Component {
               {
                 this.state.showDropdown ? (
                   <div className='header-recent-projects-btn-dropdown'>
-                    <button className='header-recent-projects-btn-dropdown-btn' 
+                    <button className='header-recent-projects-btn-dropdown-btn'
                             name='card-page-template'
                             onClick={(event) => this.handleTemplateSelection(event, event.target.name)}
                     >card page template
                     </button>
-                    <button className='header-recent-projects-btn-dropdown-btn' 
+                    <button className='header-recent-projects-btn-dropdown-btn'
                             name='blog-page-template'
                             onClick={(event) => this.handleTemplateSelection(event, event.target.name)}
                     >blog page template
                     </button>
-                    <button className='header-recent-projects-btn-dropdown-btn' 
+                    <button className='header-recent-projects-btn-dropdown-btn'
                             name='blog-post-template'
                             onClick={(event) => this.handleTemplateSelection(event, event.target.name)}
                     >blog post template
@@ -57,8 +59,11 @@ export default class Header extends Component {
                 )
               }
             </div>
-            <button className='header-btn header-profile-btn' onClick={this.props.viewProfile}>Profile</button>            
-            <button className='header-btn header-logout-btn' onClick={this.props.changeLoggedInState}>Logout</button>
+            <button className='header-btn header-profile-btn'
+                    onClick={this.props.viewProfile}
+                    >Profile
+            </button>
+            <SessionButton user={this.props.user} changeLoggedInState={this.props.changeLoggedInState}/>
           </span>
         </div>
       )
@@ -71,11 +76,10 @@ export default class Header extends Component {
             <h3 className='header-sub-title'><a>Login</a> to get started!</h3>
           </span>
           <span className='header-btn-container'>
-            <button className='header-btn header-login-btn' onClick={this.props.changeLoggedInState}>login</button>
-            <button className='header-btn header-register-btn'>register</button>
+            <SessionButton user={this.props.user} changeLoggedInState={this.props.changeLoggedInState}/>
           </span>
         </div>
-      )      
+      )
     }
   }
 }
