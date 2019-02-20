@@ -4,7 +4,7 @@ export default class UserSession {
   }
 
   setGitWiredToken(token) {
-    sessionStorage.setItem(this.tokenKey, token);
+    if (token) {sessionStorage.setItem(this.tokenKey, token)};
   }
 
   getGitWiredToken() {
@@ -20,28 +20,16 @@ export default class UserSession {
     return Boolean( this.getGitWiredToken() )
   }
 
+  getURLToken = () => {
+    let url = window.location.href
+    let arr = url.split('=')
+    return arr.length >= 2 ? arr.pop : null
+  }
 
-
-
-  // Make Fetch /login call
-  // receive userToken
-
-  // TO DO - TEST ME
-  //  - CONFIRM endpoint
-  //  - CONFIRM RESPONSE STRUCTURE
-  // loginUser() {
-  //   let url = 'https://git-wired-be.herokuapp.com/login'
-  //   fetch(url)
-  //     .then(response => response.json())
-  //     .then(data     => this.getToken(data).bind(this))
-  //     .then(token    => this.setGitWiredToken(token).bind(this))
-  //     .catch(error   => { console.log(error); });
-  // }
-  //
-  // getToken(data) {
-  //   let token = data[this.tokenKey]
-  //   return token
-  // }
+  login = () => {
+    let token = this.getURLToken()
+    this.setGitWiredToken(token)
+  }
 
 
 }
