@@ -31,4 +31,11 @@ describe('SessionButton', () => {
     expect(JSON.stringify(wrapper.instance().logoutButton())).toEqual(mockButton)
   })
 
+  it('should call goToAuth on loginButton click', () => {
+    const wrapper = mount(<SessionButton user={new UserSession} changeLoggedInState={jest.fn()}/>)
+    wrapper.instance().goToAuth = jest.fn()
+    wrapper.find('.header-login-btn').simulate('click')
+    expect(wrapper.instance().goToAuth).toHaveBeenCalled()
+  })
+
 })
