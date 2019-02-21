@@ -74,6 +74,14 @@ describe('GithubCardContainer', () => {
     expect(wrapper.find('.github-cards-container-status-dropdown')).toHaveLength(1)
   })
 
+  it('should not render dropdown on state change', () => {
+    const wrapper = mount(<GithubCardContainer cards={ cards } filterCardsAndTemplateElementsByStatus={jest.fn()}/>)
+
+    wrapper.setState({ showDropdown: false })
+
+    expect(wrapper.find('.github-cards-container-status-dropdown')).toHaveLength(0)    
+  })
+
   xit('it has functional dropdown item - open', () => {
     // TO DO - TEST ME
   })
