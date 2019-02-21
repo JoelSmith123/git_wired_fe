@@ -55,7 +55,7 @@ describe('ProjectCard', () => {
     });
   });
 
-  describe('Created At', () => {
+  describe('Updated At', () => {
     it('gets updated at', () => {
       const wrapper = shallow(<ProjectCard project={ mockProject }/>)
     
@@ -69,14 +69,13 @@ describe('ProjectCard', () => {
     });
   });
 
-  describe('Updated At', () => {
-    it.skip('gets updated at', done => {
-
-      // TO DO - TEST HERE
-
-      done();
+  describe('Created At', () => {
+    it('gets created at', () => {
+      const wrapper = shallow(<ProjectCard project={ mockProject }/>)
+    
+      expect(wrapper.instance().getCreated()).toEqual(mockProject.createdAt)
     });
-    it.skip('renders updated at', done => {
+    it.skip('renders created at', done => {
 
             // TO DO - TEST HERE
 
