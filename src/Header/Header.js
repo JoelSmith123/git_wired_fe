@@ -24,6 +24,29 @@ export default class Header extends Component {
     this.props.selectTemplate(event, templateName)
   }
 
+  // {
+  //   this.state.showDropdown ? (
+  //     <div className='header-recent-projects-btn-dropdown'>
+  //       <button className='header-recent-projects-btn-dropdown-btn'
+  //               name='card-page-template'
+  //               onClick={(event) => this.handleTemplateSelection(event, event.target.name)}
+  //       >card page template
+  //       </button>
+  //       <button className='header-recent-projects-btn-dropdown-btn'
+  //               name='blog-page-template'
+  //               onClick={(event) => this.handleTemplateSelection(event, event.target.name)}
+  //       >blog page template
+  //       </button>
+  //       <button className='header-recent-projects-btn-dropdown-btn'
+  //               name='blog-post-template'
+  //               onClick={(event) => this.handleTemplateSelection(event, event.target.name)}
+  //       >blog post template
+  //       </button>
+  //     </div>
+  //   ) : (
+  //     null
+  //   )
+  // }
 
   render() {
     if (this.props.loggedIn) {
@@ -42,32 +65,9 @@ export default class Header extends Component {
           <span className='header-btn-container'>
             <div className='header-recent-projects-btn-dropdown-container'>
               <button className='header-btn header-recent-projects-btn'
-              // onClick={this.toggleDropdown}
+                      // onClick={this.toggleDropdown}
                       onClick = { () => { this.props.changeViewPageState('recent') } }
               >Recent Projects</button>
-              {
-                this.state.showDropdown ? (
-                  <div className='header-recent-projects-btn-dropdown'>
-                    <button className='header-recent-projects-btn-dropdown-btn'
-                            name='card-page-template'
-                            onClick={(event) => this.handleTemplateSelection(event, event.target.name)}
-                    >card page template
-                    </button>
-                    <button className='header-recent-projects-btn-dropdown-btn'
-                            name='blog-page-template'
-                            onClick={(event) => this.handleTemplateSelection(event, event.target.name)}
-                    >blog page template
-                    </button>
-                    <button className='header-recent-projects-btn-dropdown-btn'
-                            name='blog-post-template'
-                            onClick={(event) => this.handleTemplateSelection(event, event.target.name)}
-                    >blog post template
-                    </button>
-                  </div>
-                ) : (
-                  null
-                )
-              }
             </div>
             <button className='header-btn header-profile-btn'
                     // onClick={this.props.viewProfile}
