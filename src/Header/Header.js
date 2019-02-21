@@ -25,15 +25,14 @@ export default class Header extends Component {
   }
 
 
-  // <button className='header-btn header-help-btn'>Help</button>
-
-
   render() {
     if (this.props.loggedIn) {
       return (
         <div className='Header'>
           <span className='header-btn-container'>
-            <button className='header-btn header-home-btn'>Git Wired</button>
+            <button className='header-btn header-home-btn'
+                    onClick = { () => { this.props.changeViewPageState('welcome') } }
+            >Git Wired</button>
             <input type="button"
                    onClick={ () => { window.location.href='https://github.com/JoelSmith123/git_wired_fe/blob/master/README.md' } }
                    className='header-btn header-help-btn'
@@ -42,7 +41,10 @@ export default class Header extends Component {
           </span>
           <span className='header-btn-container'>
             <div className='header-recent-projects-btn-dropdown-container'>
-              <button className='header-btn header-recent-projects-btn' onClick={this.toggleDropdown}>Recent Projects</button>
+              <button className='header-btn header-recent-projects-btn'
+              // onClick={this.toggleDropdown}
+                      onClick = { () => { this.props.changeViewPageState('recent') } }
+              >Recent Projects</button>
               {
                 this.state.showDropdown ? (
                   <div className='header-recent-projects-btn-dropdown'>
@@ -68,8 +70,9 @@ export default class Header extends Component {
               }
             </div>
             <button className='header-btn header-profile-btn'
-                    onClick={this.props.viewProfile}
-                    >Profile
+                    // onClick={this.props.viewProfile}
+                    onClick = { () => { this.props.changeViewPageState('profile') } }
+            >Profile
             </button>
             <SessionButton user={this.props.user} changeLoggedInState={this.props.changeLoggedInState}/>
           </span>
