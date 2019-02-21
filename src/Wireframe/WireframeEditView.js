@@ -113,7 +113,6 @@ export default class WireframeEditView extends Component {
             <span className='UpdatedTimestamp'>{ this.state.wireframeUpdated }</span>
             <span className='CreatedTimestamp'>{ this.state.wireframeCreated }</span>
           </span>
-          <button>LOAD FETCHED WIREFRAME</button>
           <span className='GithubLinks'>
             <span className='RepoName'>
               <a href={this.state.repo['url']}>{ this.state.repo['name'] }</a>
