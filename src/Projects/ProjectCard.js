@@ -61,7 +61,8 @@ export default class ProjectCard extends Component {
 
   render() {
     return (
-      <span className='ProjectCard'>
+      <span className='ProjectCard'
+            onClick= { () => { this.props.changeViewPageState('wireframe')  }  }>
         { this.renderTitle()   }
         { this.renderRepo()    }
         { this.renderUpdated() }

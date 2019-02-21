@@ -124,9 +124,10 @@ export default class WireframeService {
   }
 
   getGithub = (parseFunc) => {
-    // TO DO - Confirm ENDPOINT
+    // TO DO - we're no longer using 'project'
+
     let id  = this.props.project_id
-    let url = `https://git-wired-be.herokuapp.com/api/v1/projects/${id}/cards`
+    let url = `https://git-wired-be.herokuapp.com/api/v1/repositories/${id}/issues`
     fetch(url, {
         method:  "GET",
         headers: { "Content-Type": "application/json", },
@@ -154,9 +155,9 @@ export default class WireframeService {
   }
 
   getWireframe = (parseFunc) => {
-    // TO DO - Confirm ENDPOINT
-    let id  = this.props.wireframe_id
-    let url = `https://git-wired-be.herokuapp.com/api/v1/wireframes/${id}`
+    let id   = this.props.wireframe_id
+    let repo
+    let url  = `https://git-wired-be.herokuapp.com/api/v1/repositories/${repo}/wireframes/${id}`
     fetch(url, {
         method:  "GET",
         headers: { "Content-Type": "application/json", },
