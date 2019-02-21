@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
-import Welcome from './Welcome.js'
+import WireframeEditView from './WireframeEditView.js'
 
-describe('Welcome', () => {
+describe('WireframeEditView', () => {
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Welcome />, div);
+    ReactDOM.render(<WireframeEditView />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
   it('should match snapshot', () => {
-    const wrapper = shallow(<Welcome />)
+    const wrapper = shallow(<WireframeEditView />)
     expect(wrapper).toMatchSnapshot()
-  }) 
-});
+  })   
+})
