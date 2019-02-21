@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 import App from './App';
+import WireframeEditView from '../Wireframe/WireframeEditView.js'
+import Welcome from '../Welcome/Welcome.js'
 import UserSession from '../Tools/UserSession.js'
 
 describe('App', () => {
@@ -55,7 +57,15 @@ describe('App', () => {
 
     wrapper.setState({ loggedIn: true })
 
-    expect(wrapper.instance().selectComponentRender()).toEqual(wrapper.find('WireframeEditView'))
+    expect(wrapper.instance().selectComponentRender()).toEqual(<WireframeEditView template=""/>)
+  })
+
+  it('should render Welcome if loggedIn state is false', () => {
+    const wrapper = mount(<App user={new UserSession}/>)
+
+    wrapper.setState({ loggedIn: false })
+
+    expect(wrapper.instance().selectComponentRender()).toEqual(<Welcome />)    
   })
 
 });
