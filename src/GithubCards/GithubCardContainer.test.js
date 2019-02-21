@@ -3,10 +3,6 @@ import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 import GithubCardContainer from './GithubCardContainer.js'
 
-
-
-
-
 describe('GithubCardContainer', () => {
   let data1
   let data2
@@ -68,6 +64,14 @@ describe('GithubCardContainer', () => {
 
     expect(wrapper.state('showDropdown')).toEqual(false)
     expect(wrapper.state('statusName')).toEqual(statusName)
+  })
+
+  it('should render dropdown on state change', () => {
+    const wrapper = mount(<GithubCardContainer cards={ cards } filterCardsAndTemplateElementsByStatus={jest.fn()}/>)
+
+    wrapper.setState({ showDropdown: true })
+
+    expect(wrapper.find('.github-cards-container-status-dropdown')).toHaveLength(1)
   })
 
   xit('it has functional dropdown item - open', () => {
