@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WireframeService should match snapshot 1`] = `
+WireframeService {
+  "getGithub": [Function],
+  "getWireframe": [Function],
+  "user": UserSession {
+    "getURLToken": [Function],
+    "isLoggedIn": [Function],
+    "login": [Function],
+    "tokenKey": "userToken",
+  },
+}
+`;
