@@ -57,4 +57,19 @@ describe('WireframeEditView', () => {
     expect(wrapper.state('project')).toEqual(mockState.project)
     expect(wrapper.state('cards')).toEqual(mockState.cards)
   })  
+
+  it('should add filtered cards to state if status is true', () => {
+    const wrapper = shallow(<WireframeEditView />)
+    const mockCards = [
+      {
+        cardStatus: 'status'
+      }
+    ] 
+
+    wrapper.setState({ cards: mockCards  })
+    wrapper.instance().filterCardsAndTemplateElementsByStatus('status')
+
+    expect(wrapper.state('filteredCards')).toEqual(mockCards)
+  })
 })
+
