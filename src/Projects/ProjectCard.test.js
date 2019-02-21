@@ -16,16 +16,24 @@ describe('ProjectCard', () => {
     }
   })
 
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<ProjectCard project={mockProject} />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
+
   it('should match snapshot', () => {
     const wrapper = shallow(<ProjectCard project={mockProject} />)
     expect(wrapper).toMatchSnapshot()
   }) 
 
   describe('Title', () => {
-    it.skip('gets project title', done => {
-      
-      done();
+    it('gets project title', () => {
+      const wrapper = shallow(<ProjectCard project={ mockProject }/>)
+    
+      expect(wrapper.instance().getTitle()).toEqual(mockProject.projectTitle)      
     });
+
     it.skip('renders project title', done => {
 
             // TO DO - TEST HERE
