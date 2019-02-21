@@ -70,4 +70,11 @@ describe('GithubCard', () => {
     expect(wrapper.instance().getStatus()).toEqual(mockData.cardStatus)
   })
 
+  it('renders card status element', () => {
+    const wrapper = shallow(<GithubCard card={ mockData }/>)
+
+    expect(wrapper.instance().renderStatus()).toEqual(<div className='CardStatus'>{ wrapper.instance().getStatus() }</div>)
+  })
+
+
 });
