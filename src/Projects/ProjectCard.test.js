@@ -42,11 +42,10 @@ describe('ProjectCard', () => {
   });
 
   describe('Repo Name', () => {
-    it.skip('gets repo name', done => {
-
-      // TO DO - TEST HERE
-
-      done();
+    it('gets repo name', () => {
+      const wrapper = shallow(<ProjectCard project={ mockProject }/>)
+    
+      expect(wrapper.instance().getRepo()).toEqual(mockProject.repoName)
     });
     it.skip('renders repo name', done => {
 
