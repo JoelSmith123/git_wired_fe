@@ -34,11 +34,10 @@ describe('ProjectCard', () => {
       expect(wrapper.instance().getTitle()).toEqual(mockProject.projectTitle)      
     });
 
-    it.skip('renders project title', done => {
+    it('renders project title', ()=> {
+      const wrapper = shallow(<ProjectCard project={ mockProject }/>)
 
-            // TO DO - TEST HERE
-
-      done();
+      expect(wrapper.instance().renderTitle()).toEqual(<div className="ProjectTitle">{wrapper.instance().getTitle()}</div>)
     });
   });
 

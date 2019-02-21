@@ -31,9 +31,7 @@ ShallowWrapper {
         <div
           className="ProjectTitle"
         >
-           
           Title1
-           
         </div>,
         <div
           className="RepoName"
@@ -66,19 +64,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            " ",
-            "Title1",
-            " ",
-          ],
+          "children": "Title1",
           "className": "ProjectTitle",
         },
         "ref": null,
-        "rendered": Array [
-          " ",
-          "Title1",
-          " ",
-        ],
+        "rendered": "Title1",
         "type": "div",
       },
       Object {
@@ -154,9 +144,7 @@ ShallowWrapper {
           <div
             className="ProjectTitle"
           >
-             
             Title1
-             
           </div>,
           <div
             className="RepoName"
@@ -189,19 +177,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              " ",
-              "Title1",
-              " ",
-            ],
+            "children": "Title1",
             "className": "ProjectTitle",
           },
           "ref": null,
-          "rendered": Array [
-            " ",
-            "Title1",
-            " ",
-          ],
+          "rendered": "Title1",
           "type": "div",
         },
         Object {

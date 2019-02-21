@@ -12,7 +12,7 @@ export default class ProjectCard extends Component {
 
   renderTitle(){
     return (
-      <div className='ProjectTitle'> { this.getTitle() } </div>
+      <div className='ProjectTitle'>{ this.getTitle() }</div>
     )
   }
 
