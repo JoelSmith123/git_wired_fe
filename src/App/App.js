@@ -99,8 +99,8 @@ export default class App extends Component {
   selectComponentRender = () => {
 
     if (this.experience_welcome())       { return <Welcome /> }
-    if (this.experience_userProfile())   { return <Profile        changeViewPageState= {this.changeViewPageState} /> }
-    if (this.experience_userRecents())   { return <RecentProjects changeViewPageState= {this.changeViewPageState} /> }
+    if (this.experience_userProfile())   { return <Profile        changeViewPageState={this.changeViewPageState} /> }
+    if (this.experience_userRecents())   { return <RecentProjects changeViewPageState={this.changeViewPageState} /> }
     if (this.experience_userWireframe()) { return <WireframeEditView template={this.state.template}/> }
 
   }
