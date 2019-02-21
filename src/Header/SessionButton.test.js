@@ -15,5 +15,12 @@ describe('SessionButton', () => {
   it('should match snapshot', () => {
     const wrapper = shallow(<SessionButton user={new UserSession} changeLoggedInState={jest.fn()}/>)
     expect(wrapper).toMatchSnapshot()
-  })  
+  }) 
+
+  it('should return loginButton', () => {
+    const wrapper = shallow(<SessionButton user={new UserSession} changeLoggedInState={jest.fn()}/>)
+    const mockButton = "{\"type\":\"input\",\"key\":null,\"ref\":null,\"props\":{\"type\":\"button\",\"className\":\"header-btn header-login-btn\",\"value\":\"Login\"},\"_owner\":null,\"_store\":{}}"
+
+    expect(JSON.stringify(wrapper.instance().loginButton())).toEqual(mockButton)
+  })
 })
