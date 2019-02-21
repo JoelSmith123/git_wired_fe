@@ -15,7 +15,9 @@ export default class App extends Component {
   constructor() {
     super()
     this.state = {
-      loggedIn: false,
+      loggedIn: Boolean(sessionStorage['userToken']),
+      // This is hardcoded & will cause a weird bug on refresh
+      viewPage: null,
       template: '',
       viewProfile: false
     }
@@ -49,23 +51,56 @@ export default class App extends Component {
     })
   }
 
+
+  experience_userProfile = () => {
+    return (
+      this.state.loggedIn && (
+        this.state.viewPage == 'profile' ||
+        this.state.viewPage == null
+      ))
+  }
+
+  experience_userRecents = () => {
+    return ( this.state.loggedIn && this.state.viewPage == 'recent' )
+  }
+
+  experience_welcome = () => {
+    return (
+      !this.state.loggedIn || (
+        this.state.loggedIn &&
+        this.state.viewPage == 'welcome'
+    ))
+  }
+
+  experience_userWireframe = () => {
+    return ( this.state.loggedIn && this.state.viewPage == 'wireframe' )
+  }
+
+
+
+
   selectComponentRender = () => {
-    if (this.state.loggedIn) {
-      return <WireframeEditView template={this.state.template}/>
-      // return <Profile />
-    } else {
-      return <Welcome />
-    }
+
+    if (this.experience_welcome())       { return <Welcome /> }
+    if (this.experience_userProfile())   { return <Profile /> }
+    if (this.experience_userRecents())   { return <RecentProjects /> }
+    if (this.experience_userWireframe()) { return <WireframeEditView template={this.state.template}/> }
+
+  }
+
+  changeViewPageState = (view) => {
+    this.setState({ viewPage: view })
   }
 
   render() {
     return (
       <div className='App'>
-        <Header loggedIn={this.state.loggedIn}
-                changeLoggedInState={this.changeLoggedInState}
-                selectTemplate={this.selectTemplate}
-                viewProfile={this.viewProfile}
-                user={this.props.user}
+        <Header loggedIn=            {this.state.loggedIn}
+                changeLoggedInState= {this.changeLoggedInState}
+                changeViewPageState= {this.changeViewPageState}
+                selectTemplate=      {this.selectTemplate}
+                viewProfile=         {this.viewProfile}
+                user=                {this.props.user}
         />
         { this.selectComponentRender() }
         <div className='footer'>
