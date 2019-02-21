@@ -127,7 +127,7 @@ export default class WireframeService {
   getGithub = (parseFunc) => {
     // TO DO - No Repos exist in DB until GET Repos is called in new wireframe
     // let id =
-    // let id  = this.props.project_id
+    let id  = this.props.project_id
     let url = `https://git-wired-be.herokuapp.com/api/v1/repositories/${id}/issues`
     fetch(url, {
         method:  "GET",
