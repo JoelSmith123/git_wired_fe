@@ -1,8 +1,12 @@
+
 import React, { Component } from 'react';
+
+import './WireframeEditView.css'
+
 import TemplateContainer   from '../TemplateContainer/TemplateContainer.js'
 import GithubCardContainer from '../GithubCards/GithubCardContainer.js'
 import WireframeService    from './WireframeService.js'
-import './WireframeEditView.css'
+
 
 
 export default class WireframeEditView extends Component {
@@ -23,6 +27,7 @@ export default class WireframeEditView extends Component {
 
   //  --- Make Wireframe API req ---
 
+  // TO DO - update keys & structure
   parseWireframeResponse = (data) => {
     let info    = data['data']['attributes']
     let title   = info['title']
@@ -37,6 +42,7 @@ export default class WireframeEditView extends Component {
 
   //  --- Make GITHUB API req ---
 
+  // TO DO - update keys & structure
   parseGithubResponse = (data) => {
     let info    = data['data']['attributes']
     let repo    = info['repo']
@@ -49,11 +55,14 @@ export default class WireframeEditView extends Component {
     } )
   }
 
+
+  //  --- Filtering Functionality ---
+
   filterCardsAndTemplateElementsByStatus = (status) => {
     if (status) {
       const filteredCards = this.state.cards.filter(card => card.cardStatus === status)
 
-      this.setState({ filteredCards })      
+      this.setState({ filteredCards })
     } else {
       this.setState({ filteredCards: null })
     }
@@ -61,7 +70,7 @@ export default class WireframeEditView extends Component {
 
   getFilteredCardIdsToFilterElements = () => {
     if (this.state.filteredCards) {
-      return this.state.filteredCards.map(card => card.cardNumber)      
+      return this.state.filteredCards.map(card => card.cardNumber)
     } else {
       return null
     }
@@ -81,7 +90,7 @@ export default class WireframeEditView extends Component {
   //         'Content-Type': 'application/json',
   //       },
   //       body: JSON.stringify(data)
-  //     })      
+  //     })
   //   } catch(error) {
   //     console.log(error)
   //   }
@@ -129,7 +138,7 @@ export default class WireframeEditView extends Component {
                              buildElementObjectForBackend={this.buildElementObjectForBackend}
                              fetchTemplateObjectFromBackend={this.fetchTemplateObjectFromBackend}
            />
-          <GithubCardContainer cards={ this.state.filteredCards ?  this.state.filteredCards : this.state.cards } 
+          <GithubCardContainer cards={ this.state.filteredCards ?  this.state.filteredCards : this.state.cards }
                                filterCardsAndTemplateElementsByStatus={this.filterCardsAndTemplateElementsByStatus}
           />
         </div>
