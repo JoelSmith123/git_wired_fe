@@ -16,11 +16,20 @@ export default class TemplateContainer extends Component {
   renderCurrentTemplate = (template) => {
     switch(template) {
       case 'card-page-template':
-        return <CardPageTemplate cardIds={this.updateChildrenState()}/>
+        return <CardPageTemplate cardIds={this.updateChildrenState()}
+                                 buildElementObjectForBackend={this.props.buildElementObjectForBackend}
+                                 fetchTemplateObjectFromBackend={this.props.fetchTemplateObjectFromBackend}
+                />
       case 'blog-page-template':
-        return <BlogPageTemplate cardIds={this.updateChildrenState()}/>
+        return <BlogPageTemplate cardIds={this.updateChildrenState()}
+                                 buildElementObjectForBackend={this.props.buildElementObjectForBackend}
+                                 fetchTemplateObjectFromBackend={this.props.fetchTemplateObjectFromBackend}
+                />
       case 'blog-post-template':
-        return <BlogPostTemplate cardIds={this.updateChildrenState()}/>
+        return <BlogPostTemplate cardIds={this.updateChildrenState()}
+                                 buildElementObjectForBackend={this.props.buildElementObjectForBackend}
+                                 fetchTemplateObjectFromBackend={this.props.fetchTemplateObjectFromBackend}
+                />
       default:
         return <h2>Please select a template type from the Recent Projects dropdown menu</h2>
     }
