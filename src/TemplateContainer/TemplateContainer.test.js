@@ -31,6 +31,12 @@ describe('TemplateContainer', () => {
     expect(wrapper.instance().renderCurrentTemplate('card-page-template')).toEqual(<CardPageTemplate />)
   })
 
+  it('renders blog page template', () => {
+    const wrapper = shallow(<TemplateContainer />)
+    
+    expect(wrapper.instance().renderCurrentTemplate('blog-page-template')).toEqual(<BlogPageTemplate />)
+  })
+
   xit('renders the right template', () => {
     // TO DO - TEST ME
   })
