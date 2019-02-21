@@ -50,4 +50,12 @@ describe('App', () => {
     expect(wrapper.state('template')).toEqual('')
   })
 
+  it('should render WireframeEditView if loggedIn state is true', () => {
+    const wrapper = mount(<App user={new UserSession}/>)
+
+    wrapper.setState({ loggedIn: true })
+
+    expect(wrapper.instance().selectComponentRender()).toEqual(wrapper.find('WireframeEditView'))
+  })
+
 });
