@@ -38,6 +38,10 @@ describe('WireframeService', () => {
     expect(wrapper.stubGithub().data.attributes.cards[1]).toEqual(mockStubCards[1])
   }) 
 
+  it.skip('should fetch GitHub cards', () => {
+
+  })
+
   it('should return stub on stubWireframe invocation', () => {
     const wrapper = wireframeService
     const mockStub = {
@@ -53,6 +57,10 @@ describe('WireframeService', () => {
     }
 
     expect(wrapper.stubWireframe()).toEqual(mockStub)
+  })
+
+  it.skip('should fetch wireframes', () => {
+    
   })
 
 })
