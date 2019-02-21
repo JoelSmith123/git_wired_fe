@@ -88,29 +88,4 @@ describe('GithubCardContainer', () => {
     expect(wrapper.find('.github-cards').children()).toHaveLength(2)
   })
 
-  xit('it has functional dropdown item - open', () => {
-    // TO DO - TEST ME
-  })
-
-  xit('it has functional dropdown item - closed', () => {
-    // TO DO - TEST ME
-  })
-
-  xit('it has functional dropdown item - in-progress', () => {
-    // TO DO - TEST ME
-  })
-
-  xit('it has functional dropdown item - to-dos', () => {
-    // TO DO - TEST ME
-  })
-
-  xit('displays a card', () => {
-    // TO DO - TEST ME
-  })
-
-  xit('displays all cards', () => {
-    // TO DO - TEST ME
-  })
-
-
 });
