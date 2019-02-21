@@ -1,8 +1,6 @@
 import UserSession from '../Tools/UserSession.js'
 
-
 export default class RecentProjectsService {
-
   constructor() {
     this.user = new UserSession
   }
@@ -33,7 +31,7 @@ export default class RecentProjectsService {
   }
 
 
-  getRecents = (parseFunc) => {
+  getRecents = async (parseFunc) => {
     // TO DO - Confirm ENDPOINT
     // let url = 'https://git-wired-be.herokuapp.com/api/v1/projects'
     let url = 'https://git-wired-be.herokuapp.com/api/v1/wireframes'

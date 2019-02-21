@@ -1,58 +1,64 @@
-const chai   = require('chai');
-const should = chai.should;
-const expect = chai.expect;
-
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { shallow, mount } from 'enzyme';
 import RecentProjects from './RecentProjects.js'
-
-const stubProjects = [
-  { 'projectTitle': 'Title1',
-    'repoName':     'RepoName1',
-    'createdAt':    'Created1',
-    'updatedAt':    'Updated1',
-  },
-  { 'projectTitle': 'Title2',
-    'repoName':     'RepoName2',
-    'createdAt':    'Created2',
-    'updatedAt':    'Updated2',
-  },
-  { 'projectTitle': 'Title3',
-    'repoName':     'RepoName3',
-    'createdAt':    'Created3',
-    'updatedAt':    'Updated3',
-  },
-]
-
-const data = {
-  'id': '123',
-  'projects': stubProjects,
-}
+import RecentProjectsService from './RecentProjectsService.js'
+import ProjectCard from './ProjectCard.js'
 
 describe('RecentProjects', () => {
+  let mockRecents
+  let wrapper
+  let recents
+  let mockCardArr
+  beforeEach(() => {
+    mockRecents = [
+      { "createdAt": "Created At", 
+        "projectTitle": "Wireframe Title 1", 
+        "repoName": "Repo 1", 
+        "updatedAt": "Updated At"
+      }, 
+      { "createdAt": "Created At", 
+        "projectTitle": "Wireframe Title 2", 
+        "repoName": "Repo 2", 
+        "updatedAt": "Updated At"
+      }
+    ]
 
-  xit('return projects', done => {
-    let recents  = new RecentProjects
-    let projects = recents.projects(data)
-    let card     = projects[0]
-    expect(projects).to.be.an('array')
-    expect(card).to.be.an('object')
-    expect(card.projectTitle).to.equal('Title1')
-    expect(card.repoName    ).to.equal('RepoName1')
-    expect(card.createdAt   ).to.equal('Created1')
-    expect(card.updatedAt   ).to.equal('Updated1')
-    done();
+    mockCardArr = [
+      <ProjectCard project={{
+          "createdAt": "Created At", 
+          "projectTitle": "Wireframe Title 1", 
+          "repoName": "Repo 1", 
+          "updatedAt": "Updated At"
+      }} />, 
+      <ProjectCard project={{
+          "createdAt": "Created At", 
+          "projectTitle": "Wireframe Title 2", 
+          "repoName": "Repo 2", 
+          "updatedAt": "Updated At"
+      }} />]
+
+    recents = new RecentProjectsService
+
+    wrapper = shallow(<RecentProjects />)
+    wrapper.instance().parseRecentProjects(recents.stubRecent())
+  })
+
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<RecentProjects />, div);
+    ReactDOM.unmountComponentAtNode(div);
   });
 
-  it.skip('render Project Cards', done => {
-    let recents  = new RecentProjects
+  it('should match snapshot', () => {
+    expect(wrapper).toMatchSnapshot()
+  }) 
 
-    done();
+  it('should parse recent projects', () => {
+    expect(wrapper.state('cards')).toEqual(mockRecents)
   });
 
-  it.skip('renders', done => {
-    let recents  = new RecentProjects
-
-    done();
+  it('render Project Cards', () => {
+    expect(wrapper.instance().renderProjectCards(mockRecents)).toEqual(mockCardArr)
   });
-
-
 });

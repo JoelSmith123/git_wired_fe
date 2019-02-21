@@ -1,37 +1,47 @@
-import React    from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-
-const chai   = require('chai');
-const should = chai.should;
-const expect = chai.expect;
-
+import { shallow, mount } from 'enzyme';
 import TemplateContainer from './TemplateContainer.js'
-
-
-var container = new TemplateContainer
-
+import CardPageTemplate from '../Templates/CardPageTemplate.js';
+import BlogPageTemplate from '../Templates/BlogPageTemplate.js';
+import BlogPostTemplate from '../Templates/BlogPostTemplate.js';
 
 describe('TemplateContainer', () => {
-
-
-  xit('renders without crashing', () => {
+  it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<TemplateContainer />, div);
-    // TO DO - ^^^ I don't know how to pass all the props this needs
     ReactDOM.unmountComponentAtNode(div);
   });
 
-  xit('updatesChildrenState', () => {
-    // TO DO - TEST ME
+  it('should match snapshot', () => {
+    const wrapper = shallow(<TemplateContainer />)
+    expect(wrapper).toMatchSnapshot()
+  })    
+
+  it('updatesChildrenState', () => {
+    const mockCardIds = [10, 9, 8]
+    const wrapper = shallow(<TemplateContainer cardIds={mockCardIds}/>)
+    
+    expect(wrapper.instance().updateChildrenState()).toEqual(mockCardIds)
   })
 
-  xit('renderCurrentTemplate', () => {
-    // TO DO - TEST ME
+  it('renders card page template', () => {
+    const wrapper = shallow(<TemplateContainer />)
+    
+    expect(wrapper.instance().renderCurrentTemplate('card-page-template')).toEqual(<CardPageTemplate />)
   })
 
-  xit('renders the right template', () => {
-    // TO DO - TEST ME
+  it('renders blog page template', () => {
+    const wrapper = shallow(<TemplateContainer />)
+    
+    expect(wrapper.instance().renderCurrentTemplate('blog-page-template')).toEqual(<BlogPageTemplate />)
   })
 
-
+  it('renders blog post template', () => {
+    const wrapper = shallow(<TemplateContainer />)
+    
+    expect(wrapper.instance().renderCurrentTemplate('blog-post-template')).toEqual(<BlogPostTemplate />)
+  })  
 });
+
+

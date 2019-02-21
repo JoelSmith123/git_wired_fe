@@ -2,6 +2,20 @@
   "name": "git-wired-fe",
   "version": "0.1.0",
   "private": true,
+  "jest": {
+    "collectCoverageFrom": [
+      "src/App/*.js",
+      "src/GithubCards/*.js",
+      "src/Header/*.js",
+      "src/Profile/*.js",
+      "src/Projects/*.js",
+      "src/TemplateContainers/*.js",
+      "src/Templates/*.js",
+      "src/Tools/*.js",
+      "src/Welcome/*.js",
+      "src/Wireframe/*.js"
+    ]
+  },
   "dependencies": {
     "express": "^4.16.4",
     "express-favicon": "^2.0.1",
@@ -27,6 +41,8 @@
   ],
   "devDependencies": {
     "chai": "^4.2.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.9.1",
     "mocha": "^5.2.0"
   }
 }

@@ -1,0 +1,1271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WireframeEditView should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <WireframeEditView />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="WireframeHeaderContainer"
+        >
+          <span
+            className="WireframeTitle"
+          >
+            Wireframe Title
+          </span>
+          <span
+            className="Timestamps"
+          >
+            <span
+              className="UpdatedTimestamp"
+            >
+              Updated At
+            </span>
+            <span
+              className="CreatedTimestamp"
+            >
+              Created At
+            </span>
+          </span>
+          <span
+            className="GithubLinks"
+          >
+            <span
+              className="RepoName"
+            >
+              <a
+                href="https://github.com/JoelSmith123/git_wired_fe"
+              >
+                Repo Name
+              </a>
+            </span>
+            <span
+              className="ProjectName"
+            >
+              <a
+                href="https://github.com/JoelSmith123/git_wired_fe/projects/1"
+              >
+                Project Name
+              </a>
+            </span>
+          </span>
+        </div>,
+        <div
+          className="WireframeEditContent"
+        >
+          <TemplateContainer
+            buildElementObjectForBackend={[Function]}
+            cardIds={null}
+          />
+          <GithubCardContainer
+            cards={
+              Array [
+                Object {
+                  "cardColumn": "Column 1",
+                  "cardDescription": "Description 1",
+                  "cardNumber": 11,
+                  "cardStatus": "open",
+                  "cardTitle": "Card 1",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 2",
+                  "cardDescription": "Description 2",
+                  "cardNumber": 12,
+                  "cardStatus": "closed",
+                  "cardTitle": "Card 2",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 3",
+                  "cardDescription": "Description 3",
+                  "cardNumber": 13,
+                  "cardStatus": "in-progress",
+                  "cardTitle": "Card 3",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 4",
+                  "cardDescription": "Description 4",
+                  "cardNumber": 14,
+                  "cardStatus": "to-do",
+                  "cardTitle": "Card 4",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 5",
+                  "cardDescription": "Description 5",
+                  "cardNumber": 15,
+                  "cardStatus": "open",
+                  "cardTitle": "Card 5",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 6",
+                  "cardDescription": "Description 6",
+                  "cardNumber": 16,
+                  "cardStatus": "closed",
+                  "cardTitle": "Card 6",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 7",
+                  "cardDescription": "Description 7",
+                  "cardNumber": 17,
+                  "cardStatus": "in-progress",
+                  "cardTitle": "Card 7",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 8",
+                  "cardDescription": "Description 8",
+                  "cardNumber": 18,
+                  "cardStatus": "to-do",
+                  "cardTitle": "Card 8",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 9",
+                  "cardDescription": "Description 9",
+                  "cardNumber": 19,
+                  "cardStatus": "open",
+                  "cardTitle": "Card 9",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 10",
+                  "cardDescription": "Description 10",
+                  "cardNumber": 20,
+                  "cardStatus": "closed",
+                  "cardTitle": "Card 10",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 11",
+                  "cardDescription": "Description 11",
+                  "cardNumber": 21,
+                  "cardStatus": "in-progress",
+                  "cardTitle": "Card 11",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 12",
+                  "cardDescription": "Description 12",
+                  "cardNumber": 22,
+                  "cardStatus": "to-do",
+                  "cardTitle": "Card 12",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+              ]
+            }
+            filterCardsAndTemplateElementsByStatus={[Function]}
+          />
+        </div>,
+      ],
+      "className": "WireframeEditView",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              className="WireframeTitle"
+            >
+              Wireframe Title
+            </span>,
+            <span
+              className="Timestamps"
+            >
+              <span
+                className="UpdatedTimestamp"
+              >
+                Updated At
+              </span>
+              <span
+                className="CreatedTimestamp"
+              >
+                Created At
+              </span>
+            </span>,
+            <span
+              className="GithubLinks"
+            >
+              <span
+                className="RepoName"
+              >
+                <a
+                  href="https://github.com/JoelSmith123/git_wired_fe"
+                >
+                  Repo Name
+                </a>
+              </span>
+              <span
+                className="ProjectName"
+              >
+                <a
+                  href="https://github.com/JoelSmith123/git_wired_fe/projects/1"
+                >
+                  Project Name
+                </a>
+              </span>
+            </span>,
+          ],
+          "className": "WireframeHeaderContainer",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Wireframe Title",
+              "className": "WireframeTitle",
+            },
+            "ref": null,
+            "rendered": "Wireframe Title",
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span
+                  className="UpdatedTimestamp"
+                >
+                  Updated At
+                </span>,
+                <span
+                  className="CreatedTimestamp"
+                >
+                  Created At
+                </span>,
+              ],
+              "className": "Timestamps",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Updated At",
+                  "className": "UpdatedTimestamp",
+                },
+                "ref": null,
+                "rendered": "Updated At",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Created At",
+                  "className": "CreatedTimestamp",
+                },
+                "ref": null,
+                "rendered": "Created At",
+                "type": "span",
+              },
+            ],
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span
+                  className="RepoName"
+                >
+                  <a
+                    href="https://github.com/JoelSmith123/git_wired_fe"
+                  >
+                    Repo Name
+                  </a>
+                </span>,
+                <span
+                  className="ProjectName"
+                >
+                  <a
+                    href="https://github.com/JoelSmith123/git_wired_fe/projects/1"
+                  >
+                    Project Name
+                  </a>
+                </span>,
+              ],
+              "className": "GithubLinks",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <a
+                    href="https://github.com/JoelSmith123/git_wired_fe"
+                  >
+                    Repo Name
+                  </a>,
+                  "className": "RepoName",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Repo Name",
+                    "href": "https://github.com/JoelSmith123/git_wired_fe",
+                  },
+                  "ref": null,
+                  "rendered": "Repo Name",
+                  "type": "a",
+                },
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <a
+                    href="https://github.com/JoelSmith123/git_wired_fe/projects/1"
+                  >
+                    Project Name
+                  </a>,
+                  "className": "ProjectName",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Project Name",
+                    "href": "https://github.com/JoelSmith123/git_wired_fe/projects/1",
+                  },
+                  "ref": null,
+                  "rendered": "Project Name",
+                  "type": "a",
+                },
+                "type": "span",
+              },
+            ],
+            "type": "span",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <TemplateContainer
+              buildElementObjectForBackend={[Function]}
+              cardIds={null}
+            />,
+            <GithubCardContainer
+              cards={
+                Array [
+                  Object {
+                    "cardColumn": "Column 1",
+                    "cardDescription": "Description 1",
+                    "cardNumber": 11,
+                    "cardStatus": "open",
+                    "cardTitle": "Card 1",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 2",
+                    "cardDescription": "Description 2",
+                    "cardNumber": 12,
+                    "cardStatus": "closed",
+                    "cardTitle": "Card 2",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 3",
+                    "cardDescription": "Description 3",
+                    "cardNumber": 13,
+                    "cardStatus": "in-progress",
+                    "cardTitle": "Card 3",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 4",
+                    "cardDescription": "Description 4",
+                    "cardNumber": 14,
+                    "cardStatus": "to-do",
+                    "cardTitle": "Card 4",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 5",
+                    "cardDescription": "Description 5",
+                    "cardNumber": 15,
+                    "cardStatus": "open",
+                    "cardTitle": "Card 5",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 6",
+                    "cardDescription": "Description 6",
+                    "cardNumber": 16,
+                    "cardStatus": "closed",
+                    "cardTitle": "Card 6",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 7",
+                    "cardDescription": "Description 7",
+                    "cardNumber": 17,
+                    "cardStatus": "in-progress",
+                    "cardTitle": "Card 7",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 8",
+                    "cardDescription": "Description 8",
+                    "cardNumber": 18,
+                    "cardStatus": "to-do",
+                    "cardTitle": "Card 8",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 9",
+                    "cardDescription": "Description 9",
+                    "cardNumber": 19,
+                    "cardStatus": "open",
+                    "cardTitle": "Card 9",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 10",
+                    "cardDescription": "Description 10",
+                    "cardNumber": 20,
+                    "cardStatus": "closed",
+                    "cardTitle": "Card 10",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 11",
+                    "cardDescription": "Description 11",
+                    "cardNumber": 21,
+                    "cardStatus": "in-progress",
+                    "cardTitle": "Card 11",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 12",
+                    "cardDescription": "Description 12",
+                    "cardNumber": 22,
+                    "cardStatus": "to-do",
+                    "cardTitle": "Card 12",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                ]
+              }
+              filterCardsAndTemplateElementsByStatus={[Function]}
+            />,
+          ],
+          "className": "WireframeEditContent",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "buildElementObjectForBackend": [Function],
+              "cardIds": null,
+              "currentTemplate": undefined,
+              "fetchTemplateObjectFromBackend": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "cards": Array [
+                Object {
+                  "cardColumn": "Column 1",
+                  "cardDescription": "Description 1",
+                  "cardNumber": 11,
+                  "cardStatus": "open",
+                  "cardTitle": "Card 1",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 2",
+                  "cardDescription": "Description 2",
+                  "cardNumber": 12,
+                  "cardStatus": "closed",
+                  "cardTitle": "Card 2",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 3",
+                  "cardDescription": "Description 3",
+                  "cardNumber": 13,
+                  "cardStatus": "in-progress",
+                  "cardTitle": "Card 3",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 4",
+                  "cardDescription": "Description 4",
+                  "cardNumber": 14,
+                  "cardStatus": "to-do",
+                  "cardTitle": "Card 4",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 5",
+                  "cardDescription": "Description 5",
+                  "cardNumber": 15,
+                  "cardStatus": "open",
+                  "cardTitle": "Card 5",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 6",
+                  "cardDescription": "Description 6",
+                  "cardNumber": 16,
+                  "cardStatus": "closed",
+                  "cardTitle": "Card 6",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 7",
+                  "cardDescription": "Description 7",
+                  "cardNumber": 17,
+                  "cardStatus": "in-progress",
+                  "cardTitle": "Card 7",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 8",
+                  "cardDescription": "Description 8",
+                  "cardNumber": 18,
+                  "cardStatus": "to-do",
+                  "cardTitle": "Card 8",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 9",
+                  "cardDescription": "Description 9",
+                  "cardNumber": 19,
+                  "cardStatus": "open",
+                  "cardTitle": "Card 9",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 10",
+                  "cardDescription": "Description 10",
+                  "cardNumber": 20,
+                  "cardStatus": "closed",
+                  "cardTitle": "Card 10",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 11",
+                  "cardDescription": "Description 11",
+                  "cardNumber": 21,
+                  "cardStatus": "in-progress",
+                  "cardTitle": "Card 11",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+                Object {
+                  "cardColumn": "Column 12",
+                  "cardDescription": "Description 12",
+                  "cardNumber": 22,
+                  "cardStatus": "to-do",
+                  "cardTitle": "Card 12",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+              ],
+              "filterCardsAndTemplateElementsByStatus": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="WireframeHeaderContainer"
+          >
+            <span
+              className="WireframeTitle"
+            >
+              Wireframe Title
+            </span>
+            <span
+              className="Timestamps"
+            >
+              <span
+                className="UpdatedTimestamp"
+              >
+                Updated At
+              </span>
+              <span
+                className="CreatedTimestamp"
+              >
+                Created At
+              </span>
+            </span>
+            <span
+              className="GithubLinks"
+            >
+              <span
+                className="RepoName"
+              >
+                <a
+                  href="https://github.com/JoelSmith123/git_wired_fe"
+                >
+                  Repo Name
+                </a>
+              </span>
+              <span
+                className="ProjectName"
+              >
+                <a
+                  href="https://github.com/JoelSmith123/git_wired_fe/projects/1"
+                >
+                  Project Name
+                </a>
+              </span>
+            </span>
+          </div>,
+          <div
+            className="WireframeEditContent"
+          >
+            <TemplateContainer
+              buildElementObjectForBackend={[Function]}
+              cardIds={null}
+            />
+            <GithubCardContainer
+              cards={
+                Array [
+                  Object {
+                    "cardColumn": "Column 1",
+                    "cardDescription": "Description 1",
+                    "cardNumber": 11,
+                    "cardStatus": "open",
+                    "cardTitle": "Card 1",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 2",
+                    "cardDescription": "Description 2",
+                    "cardNumber": 12,
+                    "cardStatus": "closed",
+                    "cardTitle": "Card 2",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 3",
+                    "cardDescription": "Description 3",
+                    "cardNumber": 13,
+                    "cardStatus": "in-progress",
+                    "cardTitle": "Card 3",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 4",
+                    "cardDescription": "Description 4",
+                    "cardNumber": 14,
+                    "cardStatus": "to-do",
+                    "cardTitle": "Card 4",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 5",
+                    "cardDescription": "Description 5",
+                    "cardNumber": 15,
+                    "cardStatus": "open",
+                    "cardTitle": "Card 5",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 6",
+                    "cardDescription": "Description 6",
+                    "cardNumber": 16,
+                    "cardStatus": "closed",
+                    "cardTitle": "Card 6",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 7",
+                    "cardDescription": "Description 7",
+                    "cardNumber": 17,
+                    "cardStatus": "in-progress",
+                    "cardTitle": "Card 7",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 8",
+                    "cardDescription": "Description 8",
+                    "cardNumber": 18,
+                    "cardStatus": "to-do",
+                    "cardTitle": "Card 8",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 9",
+                    "cardDescription": "Description 9",
+                    "cardNumber": 19,
+                    "cardStatus": "open",
+                    "cardTitle": "Card 9",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 10",
+                    "cardDescription": "Description 10",
+                    "cardNumber": 20,
+                    "cardStatus": "closed",
+                    "cardTitle": "Card 10",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 11",
+                    "cardDescription": "Description 11",
+                    "cardNumber": 21,
+                    "cardStatus": "in-progress",
+                    "cardTitle": "Card 11",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 12",
+                    "cardDescription": "Description 12",
+                    "cardNumber": 22,
+                    "cardStatus": "to-do",
+                    "cardTitle": "Card 12",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                ]
+              }
+              filterCardsAndTemplateElementsByStatus={[Function]}
+            />
+          </div>,
+        ],
+        "className": "WireframeEditView",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                className="WireframeTitle"
+              >
+                Wireframe Title
+              </span>,
+              <span
+                className="Timestamps"
+              >
+                <span
+                  className="UpdatedTimestamp"
+                >
+                  Updated At
+                </span>
+                <span
+                  className="CreatedTimestamp"
+                >
+                  Created At
+                </span>
+              </span>,
+              <span
+                className="GithubLinks"
+              >
+                <span
+                  className="RepoName"
+                >
+                  <a
+                    href="https://github.com/JoelSmith123/git_wired_fe"
+                  >
+                    Repo Name
+                  </a>
+                </span>
+                <span
+                  className="ProjectName"
+                >
+                  <a
+                    href="https://github.com/JoelSmith123/git_wired_fe/projects/1"
+                  >
+                    Project Name
+                  </a>
+                </span>
+              </span>,
+            ],
+            "className": "WireframeHeaderContainer",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Wireframe Title",
+                "className": "WireframeTitle",
+              },
+              "ref": null,
+              "rendered": "Wireframe Title",
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span
+                    className="UpdatedTimestamp"
+                  >
+                    Updated At
+                  </span>,
+                  <span
+                    className="CreatedTimestamp"
+                  >
+                    Created At
+                  </span>,
+                ],
+                "className": "Timestamps",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Updated At",
+                    "className": "UpdatedTimestamp",
+                  },
+                  "ref": null,
+                  "rendered": "Updated At",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Created At",
+                    "className": "CreatedTimestamp",
+                  },
+                  "ref": null,
+                  "rendered": "Created At",
+                  "type": "span",
+                },
+              ],
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span
+                    className="RepoName"
+                  >
+                    <a
+                      href="https://github.com/JoelSmith123/git_wired_fe"
+                    >
+                      Repo Name
+                    </a>
+                  </span>,
+                  <span
+                    className="ProjectName"
+                  >
+                    <a
+                      href="https://github.com/JoelSmith123/git_wired_fe/projects/1"
+                    >
+                      Project Name
+                    </a>
+                  </span>,
+                ],
+                "className": "GithubLinks",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <a
+                      href="https://github.com/JoelSmith123/git_wired_fe"
+                    >
+                      Repo Name
+                    </a>,
+                    "className": "RepoName",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Repo Name",
+                      "href": "https://github.com/JoelSmith123/git_wired_fe",
+                    },
+                    "ref": null,
+                    "rendered": "Repo Name",
+                    "type": "a",
+                  },
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <a
+                      href="https://github.com/JoelSmith123/git_wired_fe/projects/1"
+                    >
+                      Project Name
+                    </a>,
+                    "className": "ProjectName",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Project Name",
+                      "href": "https://github.com/JoelSmith123/git_wired_fe/projects/1",
+                    },
+                    "ref": null,
+                    "rendered": "Project Name",
+                    "type": "a",
+                  },
+                  "type": "span",
+                },
+              ],
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <TemplateContainer
+                buildElementObjectForBackend={[Function]}
+                cardIds={null}
+              />,
+              <GithubCardContainer
+                cards={
+                  Array [
+                    Object {
+                      "cardColumn": "Column 1",
+                      "cardDescription": "Description 1",
+                      "cardNumber": 11,
+                      "cardStatus": "open",
+                      "cardTitle": "Card 1",
+                      "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                    },
+                    Object {
+                      "cardColumn": "Column 2",
+                      "cardDescription": "Description 2",
+                      "cardNumber": 12,
+                      "cardStatus": "closed",
+                      "cardTitle": "Card 2",
+                      "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                    },
+                    Object {
+                      "cardColumn": "Column 3",
+                      "cardDescription": "Description 3",
+                      "cardNumber": 13,
+                      "cardStatus": "in-progress",
+                      "cardTitle": "Card 3",
+                      "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                    },
+                    Object {
+                      "cardColumn": "Column 4",
+                      "cardDescription": "Description 4",
+                      "cardNumber": 14,
+                      "cardStatus": "to-do",
+                      "cardTitle": "Card 4",
+                      "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                    },
+                    Object {
+                      "cardColumn": "Column 5",
+                      "cardDescription": "Description 5",
+                      "cardNumber": 15,
+                      "cardStatus": "open",
+                      "cardTitle": "Card 5",
+                      "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                    },
+                    Object {
+                      "cardColumn": "Column 6",
+                      "cardDescription": "Description 6",
+                      "cardNumber": 16,
+                      "cardStatus": "closed",
+                      "cardTitle": "Card 6",
+                      "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                    },
+                    Object {
+                      "cardColumn": "Column 7",
+                      "cardDescription": "Description 7",
+                      "cardNumber": 17,
+                      "cardStatus": "in-progress",
+                      "cardTitle": "Card 7",
+                      "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                    },
+                    Object {
+                      "cardColumn": "Column 8",
+                      "cardDescription": "Description 8",
+                      "cardNumber": 18,
+                      "cardStatus": "to-do",
+                      "cardTitle": "Card 8",
+                      "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                    },
+                    Object {
+                      "cardColumn": "Column 9",
+                      "cardDescription": "Description 9",
+                      "cardNumber": 19,
+                      "cardStatus": "open",
+                      "cardTitle": "Card 9",
+                      "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                    },
+                    Object {
+                      "cardColumn": "Column 10",
+                      "cardDescription": "Description 10",
+                      "cardNumber": 20,
+                      "cardStatus": "closed",
+                      "cardTitle": "Card 10",
+                      "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                    },
+                    Object {
+                      "cardColumn": "Column 11",
+                      "cardDescription": "Description 11",
+                      "cardNumber": 21,
+                      "cardStatus": "in-progress",
+                      "cardTitle": "Card 11",
+                      "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                    },
+                    Object {
+                      "cardColumn": "Column 12",
+                      "cardDescription": "Description 12",
+                      "cardNumber": 22,
+                      "cardStatus": "to-do",
+                      "cardTitle": "Card 12",
+                      "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                    },
+                  ]
+                }
+                filterCardsAndTemplateElementsByStatus={[Function]}
+              />,
+            ],
+            "className": "WireframeEditContent",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "buildElementObjectForBackend": [Function],
+                "cardIds": null,
+                "currentTemplate": undefined,
+                "fetchTemplateObjectFromBackend": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "cards": Array [
+                  Object {
+                    "cardColumn": "Column 1",
+                    "cardDescription": "Description 1",
+                    "cardNumber": 11,
+                    "cardStatus": "open",
+                    "cardTitle": "Card 1",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 2",
+                    "cardDescription": "Description 2",
+                    "cardNumber": 12,
+                    "cardStatus": "closed",
+                    "cardTitle": "Card 2",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 3",
+                    "cardDescription": "Description 3",
+                    "cardNumber": 13,
+                    "cardStatus": "in-progress",
+                    "cardTitle": "Card 3",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 4",
+                    "cardDescription": "Description 4",
+                    "cardNumber": 14,
+                    "cardStatus": "to-do",
+                    "cardTitle": "Card 4",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 5",
+                    "cardDescription": "Description 5",
+                    "cardNumber": 15,
+                    "cardStatus": "open",
+                    "cardTitle": "Card 5",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 6",
+                    "cardDescription": "Description 6",
+                    "cardNumber": 16,
+                    "cardStatus": "closed",
+                    "cardTitle": "Card 6",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 7",
+                    "cardDescription": "Description 7",
+                    "cardNumber": 17,
+                    "cardStatus": "in-progress",
+                    "cardTitle": "Card 7",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 8",
+                    "cardDescription": "Description 8",
+                    "cardNumber": 18,
+                    "cardStatus": "to-do",
+                    "cardTitle": "Card 8",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 9",
+                    "cardDescription": "Description 9",
+                    "cardNumber": 19,
+                    "cardStatus": "open",
+                    "cardTitle": "Card 9",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 10",
+                    "cardDescription": "Description 10",
+                    "cardNumber": 20,
+                    "cardStatus": "closed",
+                    "cardTitle": "Card 10",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 11",
+                    "cardDescription": "Description 11",
+                    "cardNumber": 21,
+                    "cardStatus": "in-progress",
+                    "cardTitle": "Card 11",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  Object {
+                    "cardColumn": "Column 12",
+                    "cardDescription": "Description 12",
+                    "cardNumber": 22,
+                    "cardStatus": "to-do",
+                    "cardTitle": "Card 12",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                ],
+                "filterCardsAndTemplateElementsByStatus": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

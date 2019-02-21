@@ -1,26 +1,20 @@
-import React    from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-
-const chai   = require('chai');
-const should = chai.should;
-const expect = chai.expect;
-
-import Profile      from './Profile.js'
+import { shallow, mount } from 'enzyme';
+import Profile from './Profile.js'
 import UserSession from '../Tools/UserSession.js'
 
-
-var container = new Profile
-
-
 describe('Profile', () => {
-
-
-  xit('renders without crashing', () => {
+  it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Profile user={ new UserSession } />, div);
-    // TO DO - ^^^ I don't know how to pass all the props this needs
     ReactDOM.unmountComponentAtNode(div);
   });
+
+  it('should match snapshot', () => {
+    const wrapper = shallow(<Profile user={new UserSession}/>)
+    expect(wrapper).toMatchSnapshot()
+  })  
 
   xit('renders RecentProjects', () => {
     // TO DO - TEST ME

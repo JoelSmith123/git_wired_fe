@@ -1,83 +1,85 @@
-const chai   = require('chai');
-const should = chai.should;
-const expect = chai.expect;
-
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { shallow, mount } from 'enzyme';
 import ProjectCard from './ProjectCard.js'
 
 
-const stubProject = {
-    'projectTitle': 'Title1',
-    'repoName':     'RepoName1',
-    'createdAt':    'Created1',
-    'updatedAt':    'Updated1',
-  }
 
 describe('ProjectCard', () => {
+  let mockProject
+  beforeEach(() => {
+    mockProject = {
+      'projectTitle': 'Title1',
+      'repoName':     'RepoName1',
+      'createdAt':    'Created1',
+      'updatedAt':    'Updated1',
+    }
+  })
+
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<ProjectCard project={mockProject} />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
+
+  it('should match snapshot', () => {
+    const wrapper = shallow(<ProjectCard project={mockProject} />)
+    expect(wrapper).toMatchSnapshot()
+  }) 
 
   describe('Title', () => {
-    it.skip('gets project title', done => {
-      
-      done();
+    it('gets project title', () => {
+      const wrapper = shallow(<ProjectCard project={ mockProject }/>)
+    
+      expect(wrapper.instance().getTitle()).toEqual(mockProject.projectTitle)      
     });
-    it.skip('renders project title', done => {
 
-            // TO DO - TEST HERE
+    it('renders project title', ()=> {
+      const wrapper = shallow(<ProjectCard project={ mockProject }/>)
 
-      done();
+      expect(wrapper.instance().renderTitle()).toEqual(<div className="ProjectTitle">{wrapper.instance().getTitle()}</div>)
     });
   });
 
   describe('Repo Name', () => {
-    it.skip('gets repo name', done => {
-
-      // TO DO - TEST HERE
-
-      done();
+    it('gets repo name', () => {
+      const wrapper = shallow(<ProjectCard project={ mockProject }/>)
+    
+      expect(wrapper.instance().getRepo()).toEqual(mockProject.repoName)
     });
-    it.skip('renders repo name', done => {
 
-            // TO DO - TEST HERE
+    it('renders repo name', () => {
+      const wrapper = shallow(<ProjectCard project={ mockProject }/>)
 
-      done();
-    });
-  });
-
-  describe('Created At', () => {
-    it.skip('gets created at', done => {
-
-      // TO DO - TEST HERE
-
-      done();
-    });
-    it.skip('renders created at', done => {
-
-            // TO DO - TEST HERE
-
-      done();
+      expect(wrapper.instance().renderRepo()).toEqual(<div className="RepoName">{wrapper.instance().getRepo()}</div>)
     });
   });
 
   describe('Updated At', () => {
-    it.skip('gets updated at', done => {
-
-      // TO DO - TEST HERE
-
-      done();
+    it('gets updated at', () => {
+      const wrapper = shallow(<ProjectCard project={ mockProject }/>)
+    
+      expect(wrapper.instance().getUpdated()).toEqual(mockProject.updatedAt)
     });
-    it.skip('renders updated at', done => {
 
-            // TO DO - TEST HERE
+    it('renders updated at', () => {
+      const wrapper = shallow(<ProjectCard project={ mockProject }/>)
 
-      done();
+      expect(wrapper.instance().renderUpdated()).toEqual(<div className="Updated">{wrapper.instance().getUpdated()}</div>)
     });
   });
 
-  it('renders card', done => {
+  describe('Created At', () => {
+    it('gets created at', () => {
+      const wrapper = shallow(<ProjectCard project={ mockProject }/>)
+    
+      expect(wrapper.instance().getCreated()).toEqual(mockProject.createdAt)
+    });
 
-    // TO DO - TEST HERE
+    it('renders created at', () => {
+      const wrapper = shallow(<ProjectCard project={ mockProject }/>)
 
-    done();
+      expect(wrapper.instance().renderCreated()).toEqual(<div className="Created">{wrapper.instance().getCreated()}</div>)
+    });
   });
-
-
 });
