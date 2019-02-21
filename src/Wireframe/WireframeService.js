@@ -124,6 +124,7 @@ export default class WireframeService {
     return stub
   }
 
+
   getGithub = (parseFunc) => {
     // TO DO - No Repos exist in DB until GET Repos is called in new wireframe
     // let id =
@@ -155,7 +156,7 @@ export default class WireframeService {
     return stub
   }
 
-  getWireframe = (parseFunc) => {
+  getWireframe = async (parseFunc) => {
     let id   = this.props.wireframe_id
     let repo
     let url  = `https://git-wired-be.herokuapp.com/api/v1/repositories/${repo}/wireframes/${id}`

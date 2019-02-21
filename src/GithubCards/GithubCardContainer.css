@@ -26,10 +26,11 @@
 
 .github-cards-container-status-dropdown {
   position: relative;
+  width: 150px;
   z-index: 1; 
 }
 
-.github-cards-container-status-dropdown {
+.github-cards-container-status-dropdown-btn {
   height: 40px;
   width: 150px; 
 }

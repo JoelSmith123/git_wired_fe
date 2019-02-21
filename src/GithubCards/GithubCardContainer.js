@@ -45,22 +45,22 @@ export default class GithubCardContainer extends Component {
           {
             this.state.showDropdown ? (
               <div className='github-cards-container-status-dropdown'>
-                <button className='github-cards-container-status-dropdown'
+                <button className='github-cards-container-status-dropdown-btn'
                         onClick={(event) => this.cardsStatusSelect(event, event.target.name)}
                 >---Show All---</button>
-                <button className='github-cards-container-status-dropdown'
+                <button className='github-cards-container-status-dropdown-btn'
                         name='open'
                         onClick={(event) => this.cardsStatusSelect(event, event.target.name)}
                 >Open</button>
-                <button className='github-cards-container-status-dropdown'
+                <button className='github-cards-container-status-dropdown-btn'
                         name='closed'
                         onClick={(event) => this.cardsStatusSelect(event, event.target.name)}
                 >Closed</button>
-                <button className='github-cards-container-status-dropdown'
+                <button className='github-cards-container-status-dropdown-btn'
                         name='in-progress'
                         onClick={(event) => this.cardsStatusSelect(event, event.target.name)}
                 >In-Progress</button>
-                <button className='github-cards-container-status-dropdown'
+                <button className='github-cards-container-status-dropdown-btn'
                         name='to-do'
                         onClick={(event) => this.cardsStatusSelect(event, event.target.name)}                        
                 >To Do</button>
