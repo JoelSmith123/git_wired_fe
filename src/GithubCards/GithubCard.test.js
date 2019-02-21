@@ -34,8 +34,10 @@ describe('GithubCard', () => {
     expect(wrapper.instance().getTitle()).toEqual(mockData.cardTitle)
   })
 
-  xit('gets description from card', () => {
-    // TO DO - TEST ME
+  it('gets description from card', () => {
+    const wrapper = shallow(<GithubCard card={ mockData }/>)
+
+    expect(wrapper.instance().getDescription()).toEqual(mockData.cardDescription)    
   })
 
   xit('gets card number from card', () => {
