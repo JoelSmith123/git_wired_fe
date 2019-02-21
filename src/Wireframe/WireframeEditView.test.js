@@ -7,10 +7,12 @@ import WireframeService from './WireframeService.js'
 
 describe('WireframeEditView', () => {
   let frame
-  let mockData
+  let mockWireframeData
+  let mockGithubData
   beforeEach(() => {
     frame = new WireframeService
-    mockData = frame.stubWireframe()
+    mockWireframeData = frame.stubWireframe()
+    mockGithubData = frame.stubGithub()
   })
 
   it('renders without crashing', () => {
@@ -26,7 +28,7 @@ describe('WireframeEditView', () => {
 
   it('should parse wireframe response', () => {
     const wrapper = shallow(<WireframeEditView />)
-    const mockInfo = mockData['data']['attributes']
+    const mockInfo = mockWireframeData['data']['attributes']
     const mockState = {
       wireframeTitle: mockInfo['title'],
       wireframeUpdated: mockInfo['updated'],
@@ -39,4 +41,20 @@ describe('WireframeEditView', () => {
     expect(wrapper.state('wireframeUpdated')).toEqual(mockState.wireframeUpdated)
     expect(wrapper.state('wireframeCreated')).toEqual(mockState.wireframeCreated)
   })
+
+  it('should parse github response', () => {
+    const wrapper = shallow(<WireframeEditView />)
+    const mockInfo = mockGithubData['data']['attributes']
+    const mockState = {
+      repo: mockInfo['repo'],
+      project: mockInfo['project'],
+      cards: mockInfo['cards']
+    }
+
+    wrapper.instance().parseGithubResponse(frame.stubGithub())
+
+    expect(wrapper.state('repo')).toEqual(mockState.repo)
+    expect(wrapper.state('project')).toEqual(mockState.project)
+    expect(wrapper.state('cards')).toEqual(mockState.cards)
+  })  
 })
