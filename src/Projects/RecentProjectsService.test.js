@@ -7,8 +7,10 @@ import UserSession from '../Tools/UserSession.js'
 describe('RecentProjectsService', () => {
   let recentProjectsService
   let mockStub
+  let user
   beforeEach(() => {
     recentProjectsService = new RecentProjectsService()
+    user = new UserSession
 
     mockStub =  {
       'data': {
@@ -46,12 +48,20 @@ describe('RecentProjectsService', () => {
     expect(wrapper.stubRecent()).toEqual(mockStub)
   })
 
-  it.skip('should return recents on getRecents invokation', () => {
+  it('should check if fetch is called with correct params in getRecents', () => {
     const wrapper = recentProjectsService
     const parseFunc = jest.fn()
+    const expected = [
+      'https://git-wired-be.herokuapp.com/api/v1/wireframes',
+      {
+        method:  "GET",
+        headers: { "Content-Type": "application/json", },
+        body:    JSON.stringify(user.getGitWiredToken()),
+      } 
+    ]
 
     wrapper.getRecents(parseFunc)
-    expect(window.fetch).toHaveBeenCalled()
+    expect(window.fetch).toHaveBeenCalledWith(...expected)
   })
 })
 
