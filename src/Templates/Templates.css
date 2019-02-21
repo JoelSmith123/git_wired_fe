@@ -65,6 +65,10 @@
   border: none;
 }
 
+.template-info input {
+  background-color: #fff;
+}
+
 .template-header:hover .template-info,
 .template-page-section:hover .template-info,
 .template-footer:hover .template-info {

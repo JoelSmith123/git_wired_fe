@@ -147,9 +147,10 @@ export default class BlogPageTemplate extends Component {
     const templateObj = this.state.templateObj
     return (
       <div className='BlogPageTemplate' ref='BlogPageTemplate'>
-        <div className='template-header' id={templateObj.header.card}>
+        <div className='template-header' id='#1'>
         <div className='template-info'>
           <form>
+            <h3>#1</h3>
             <input onChange={this.handleChange} 
                    type='text' 
                    name='header.label'
@@ -171,9 +172,10 @@ export default class BlogPageTemplate extends Component {
           }
         </div>
         <div className='template-card-container'>
-          <div className='template-page-section' id={templateObj.pageSections[1].card}>
+          <div className='template-page-section' id='#2'>
             <div className='template-info'>
-              <form onSubmit={this.handleClick}>
+              <form>
+                <h3>#2</h3>
                 <input onChange={this.handleChange} 
                        type='text' 
                        name='pageSections[1].label'
@@ -189,9 +191,10 @@ export default class BlogPageTemplate extends Component {
               </form>
             </div>
           </div>
-          <div className='template-page-section' id={templateObj.pageSections[2].card}>
+          <div className='template-page-section' id='#3'>
             <div className='template-info'>
-              <form onSubmit={this.handleClick}>
+              <h3>#3</h3>
+              <form>
                 <input onChange={this.handleChange} 
                        type='text' 
                        name='pageSections[2].label'
@@ -208,22 +211,23 @@ export default class BlogPageTemplate extends Component {
             </div>
           </div>        
         </div>
-        <div className='template-footer' id={templateObj.footer.card}>
+        <div className='template-footer' id='#4'>
           <div className='template-info'>
-            <form onSubmit={this.handleClick}>
-                <input onChange={this.handleChange} 
-                       type='text' 
-                       name='footer.label'
-                       placeholder='Footer Label'
-                >
-                </input>
-                <input onChange={this.handleChange} 
-                       type='text' 
-                       name='footer.desc'
-                       placeholder='Footer Description'
-                >
-                </input>
-              </form>
+            <form>
+              <h3>#4</h3>
+              <input onChange={this.handleChange} 
+                     type='text' 
+                     name='footer.label'
+                     placeholder='Footer Label'
+              >
+              </input>
+              <input onChange={this.handleChange} 
+                     type='text' 
+                     name='footer.desc'
+                     placeholder='Footer Description'
+              >
+              </input>
+            </form>
           </div>
         </div>
       </div>
