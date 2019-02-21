@@ -82,13 +82,4 @@ describe('ProjectCard', () => {
       expect(wrapper.instance().renderCreated()).toEqual(<div className="Created">{wrapper.instance().getCreated()}</div>)
     });
   });
-
-  it('renders card', done => {
-
-    // TO DO - TEST HERE
-
-    done();
-  });
-
-
 });

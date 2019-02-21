@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecentProjects should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <RecentProjects />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <ProjectCard
+          project={
+            Object {
+              "createdAt": "Created At",
+              "projectTitle": "Wireframe Title 1",
+              "repoName": "Repo 1",
+              "updatedAt": "Updated At",
+            }
+          }
+        />,
+        <ProjectCard
+          project={
+            Object {
+              "createdAt": "Created At",
+              "projectTitle": "Wireframe Title 2",
+              "repoName": "Repo 2",
+              "updatedAt": "Updated At",
+            }
+          }
+        />,
+      ],
+      "className": "RecentProjects",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "project": Object {
+            "createdAt": "Created At",
+            "projectTitle": "Wireframe Title 1",
+            "repoName": "Repo 1",
+            "updatedAt": "Updated At",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "project": Object {
+            "createdAt": "Created At",
+            "projectTitle": "Wireframe Title 2",
+            "repoName": "Repo 2",
+            "updatedAt": "Updated At",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <ProjectCard
+            project={
+              Object {
+                "createdAt": "Created At",
+                "projectTitle": "Wireframe Title 1",
+                "repoName": "Repo 1",
+                "updatedAt": "Updated At",
+              }
+            }
+          />,
+          <ProjectCard
+            project={
+              Object {
+                "createdAt": "Created At",
+                "projectTitle": "Wireframe Title 2",
+                "repoName": "Repo 2",
+                "updatedAt": "Updated At",
+              }
+            }
+          />,
+        ],
+        "className": "RecentProjects",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "project": Object {
+              "createdAt": "Created At",
+              "projectTitle": "Wireframe Title 1",
+              "repoName": "Repo 1",
+              "updatedAt": "Updated At",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "project": Object {
+              "createdAt": "Created At",
+              "projectTitle": "Wireframe Title 2",
+              "repoName": "Repo 2",
+              "updatedAt": "Updated At",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
