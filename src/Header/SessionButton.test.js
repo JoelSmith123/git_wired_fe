@@ -34,8 +34,23 @@ describe('SessionButton', () => {
   it('should call goToAuth on loginButton click', () => {
     const wrapper = mount(<SessionButton user={new UserSession} changeLoggedInState={jest.fn()}/>)
     wrapper.instance().goToAuth = jest.fn()
+
     wrapper.find('.header-login-btn').simulate('click')
+
     expect(wrapper.instance().goToAuth).toHaveBeenCalled()
+  })
+
+  it('should call functions on logoutButton click', () => {
+    const user = {
+      logout: jest.fn(),
+      isLoggedIn: () => true
+    }
+    const wrapper = mount(<SessionButton user={user} changeLoggedInState={jest.fn()}/>)
+    wrapper.instance().updateState = jest.fn()
+    wrapper.find('.header-logout-btn').simulate('click')
+
+    expect(wrapper.instance().updateState).toHaveBeenCalled()
+    expect(wrapper.prop('user').logout).toHaveBeenCalled()
   })
 
 })
