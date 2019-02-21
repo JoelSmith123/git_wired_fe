@@ -3,6 +3,7 @@ import UserSession from '../Tools/UserSession.js'
 export default class WireframeService {
 
   constructor() {
+    // TO DO - this user can be passed down from App
     this.user = new UserSession
   }
 
@@ -124,9 +125,9 @@ export default class WireframeService {
   }
 
   getGithub = (parseFunc) => {
-    // TO DO - we're no longer using 'project'
-
-    let id  = this.props.project_id
+    // TO DO - No Repos exist in DB until GET Repos is called in new wireframe
+    // let id =
+    // let id  = this.props.project_id
     let url = `https://git-wired-be.herokuapp.com/api/v1/repositories/${id}/issues`
     fetch(url, {
         method:  "GET",
