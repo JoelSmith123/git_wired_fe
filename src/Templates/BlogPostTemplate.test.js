@@ -15,4 +15,14 @@ describe('BlogPostTemplate', () => {
     const wrapper = shallow(<BlogPostTemplate />)
     expect(wrapper).toMatchSnapshot()
   })   
+
+  it('should update state with new header buttons', () => {
+    const wrapper = shallow(<BlogPostTemplate />)
+    const mockEvent = { target: {}, preventDefault: jest.fn() }
+
+    wrapper.setState({ headerButtons: 1 })
+    wrapper.instance().addBtnToHeader(mockEvent)
+
+    expect(wrapper.state('headerButtons')).toEqual(2)
+  })
 })
