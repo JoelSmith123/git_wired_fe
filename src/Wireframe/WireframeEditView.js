@@ -67,6 +67,39 @@ export default class WireframeEditView extends Component {
     }
   }
 
+  buildElementObjectForBackend = (templateObj) => {
+    console.log(templateObj)
+    // this.postTemplateToBackend(JSON.stringify(templateObj))
+  }
+
+  // postTemplateToBackend = async (data) => {
+  //   const url = ''
+  //   try {
+  //     const response = await fetch(url, {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(data)
+  //     })      
+  //   } catch(error) {
+  //     console.log(error)
+  //   }
+  // }
+
+  // fetchTemplateObjectFromBackend = async () => {
+  //   const url = ''
+  //   try {
+  //     const response = await fetch(url)
+  //     const fetchedTemplateObj = response.json()
+  //     return fetchedTemplateObj
+  //   } catch(error) {
+  //     console.log(error)
+  //   }
+  // }
+
+
+
 
   render() {
     if (this.state == null || undefined) { return null }
@@ -80,7 +113,6 @@ export default class WireframeEditView extends Component {
             <span className='UpdatedTimestamp'>{ this.state.wireframeUpdated }</span>
             <span className='CreatedTimestamp'>{ this.state.wireframeCreated }</span>
           </span>
-
           <span className='GithubLinks'>
             <span className='RepoName'>
               <a href={this.state.repo['url']}>{ this.state.repo['name'] }</a>
@@ -89,12 +121,13 @@ export default class WireframeEditView extends Component {
               <a href={this.state.project['url']}>{ this.state.project['name'] }</a>
             </span>
           </span>
-
         </div>
 
         <div className='WireframeEditContent'>
           <TemplateContainer currentTemplate={this.props.template}
                              cardIds={this.getFilteredCardIdsToFilterElements()}
+                             buildElementObjectForBackend={this.buildElementObjectForBackend}
+                             fetchTemplateObjectFromBackend={this.fetchTemplateObjectFromBackend}
            />
           <GithubCardContainer cards={ this.state.filteredCards ?  this.state.filteredCards : this.state.cards } 
                                filterCardsAndTemplateElementsByStatus={this.filterCardsAndTemplateElementsByStatus}
