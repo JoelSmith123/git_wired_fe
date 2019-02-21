@@ -61,11 +61,4 @@ describe('RecentProjects', () => {
   it('render Project Cards', () => {
     expect(wrapper.instance().renderProjectCards(mockRecents)).toEqual(mockCardArr)
   });
-
-  it.skip('renders', done => {
-
-    done();
-  });
-
-
 });

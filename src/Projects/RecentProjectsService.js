@@ -1,8 +1,6 @@
 import UserSession from '../Tools/UserSession.js'
 
-
 export default class RecentProjectsService {
-
   constructor() {
     this.user = new UserSession
   }
