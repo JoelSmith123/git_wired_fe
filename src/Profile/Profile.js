@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 import RecentProjects    from '../Projects/RecentProjects.js'
 import GithubRepoService from '../GithubRepos/GithubRepoService.js'
+import WireframeEditView from '../Wireframe/WireframeEditView.js'
 
 import './Profile.css';
 
@@ -43,10 +44,20 @@ export default class Profile extends Component {
              name="wireframe-title"
              placeholder='Untitled Wireframe'
              type="text"
+             onChange={ (event) => {this.addTitleToState(event.target.value)} }
       />
     )
   }
+  // onfocusout={ (event) => {this.addTitleToState(event.target.value)}
+  // .target.value
 
+  // addTitleToState = (event) => {
+  //   let text = event.target.value
+  //   this.setState({title: text})
+  // }
+  addTitleToState = (text) => {
+    this.setState({title: text})
+  }
 
   // ---- Repos  ---
 
@@ -80,16 +91,6 @@ export default class Profile extends Component {
     this.setState( { repo: repo} )
   }
 
-
-
-  // wireframeType = () => {
-  //   // includes dropdown ?
-  // }
-  //
-  //
-  // componentDidMount() {
-  //
-  // }
 
   // ---- Templates  ---
 // name='card-page-template'
@@ -131,31 +132,54 @@ export default class Profile extends Component {
     this.setState( { template: template} )
   }
 
+  // ---- Submit New Wireframe  ---
+
+  assessFormCompletion = () => {
+    var finished = (
+      Boolean(this.state.repo) &&
+      Boolean(this.state.title) &&
+      Boolean(this.state.template)
+    )
+    if (finished) { this.setState({ moveToEdit: true }) }
+  }
+
+
 
   // ---- Render  ---
 
   render() {
     return (
-      <div className='Profile'>
-        <div className='profile-select-options'>
-          <h2 className='profile-select-options-title'>Pick a new wireframe!</h2>
-          <div className='profile-select-options-btn-container'>
-            <button onClick={ () => { this.repoField(); } }
-            >Repo</button>
-            { this.state.showRepoDropdown ? ( <React.Fragment>{this.repoDropdown()}</React.Fragment>) : null }
-            { this.titleField() }
-            <button onClick={ () => { this.activateTemplateDropdown(); } }>Type of page</button>
-            { this.state.showTemplateDropdown ? this.templateDropdown() : null }
-            <button>Start</button>
+    <React.Fragment>
+      {
+        (
+          ( !this.state.moveToEdit ) ?
+          <div className='Profile'>
+            <div className='profile-select-options'>
+              <h2 className='profile-select-options-title'>Pick a new wireframe!</h2>
+              <div className='profile-select-options-btn-container'>
+                <button onClick={ () => { this.repoField(); } }
+                >Repo</button>
+                { this.state.showRepoDropdown ? ( <React.Fragment>{this.repoDropdown()}</React.Fragment>) : null }
+                { this.titleField() }
+                <button onClick={ () => { this.activateTemplateDropdown(); } }>Type of page</button>
+                { this.state.showTemplateDropdown ? this.templateDropdown() : null }
+                <button onClick={ () => this.assessFormCompletion() }
+                >Start</button>
+              </div>
+            </div>
+            <div className='recent-projects-container'>
+              <h2 className='recent-projects-container-title'>Recent Projects</h2>
+              <div className='recent-projects-card-container'>
+              {  <RecentProjects changeViewPageState={this.props.changeViewPageState}/> }
+              </div>
+            </div>
           </div>
-        </div>
-        <div className='recent-projects-container'>
-          <h2 className='recent-projects-container-title'>Recent Projects</h2>
-          <div className='recent-projects-card-container'>
-          {  <RecentProjects changeViewPageState={this.props.changeViewPageState}/> }
-          </div>
-        </div>
-      </div>
+         :
+          <WireframeEditView template={this.state.template} wireframe={this.state} />
+
+      )
+      }
+    </React.Fragment>
     )
   }
 }
