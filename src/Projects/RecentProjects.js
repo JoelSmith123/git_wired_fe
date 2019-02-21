@@ -5,6 +5,13 @@ import UserSession from '../Tools/UserSession.js'
 
 
 export default class RecentProjects extends Component {
+
+  // constructor(props) {
+  //   super(props)
+  //   this.chan = this.props.changeLoggedInState.bind(this)
+  // }
+
+
   componentDidMount() {
     const recents = new RecentProjectsService
     // ------- API call HERE ----------
@@ -22,7 +29,7 @@ export default class RecentProjects extends Component {
   // TO DO - TEST ME
   renderProjectCards(data){
     let cards = this.state.cards
-    return cards.map( (card) => <ProjectCard project={card} /> )
+    return cards.map( (card) => <ProjectCard project={card} changeViewPageState={this.props.changeViewPageState} /> )
   }
 
   // TO DO - TEST ME

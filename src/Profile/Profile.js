@@ -21,7 +21,7 @@ export default class Profile extends Component {
         <div className='recent-projects-container'>
           <h2 className='recent-projects-container-title'>Recent Projects</h2>
           <div className='recent-projects-card-container'>
-          {  <RecentProjects /> }
+          {  <RecentProjects changeViewPageState={this.props.changeViewPageState}/> }
           </div>
         </div>
       </div>

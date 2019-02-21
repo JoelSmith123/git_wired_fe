@@ -9,7 +9,6 @@ import RecentProjects     from '../Projects/RecentProjects.js'
 import WireframeEditView  from '../Wireframe/WireframeEditView.js'
 import TemplateContainer  from '../TemplateContainer/TemplateContainer.js'
 
-import './App.css';
 
 export default class App extends Component {
   constructor() {
@@ -18,10 +17,14 @@ export default class App extends Component {
       loggedIn: Boolean(sessionStorage['userToken']),
       // This is hardcoded & will cause a weird bug on refresh
       viewPage: null,
+      // TO DO - can we get rid of these last 2?
       template: '',
       viewProfile: false
     }
   }
+
+
+  // ----- Session ------
 
   componentDidMount() {
     if (Boolean(this.props.user.getURLToken())) {
@@ -30,18 +33,24 @@ export default class App extends Component {
     }
   }
 
-  selectTemplate = (event, template) => {
-    event.preventDefault()
-
-    this.setState({ template })
-  }
-
   changeLoggedInState = (event) => {
     if (event) {event.preventDefault()}
 
     this.setState({ loggedIn: this.props.user.isLoggedIn() })
   }
 
+
+
+  // ----- Can Remove ? ------
+
+  // TO DO - can we get rid of this or move it?
+  selectTemplate = (event, template) => {
+    event.preventDefault()
+
+    this.setState({ template })
+  }
+
+  // TO DO - can we get rid of this?
   viewProfile = (event) => {
     event.preventDefault()
 
@@ -51,39 +60,47 @@ export default class App extends Component {
     })
   }
 
+// ----------------------------
+
+
+
+// ----- Experiences / Views ------
 
   experience_userProfile = () => {
-    return (
-      this.state.loggedIn && (
-        this.state.viewPage == 'profile' ||
-        this.state.viewPage == null
-      ))
+    let loggedIn    = this.state.loggedIn
+    let profile     = (this.state.viewPage == 'profile')
+    let defaultView = (this.state.viewPage == null)
+
+    return ( loggedIn && ( profile || defaultView ) )
   }
 
   experience_userRecents = () => {
-    return ( this.state.loggedIn && this.state.viewPage == 'recent' )
+    let loggedIn = this.state.loggedIn
+    let recent   = this.state.viewPage == 'recent'
+
+    return ( loggedIn && recent )
   }
 
   experience_welcome = () => {
-    return (
-      !this.state.loggedIn || (
-        this.state.loggedIn &&
-        this.state.viewPage == 'welcome'
-    ))
+    let loggedIn    = this.state.loggedIn
+    let notLoggedIn = !loggedIn
+    let welcome     = this.state.viewPage == 'welcome'
+
+    return ( notLoggedIn || ( loggedIn && welcome ) )
   }
 
   experience_userWireframe = () => {
-    return ( this.state.loggedIn && this.state.viewPage == 'wireframe' )
+    let loggedIn  = this.state.loggedIn
+    let wireframe = this.state.viewPage == 'wireframe'
+
+    return ( loggedIn && wireframe )
   }
-
-
-
 
   selectComponentRender = () => {
 
     if (this.experience_welcome())       { return <Welcome /> }
-    if (this.experience_userProfile())   { return <Profile /> }
-    if (this.experience_userRecents())   { return <RecentProjects /> }
+    if (this.experience_userProfile())   { return <Profile        changeViewPageState={this.changeViewPageState} /> }
+    if (this.experience_userRecents())   { return <RecentProjects changeViewPageState={this.changeViewPageState} /> }
     if (this.experience_userWireframe()) { return <WireframeEditView template={this.state.template}/> }
 
   }
@@ -91,6 +108,10 @@ export default class App extends Component {
   changeViewPageState = (view) => {
     this.setState({ viewPage: view })
   }
+
+
+
+  // -------- Render --------
 
   render() {
     return (
