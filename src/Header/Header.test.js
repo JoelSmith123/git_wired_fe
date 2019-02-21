@@ -37,10 +37,16 @@ describe('Header', () => {
     expect(wrapper.state('showDropdown')).toEqual(false)
   })
 
-  it('should conditionally render header based on loggedIn state', () => {
+  it('should conditionally render header based on loggedIn state true', () => {
     const wrapper = mount(<Header user={ new UserSession } selectTemplate={jest.fn()} loggedIn={true} changeLoggedInState={jest.fn()}/>)
 
     expect(wrapper.find('.header-recent-projects-btn-dropdown-container')).toHaveLength(1)
   })
+
+  it('should conditionally render header based on loggedIn state false', () => {
+    const wrapper = mount(<Header user={ new UserSession } selectTemplate={jest.fn()} loggedIn={false} changeLoggedInState={jest.fn()}/>)
+
+    expect(wrapper.find('.header-recent-projects-btn-dropdown-container')).toHaveLength(0)
+  })  
 
 });
