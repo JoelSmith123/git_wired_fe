@@ -1,24 +1,20 @@
-import React    from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-
-const chai   = require('chai');
-const should = chai.should;
-const expect = chai.expect;
-
+import { shallow, mount } from 'enzyme';
 import Welcome from './Welcome.js'
 
-
-var container = new Welcome
-
-
 describe('Welcome', () => {
-
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Welcome />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
+
+  it('should match snapshot', () => {
+    const wrapper = shallow(<Welcome />)
+    expect(wrapper).toMatchSnapshot()
+  }) 
 
   xit('should render instructional content', () => {
     // TO DO - TEST ME
