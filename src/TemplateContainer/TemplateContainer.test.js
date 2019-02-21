@@ -37,6 +37,12 @@ describe('TemplateContainer', () => {
     expect(wrapper.instance().renderCurrentTemplate('blog-page-template')).toEqual(<BlogPageTemplate />)
   })
 
+  it('renders blog post template', () => {
+    const wrapper = shallow(<TemplateContainer />)
+    
+    expect(wrapper.instance().renderCurrentTemplate('blog-post-template')).toEqual(<BlogPostTemplate />)
+  })  
+
   xit('renders the right template', () => {
     // TO DO - TEST ME
   })
