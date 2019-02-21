@@ -24,7 +24,7 @@ export default class ProjectCard extends Component {
 
   renderRepo(){
     return (
-      <div className='RepoName'> { this.getRepo() } </div>
+      <div className='RepoName'>{ this.getRepo() }</div>
     )
   }
 

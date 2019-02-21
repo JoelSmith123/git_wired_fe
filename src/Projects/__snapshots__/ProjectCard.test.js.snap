@@ -36,9 +36,7 @@ ShallowWrapper {
         <div
           className="RepoName"
         >
-           
           RepoName1
-           
         </div>,
         <div
           className="Updated"
@@ -76,19 +74,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            " ",
-            "RepoName1",
-            " ",
-          ],
+          "children": "RepoName1",
           "className": "RepoName",
         },
         "ref": null,
-        "rendered": Array [
-          " ",
-          "RepoName1",
-          " ",
-        ],
+        "rendered": "RepoName1",
         "type": "div",
       },
       Object {
@@ -149,9 +139,7 @@ ShallowWrapper {
           <div
             className="RepoName"
           >
-             
             RepoName1
-             
           </div>,
           <div
             className="Updated"
@@ -189,19 +177,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              " ",
-              "RepoName1",
-              " ",
-            ],
+            "children": "RepoName1",
             "className": "RepoName",
           },
           "ref": null,
-          "rendered": Array [
-            " ",
-            "RepoName1",
-            " ",
-          ],
+          "rendered": "RepoName1",
           "type": "div",
         },
         Object {
