@@ -42,6 +42,12 @@ describe('GithubCardContainer', () => {
     expect(wrapper).toMatchSnapshot()
   })   
 
+  it('should render github cards', () => {
+    const wrapper = shallow(<GithubCardContainer cards={ cards }/>)
+
+    expect(wrapper.instance().renderGithubCards()).toHaveLength(2)
+  })
+
   xit('it has functional dropdown item - open', () => {
     // TO DO - TEST ME
   })
