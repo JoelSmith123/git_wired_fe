@@ -16,12 +16,18 @@ describe('Header', () => {
     expect(wrapper).toMatchSnapshot()
   })  
 
-  xit('toggleDropdown', () => {
-    // TO DO - TEST ME
+  it('should toggle dropdown state on toggleDropdown invocation', () => {
+    const wrapper = shallow(<Header user={ new UserSession } changeLoggedInState={jest.fn()}/>)
+    const mockEvent = { target: {}, preventDefault: jest.fn() }
+
+    wrapper.setState({ showDropdown: false })
+    wrapper.instance().toggleDropdown(mockEvent)
+
+    expect(wrapper.state('showDropdown')).toEqual(true)
   })
 
   xit('handleTemplateSelection', () => {
-    // TO DO - TEST ME
+
   })
 
   xit('renders things that I do not know to test', () => {
