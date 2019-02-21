@@ -17,9 +17,9 @@ export default class Header extends Component {
    return (
      <input type="button"
             onClick={ () => {
-              // this.props.user.setGitWiredToken('123');
-              // this.updateState()
-                this.goToAuth()
+              this.props.user.setGitWiredToken('eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.o2MiNuDrZn0bBOga7AwW7P6-aZBHpgLi2Lo1sCYz_N8');
+              this.updateState()
+                // this.goToAuth()
               }
             }
             className='header-btn header-login-btn'
