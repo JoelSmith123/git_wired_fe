@@ -17,7 +17,7 @@ describe('Header', () => {
   })  
 
   it('should toggle dropdown state on toggleDropdown invocation', () => {
-    const wrapper = shallow(<Header user={ new UserSession } changeLoggedInState={jest.fn()}/>)
+    const wrapper = shallow(<Header user={ new UserSession }/>)
     const mockEvent = { target: {}, preventDefault: jest.fn() }
 
     wrapper.setState({ showDropdown: false })
@@ -26,12 +26,16 @@ describe('Header', () => {
     expect(wrapper.state('showDropdown')).toEqual(true)
   })
 
-  xit('handleTemplateSelection', () => {
+  it('should change template selection and dropdown state', () => {
+    const wrapper = shallow(<Header user={ new UserSession } selectTemplate={jest.fn()}/>)
+    const mockEvent = { target: {}, preventDefault: jest.fn() }
+    const mockTemplateName = 'template name'
 
-  })
+    wrapper.setState({ showDropdown: true })
+    wrapper.instance().handleTemplateSelection(mockEvent, mockTemplateName)
 
-  xit('renders things that I do not know to test', () => {
-    // TO DO - TEST ME
+    expect(wrapper.state('showDropdown')).toEqual(false)
+    expect(wrapper.selectTemplate).toHaveBeenCalled
   })
 
 });
