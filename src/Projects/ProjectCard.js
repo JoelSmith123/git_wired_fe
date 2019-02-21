@@ -36,7 +36,7 @@ export default class ProjectCard extends Component {
 
   renderUpdated(){
     return (
-      <div className='Updated'> { this.getUpdated() } </div>
+      <div className='Updated'>{ this.getUpdated() }</div>
     )
   }
 

@@ -41,9 +41,7 @@ ShallowWrapper {
         <div
           className="Updated"
         >
-           
           Updated1
-           
         </div>,
         <div
           className="Created"
@@ -86,19 +84,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            " ",
-            "Updated1",
-            " ",
-          ],
+          "children": "Updated1",
           "className": "Updated",
         },
         "ref": null,
-        "rendered": Array [
-          " ",
-          "Updated1",
-          " ",
-        ],
+        "rendered": "Updated1",
         "type": "div",
       },
       Object {
@@ -144,9 +134,7 @@ ShallowWrapper {
           <div
             className="Updated"
           >
-             
             Updated1
-             
           </div>,
           <div
             className="Created"
@@ -189,19 +177,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              " ",
-              "Updated1",
-              " ",
-            ],
+            "children": "Updated1",
             "className": "Updated",
           },
           "ref": null,
-          "rendered": Array [
-            " ",
-            "Updated1",
-            " ",
-          ],
+          "rendered": "Updated1",
           "type": "div",
         },
         Object {
