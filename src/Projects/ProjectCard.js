@@ -48,7 +48,7 @@ export default class ProjectCard extends Component {
 
   renderCreated(){
     return (
-      <div className='Created'> { this.getCreated() } </div>
+      <div className='Created'>{ this.getCreated() }</div>
     )
   }
 

@@ -46,9 +46,7 @@ ShallowWrapper {
         <div
           className="Created"
         >
-           
           Created1
-           
         </div>,
       ],
       "className": "ProjectCard",
@@ -96,19 +94,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            " ",
-            "Created1",
-            " ",
-          ],
+          "children": "Created1",
           "className": "Created",
         },
         "ref": null,
-        "rendered": Array [
-          " ",
-          "Created1",
-          " ",
-        ],
+        "rendered": "Created1",
         "type": "div",
       },
     ],
@@ -139,9 +129,7 @@ ShallowWrapper {
           <div
             className="Created"
           >
-             
             Created1
-             
           </div>,
         ],
         "className": "ProjectCard",
@@ -189,19 +177,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              " ",
-              "Created1",
-              " ",
-            ],
+            "children": "Created1",
             "className": "Created",
           },
           "ref": null,
-          "rendered": Array [
-            " ",
-            "Created1",
-            " ",
-          ],
+          "rendered": "Created1",
           "type": "div",
         },
       ],
