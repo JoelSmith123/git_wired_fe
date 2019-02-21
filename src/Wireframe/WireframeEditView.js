@@ -87,16 +87,16 @@ export default class WireframeEditView extends Component {
   //   }
   // }
 
-  fetchTemplateObjectFromBackend = async () => {
-    const url = ''
-    try {
-      const response = await fetch(url)
-      const fetchedTemplateObj = response.json()
-      return fetchedTemplateObj
-    } catch(error) {
-      console.log(error)
-    }
-  }
+  // fetchTemplateObjectFromBackend = async () => {
+  //   const url = ''
+  //   try {
+  //     const response = await fetch(url)
+  //     const fetchedTemplateObj = response.json()
+  //     return fetchedTemplateObj
+  //   } catch(error) {
+  //     console.log(error)
+  //   }
+  // }
 
 
 
