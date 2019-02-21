@@ -24,13 +24,21 @@ export default class Header extends Component {
     this.props.selectTemplate(event, templateName)
   }
 
+
+  // <button className='header-btn header-help-btn'>Help</button>
+
+
   render() {
     if (this.props.loggedIn) {
       return (
         <div className='Header'>
           <span className='header-btn-container'>
             <button className='header-btn header-home-btn'>Git Wired</button>
-            <button className='header-btn header-help-btn'>Help</button>
+            <input type="button"
+                   onClick={ () => { window.location.href='https://github.com/JoelSmith123/git_wired_fe/blob/master/README.md' } }
+                   className='header-btn header-help-btn'
+                   value="Help"
+            />
           </span>
           <span className='header-btn-container'>
             <div className='header-recent-projects-btn-dropdown-container'>
