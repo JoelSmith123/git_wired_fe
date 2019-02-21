@@ -6,6 +6,7 @@ import GithubRepoService from '../GithubRepos/GithubRepoService.js'
 
 import './Profile.css';
 
+
 export default class Profile extends Component {
 
   constructor(props) {
@@ -18,16 +19,7 @@ export default class Profile extends Component {
   }
 
 
-
-  titleField = () => {
-    return (
-      <input className='new-wireframe-title'
-             name="wireframe-title"
-             placeholder='Untitled Wireframe'
-             type="text"
-      />
-    )
-  }
+  // ---- API  ---
 
   repoField = () => {
     let service = new GithubRepoService
@@ -42,34 +34,21 @@ export default class Profile extends Component {
     this.setState({ showRepoDropdown: true })
   }
 
-  // {
-  //   this.state.showRepoDropdown ? (
-  //     <div className='header-recent-projects-btn-dropdown'>
-  //       <button className='header-recent-projects-btn-dropdown-btn'
-  //               name='card-page-template'
-  //               onClick={(event) => this.handleTemplateSelection(event, event.target.name)}
-  //       >card page template
-  //       </button>
-  //       <button className='header-recent-projects-btn-dropdown-btn'
-  //               name='blog-page-template'
-  //               onClick={(event) => this.handleTemplateSelection(event, event.target.name)}
-  //       >blog page template
-  //       </button>
-  //       <button className='header-recent-projects-btn-dropdown-btn'
-  //               name='blog-post-template'
-  //               onClick={(event) => this.handleTemplateSelection(event, event.target.name)}
-  //       >blog post template
-  //       </button>
-  //     </div>
-  //   ) : (
-  //     null
-  //   )
-  // }
 
-// 'card-page-template'
-// 'blog-page-template'
-// 'blog-post-template'
+  // ---- Form  ---
 
+  titleField = () => {
+    return (
+      <input className='new-wireframe-title'
+             name="wireframe-title"
+             placeholder='Untitled Wireframe'
+             type="text"
+      />
+    )
+  }
+
+
+  // ---- Repos  ---
 
   repoDropdown = () => {
     if (!this.state.userRepos) { return null }
@@ -81,16 +60,12 @@ export default class Profile extends Component {
     )
   }
 
-  // repo_id={   repo.id }
-  // repo_name={ repo.name}
-  // github_id={ repo.github_id}
-
   repoDropdownItem = (repo) => {
     return (
         <div className='repo-dropdown-menu-item'
               onClick= { () => {
                 this.killRepoDropdown();
-                this.addRepoSelection(repo)
+                this.addRepoToState(repo)
               } }
         >{repo.name}
         </div>
@@ -101,17 +76,11 @@ export default class Profile extends Component {
     this.setState( {showRepoDropdown: false} )
   }
 
-  killTemplateDropdown = () => {
-    this.setState( {showTemplateDropdown: false} )
-  }
-
   addRepoToState = (repo) => {
     this.setState( { repo: repo} )
   }
 
-  addTemplateToState = (template) => {
-    this.setState( { template: template} )
-  }
+
 
   // wireframeType = () => {
   //   // includes dropdown ?
@@ -122,7 +91,48 @@ export default class Profile extends Component {
   //
   // }
 
+  // ---- Templates  ---
+// name='card-page-template'
+// name='blog-page-template'
+// name='blog-post-template'
 
+  templateDropdown = () => {
+    let names = [
+      'card-page-template',
+      'blog-page-template',
+      'blog-post-template'
+    ]
+
+    return (
+      <span className='template-dropdown-menu'>
+        { names.map( (name, index) => (
+          <div className='template-dropdown-menu-item'
+               onClick={ (name) => {
+                 this.killTemplateDropdown();
+                 this.addTemplateToState(name)
+              } }
+          >{name}
+          </div>
+           )
+         )}
+      </span>
+    )
+  }
+
+  activateTemplateDropdown = () => {
+    this.setState( { showTemplateDropdown: true } )
+  }
+
+  killTemplateDropdown = () => {
+    this.setState( {showTemplateDropdown: false} )
+  }
+
+  addTemplateToState = (template) => {
+    this.setState( { template: template} )
+  }
+
+
+  // ---- Render  ---
 
   render() {
     return (
@@ -130,20 +140,12 @@ export default class Profile extends Component {
         <div className='profile-select-options'>
           <h2 className='profile-select-options-title'>Pick a new wireframe!</h2>
           <div className='profile-select-options-btn-container'>
-            <button onClick={ () => {
-              this.repoField();
-            }
-           }
+            <button onClick={ () => { this.repoField(); } }
             >Repo</button>
-            {
-              this.state.showRepoDropdown ? (
-              <div>
-                {this.repoDropdown() }
-              </div>)
-                : null
-              }
+            { this.state.showRepoDropdown ? ( <React.Fragment>{this.repoDropdown()}</React.Fragment>) : null }
             { this.titleField() }
-            <button>Type of page</button>
+            <button onClick={ () => { this.activateTemplateDropdown(); } }>Type of page</button>
+            { this.state.showTemplateDropdown ? this.templateDropdown() : null }
             <button>Start</button>
           </div>
         </div>
