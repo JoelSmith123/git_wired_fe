@@ -33,8 +33,27 @@ describe('WireframeService', () => {
         'cardColumn':      'Column 2',
       }
     ]
-    
+
     expect(wrapper.stubGithub().data.attributes.cards[0]).toEqual(mockStubCards[0])
     expect(wrapper.stubGithub().data.attributes.cards[1]).toEqual(mockStubCards[1])
-  })  
+  }) 
+
+  it('should return stub on stubWireframe invocation', () => {
+    const wrapper = wireframeService
+    const mockStub = {
+      'data': {
+        'id':         1,
+        'attributes': {
+          'title':        "Wireframe Title",
+          'updated':      "Updated At",
+          'created':      "Created At",
+          'templateData': "{'Something': 1, 'Something': 2}",
+        },
+      },
+    }
+
+    expect(wrapper.stubWireframe()).toEqual(mockStub)
+  })
+
 })
+
