@@ -136,18 +136,10 @@ export default class BlogPageTemplate extends Component {
     this.setState({ templateObj })
   }
 
-  handleChange= (event) => {
+  handleChange = (event) => {
     event.preventDefault()
 
-    const inputLabel = event.target
-    const inputDesc = event.target
-
-    let templateObj = {...this.state.templateObj}
-    templateObj[inputLabel.name] = inputLabel.value
-    this.setState({
-      templateObj
-    })
-    console.log(this.state[inputLabel.name])
+    // edit state
   }
 
 
@@ -157,15 +149,19 @@ export default class BlogPageTemplate extends Component {
       <div className='BlogPageTemplate' ref='BlogPageTemplate'>
         <div className='template-header' id={templateObj.header.card}>
         <div className='template-info'>
-          <form onSubmit={this.handleClick}>
+          <form>
             <input onChange={this.handleChange} 
                    type='text' 
-                   name='header[label]'
+                   name='header.label'
                    placeholder='Header Label'
             >
             </input>
-            <input type='text' value={templateObj.header.desc}></input>
-            <button className='save-info-btn'>save</button>
+            <input onChange={this.handleChange} 
+                   type='text' 
+                   name='header.desc'
+                   placeholder='Header Description'
+            >
+            </input>
           </form>
         </div>
         <div className='pseudo-btn-space'></div>
@@ -177,21 +173,57 @@ export default class BlogPageTemplate extends Component {
         <div className='template-card-container'>
           <div className='template-page-section' id={templateObj.pageSections[1].card}>
             <div className='template-info'>
-              <input type='text' value={templateObj.pageSections[1].label}></input>
-              <input type='text' value={templateObj.pageSections[1].desc}></input>
+              <form onSubmit={this.handleClick}>
+                <input onChange={this.handleChange} 
+                       type='text' 
+                       name='pageSections[1].label'
+                       placeholder='Page Section 1 Label'
+                >
+                </input>
+                <input onChange={this.handleChange} 
+                       type='text' 
+                       name='pageSections[1].desc'
+                       placeholder='Page Section 1 Description'
+                >
+                </input>
+              </form>
             </div>
           </div>
           <div className='template-page-section' id={templateObj.pageSections[2].card}>
             <div className='template-info'>
-              <input type='text' value={templateObj.pageSections[2].label}></input>
-              <input type='text' value={templateObj.pageSections[2].desc}></input>
+              <form onSubmit={this.handleClick}>
+                <input onChange={this.handleChange} 
+                       type='text' 
+                       name='pageSections[2].label'
+                       placeholder='Page Section 2 Label'
+                >
+                </input>
+                <input onChange={this.handleChange} 
+                       type='text' 
+                       name='pageSections[2].desc'
+                       placeholder='Page Section 2 Description'
+                >
+                </input>
+              </form>
             </div>
           </div>        
         </div>
         <div className='template-footer' id={templateObj.footer.card}>
           <div className='template-info'>
-            <input type='text' value={templateObj.footer.label}></input>
-            <input type='text' value={templateObj.footer.desc}></input>
+            <form onSubmit={this.handleClick}>
+                <input onChange={this.handleChange} 
+                       type='text' 
+                       name='footer.label'
+                       placeholder='Footer Label'
+                >
+                </input>
+                <input onChange={this.handleChange} 
+                       type='text' 
+                       name='footer.desc'
+                       placeholder='Footer Description'
+                >
+                </input>
+              </form>
           </div>
         </div>
       </div>
