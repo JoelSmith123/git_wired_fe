@@ -52,6 +52,38 @@ describe('App', () => {
     expect(wrapper.state('template')).toEqual('')
   })
 
+  it('should return properties from experience_userProfile', () => {
+    const wrapper = shallow(<App user={new UserSession}/>)
+
+    wrapper.setState({ loggedIn: true, profile: true})
+
+    expect(wrapper.instance().experience_userProfile()).toEqual(true)
+  })
+
+  it('should return properties from experience_userRecents', () => {
+    const wrapper = shallow(<App user={new UserSession}/>)
+
+    wrapper.setState({ loggedIn: true, viewPage: 'recent' })
+
+    expect(wrapper.instance().experience_userRecents()).toEqual(true)
+  })  
+
+  it('should return properties from experience_welcome', () => {
+    const wrapper = shallow(<App user={new UserSession}/>)
+
+    wrapper.setState({ loggedIn: true, viewPage: 'welcome' })
+
+    expect(wrapper.instance().experience_welcome()).toEqual(true)
+  })  
+
+  it('should return properties from experience_userWireframe', () => {
+    const wrapper = shallow(<App user={new UserSession}/>)
+
+    wrapper.setState({ loggedIn: true, viewPage: 'wireframe' })
+
+    expect(wrapper.instance().experience_userWireframe()).toEqual(true)
+  })   
+
   it('should render Profile if loggedIn state is true', () => {
     const wrapper = mount(<App user={new UserSession}/>)
 
