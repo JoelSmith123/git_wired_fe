@@ -58,6 +58,18 @@ describe('GithubCardContainer', () => {
     expect(wrapper.state('showDropdown')).toEqual(true)
   })
 
+  it('should set state for statusName and change dropdown to false', () => {
+    const wrapper = shallow(<GithubCardContainer cards={ cards } filterCardsAndTemplateElementsByStatus={jest.fn()}/>)
+    const mockEvent = { target: {}, preventDefault: jest.fn() }
+    const statusName = 'status'
+
+    wrapper.setState({ showDropdown: true, statusName: ''})
+    wrapper.instance().cardsStatusSelect(mockEvent, statusName)
+
+    expect(wrapper.state('showDropdown')).toEqual(false)
+    expect(wrapper.state('statusName')).toEqual(statusName)
+  })
+
   xit('it has functional dropdown item - open', () => {
     // TO DO - TEST ME
   })
