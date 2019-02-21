@@ -1,0 +1,466 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Profile
+    user={
+      UserSession {
+        "getURLToken": [Function],
+        "isLoggedIn": [Function],
+        "login": [Function],
+        "tokenKey": "userToken",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="profile-select-options"
+        >
+          <h2
+            className="profile-select-options-title"
+          >
+            Pick a new wireframe!
+          </h2>
+          <div
+            className="profile-select-options-btn-container"
+          >
+            <button>
+              Repo
+            </button>
+            <button>
+              Project
+            </button>
+            <button>
+              Type of page
+            </button>
+          </div>
+        </div>,
+        <div
+          className="recent-projects-container"
+        >
+          <h2
+            className="recent-projects-container-title"
+          >
+            Recent Projects
+          </h2>
+          <div
+            className="recent-projects-card-container"
+          >
+            <RecentProjects />
+          </div>
+        </div>,
+      ],
+      "className": "Profile",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2
+              className="profile-select-options-title"
+            >
+              Pick a new wireframe!
+            </h2>,
+            <div
+              className="profile-select-options-btn-container"
+            >
+              <button>
+                Repo
+              </button>
+              <button>
+                Project
+              </button>
+              <button>
+                Type of page
+              </button>
+            </div>,
+          ],
+          "className": "profile-select-options",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Pick a new wireframe!",
+              "className": "profile-select-options-title",
+            },
+            "ref": null,
+            "rendered": "Pick a new wireframe!",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <button>
+                  Repo
+                </button>,
+                <button>
+                  Project
+                </button>,
+                <button>
+                  Type of page
+                </button>,
+              ],
+              "className": "profile-select-options-btn-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Repo",
+                },
+                "ref": null,
+                "rendered": "Repo",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Project",
+                },
+                "ref": null,
+                "rendered": "Project",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Type of page",
+                },
+                "ref": null,
+                "rendered": "Type of page",
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2
+              className="recent-projects-container-title"
+            >
+              Recent Projects
+            </h2>,
+            <div
+              className="recent-projects-card-container"
+            >
+              <RecentProjects />
+            </div>,
+          ],
+          "className": "recent-projects-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Recent Projects",
+              "className": "recent-projects-container-title",
+            },
+            "ref": null,
+            "rendered": "Recent Projects",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <RecentProjects />,
+              "className": "recent-projects-card-container",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "changeViewPageState": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="profile-select-options"
+          >
+            <h2
+              className="profile-select-options-title"
+            >
+              Pick a new wireframe!
+            </h2>
+            <div
+              className="profile-select-options-btn-container"
+            >
+              <button>
+                Repo
+              </button>
+              <button>
+                Project
+              </button>
+              <button>
+                Type of page
+              </button>
+            </div>
+          </div>,
+          <div
+            className="recent-projects-container"
+          >
+            <h2
+              className="recent-projects-container-title"
+            >
+              Recent Projects
+            </h2>
+            <div
+              className="recent-projects-card-container"
+            >
+              <RecentProjects />
+            </div>
+          </div>,
+        ],
+        "className": "Profile",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2
+                className="profile-select-options-title"
+              >
+                Pick a new wireframe!
+              </h2>,
+              <div
+                className="profile-select-options-btn-container"
+              >
+                <button>
+                  Repo
+                </button>
+                <button>
+                  Project
+                </button>
+                <button>
+                  Type of page
+                </button>
+              </div>,
+            ],
+            "className": "profile-select-options",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Pick a new wireframe!",
+                "className": "profile-select-options-title",
+              },
+              "ref": null,
+              "rendered": "Pick a new wireframe!",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <button>
+                    Repo
+                  </button>,
+                  <button>
+                    Project
+                  </button>,
+                  <button>
+                    Type of page
+                  </button>,
+                ],
+                "className": "profile-select-options-btn-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Repo",
+                  },
+                  "ref": null,
+                  "rendered": "Repo",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Project",
+                  },
+                  "ref": null,
+                  "rendered": "Project",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Type of page",
+                  },
+                  "ref": null,
+                  "rendered": "Type of page",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2
+                className="recent-projects-container-title"
+              >
+                Recent Projects
+              </h2>,
+              <div
+                className="recent-projects-card-container"
+              >
+                <RecentProjects />
+              </div>,
+            ],
+            "className": "recent-projects-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Recent Projects",
+                "className": "recent-projects-container-title",
+              },
+              "ref": null,
+              "rendered": "Recent Projects",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <RecentProjects />,
+                "className": "recent-projects-card-container",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "changeViewPageState": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

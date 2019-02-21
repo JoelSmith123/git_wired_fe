@@ -1,0 +1,391 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Header
+    changeLoggedInState={[MockFunction]}
+    user={
+      UserSession {
+        "getURLToken": [Function],
+        "isLoggedIn": [Function],
+        "login": [Function],
+        "tokenKey": "userToken",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          className="header-btn header-home-btn"
+        >
+          Git Wired
+        </button>,
+        <span
+          className="header-title-container"
+        >
+          <h1
+            className="header-main-title"
+          >
+            Welcome!
+          </h1>
+          <h3
+            className="header-sub-title"
+          >
+            <a>
+              Login
+            </a>
+             to get started!
+          </h3>
+        </span>,
+        <span
+          className="header-btn-container"
+        >
+          <Header
+            changeLoggedInState={[MockFunction]}
+            user={
+              UserSession {
+                "getURLToken": [Function],
+                "isLoggedIn": [Function],
+                "login": [Function],
+                "tokenKey": "userToken",
+              }
+            }
+          />
+        </span>,
+      ],
+      "className": "Header",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Git Wired",
+          "className": "header-btn header-home-btn",
+        },
+        "ref": null,
+        "rendered": "Git Wired",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1
+              className="header-main-title"
+            >
+              Welcome!
+            </h1>,
+            <h3
+              className="header-sub-title"
+            >
+              <a>
+                Login
+              </a>
+               to get started!
+            </h3>,
+          ],
+          "className": "header-title-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Welcome!",
+              "className": "header-main-title",
+            },
+            "ref": null,
+            "rendered": "Welcome!",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <a>
+                  Login
+                </a>,
+                " to get started!",
+              ],
+              "className": "header-sub-title",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Login",
+                },
+                "ref": null,
+                "rendered": "Login",
+                "type": "a",
+              },
+              " to get started!",
+            ],
+            "type": "h3",
+          },
+        ],
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Header
+            changeLoggedInState={[MockFunction]}
+            user={
+              UserSession {
+                "getURLToken": [Function],
+                "isLoggedIn": [Function],
+                "login": [Function],
+                "tokenKey": "userToken",
+              }
+            }
+          />,
+          "className": "header-btn-container",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "changeLoggedInState": [MockFunction],
+            "user": UserSession {
+              "getURLToken": [Function],
+              "isLoggedIn": [Function],
+              "login": [Function],
+              "tokenKey": "userToken",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "span",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="header-btn header-home-btn"
+          >
+            Git Wired
+          </button>,
+          <span
+            className="header-title-container"
+          >
+            <h1
+              className="header-main-title"
+            >
+              Welcome!
+            </h1>
+            <h3
+              className="header-sub-title"
+            >
+              <a>
+                Login
+              </a>
+               to get started!
+            </h3>
+          </span>,
+          <span
+            className="header-btn-container"
+          >
+            <Header
+              changeLoggedInState={[MockFunction]}
+              user={
+                UserSession {
+                  "getURLToken": [Function],
+                  "isLoggedIn": [Function],
+                  "login": [Function],
+                  "tokenKey": "userToken",
+                }
+              }
+            />
+          </span>,
+        ],
+        "className": "Header",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Git Wired",
+            "className": "header-btn header-home-btn",
+          },
+          "ref": null,
+          "rendered": "Git Wired",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1
+                className="header-main-title"
+              >
+                Welcome!
+              </h1>,
+              <h3
+                className="header-sub-title"
+              >
+                <a>
+                  Login
+                </a>
+                 to get started!
+              </h3>,
+            ],
+            "className": "header-title-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Welcome!",
+                "className": "header-main-title",
+              },
+              "ref": null,
+              "rendered": "Welcome!",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <a>
+                    Login
+                  </a>,
+                  " to get started!",
+                ],
+                "className": "header-sub-title",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Login",
+                  },
+                  "ref": null,
+                  "rendered": "Login",
+                  "type": "a",
+                },
+                " to get started!",
+              ],
+              "type": "h3",
+            },
+          ],
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Header
+              changeLoggedInState={[MockFunction]}
+              user={
+                UserSession {
+                  "getURLToken": [Function],
+                  "isLoggedIn": [Function],
+                  "login": [Function],
+                  "tokenKey": "userToken",
+                }
+              }
+            />,
+            "className": "header-btn-container",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "changeLoggedInState": [MockFunction],
+              "user": UserSession {
+                "getURLToken": [Function],
+                "isLoggedIn": [Function],
+                "login": [Function],
+                "tokenKey": "userToken",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "span",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

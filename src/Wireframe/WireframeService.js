@@ -123,7 +123,7 @@ export default class WireframeService {
     return stub
   }
 
-  getGithub = (parseFunc) => {
+  getGithub = async (parseFunc) => {
     // TO DO - we're no longer using 'project'
 
     let id  = this.props.project_id
@@ -154,7 +154,7 @@ export default class WireframeService {
     return stub
   }
 
-  getWireframe = (parseFunc) => {
+  getWireframe = async (parseFunc) => {
     let id   = this.props.wireframe_id
     let repo
     let url  = `https://git-wired-be.herokuapp.com/api/v1/repositories/${repo}/wireframes/${id}`

@@ -1,0 +1,408 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GithubCardContainer should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <GithubCardContainer
+    cards={
+      Array [
+        Object {
+          "cardDescription": "This is lots of long text from the body of my issue",
+          "cardNumber": 23,
+          "cardStatus": "Open",
+          "cardTitle": "This is the title",
+          "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+        },
+        Object {
+          "cardDescription": "Description 2",
+          "cardNumber": 16,
+          "cardStatus": "Open",
+          "cardTitle": "This is title2",
+          "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/16",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="github-cards-container-header"
+        >
+          <div
+            className="github-title"
+          >
+            Github Issues
+          </div>
+          <button
+            onClick={[Function]}
+          >
+            status
+          </button>
+        </div>,
+        <div
+          className="github-cards"
+        >
+          <GithubCard
+            card={
+              Object {
+                "cardDescription": "This is lots of long text from the body of my issue",
+                "cardNumber": 23,
+                "cardStatus": "Open",
+                "cardTitle": "This is the title",
+                "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+              }
+            }
+          />
+          <GithubCard
+            card={
+              Object {
+                "cardDescription": "Description 2",
+                "cardNumber": 16,
+                "cardStatus": "Open",
+                "cardTitle": "This is title2",
+                "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/16",
+              }
+            }
+          />
+        </div>,
+      ],
+      "className": "github-cards-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="github-title"
+            >
+              Github Issues
+            </div>,
+            <button
+              onClick={[Function]}
+            >
+              status
+            </button>,
+            null,
+          ],
+          "className": "github-cards-container-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Github Issues",
+              "className": "github-title",
+            },
+            "ref": null,
+            "rendered": "Github Issues",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "status",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "status",
+            "type": "button",
+          },
+          null,
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <GithubCard
+              card={
+                Object {
+                  "cardDescription": "This is lots of long text from the body of my issue",
+                  "cardNumber": 23,
+                  "cardStatus": "Open",
+                  "cardTitle": "This is the title",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                }
+              }
+            />,
+            <GithubCard
+              card={
+                Object {
+                  "cardDescription": "Description 2",
+                  "cardNumber": 16,
+                  "cardStatus": "Open",
+                  "cardTitle": "This is title2",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/16",
+                }
+              }
+            />,
+          ],
+          "className": "github-cards",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "class",
+            "props": Object {
+              "card": Object {
+                "cardDescription": "This is lots of long text from the body of my issue",
+                "cardNumber": 23,
+                "cardStatus": "Open",
+                "cardTitle": "This is the title",
+                "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "class",
+            "props": Object {
+              "card": Object {
+                "cardDescription": "Description 2",
+                "cardNumber": 16,
+                "cardStatus": "Open",
+                "cardTitle": "This is title2",
+                "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/16",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="github-cards-container-header"
+          >
+            <div
+              className="github-title"
+            >
+              Github Issues
+            </div>
+            <button
+              onClick={[Function]}
+            >
+              status
+            </button>
+          </div>,
+          <div
+            className="github-cards"
+          >
+            <GithubCard
+              card={
+                Object {
+                  "cardDescription": "This is lots of long text from the body of my issue",
+                  "cardNumber": 23,
+                  "cardStatus": "Open",
+                  "cardTitle": "This is the title",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                }
+              }
+            />
+            <GithubCard
+              card={
+                Object {
+                  "cardDescription": "Description 2",
+                  "cardNumber": 16,
+                  "cardStatus": "Open",
+                  "cardTitle": "This is title2",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/16",
+                }
+              }
+            />
+          </div>,
+        ],
+        "className": "github-cards-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="github-title"
+              >
+                Github Issues
+              </div>,
+              <button
+                onClick={[Function]}
+              >
+                status
+              </button>,
+              null,
+            ],
+            "className": "github-cards-container-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Github Issues",
+                "className": "github-title",
+              },
+              "ref": null,
+              "rendered": "Github Issues",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "status",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "status",
+              "type": "button",
+            },
+            null,
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <GithubCard
+                card={
+                  Object {
+                    "cardDescription": "This is lots of long text from the body of my issue",
+                    "cardNumber": 23,
+                    "cardStatus": "Open",
+                    "cardTitle": "This is the title",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  }
+                }
+              />,
+              <GithubCard
+                card={
+                  Object {
+                    "cardDescription": "Description 2",
+                    "cardNumber": 16,
+                    "cardStatus": "Open",
+                    "cardTitle": "This is title2",
+                    "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/16",
+                  }
+                }
+              />,
+            ],
+            "className": "github-cards",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "class",
+              "props": Object {
+                "card": Object {
+                  "cardDescription": "This is lots of long text from the body of my issue",
+                  "cardNumber": 23,
+                  "cardStatus": "Open",
+                  "cardTitle": "This is the title",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "class",
+              "props": Object {
+                "card": Object {
+                  "cardDescription": "Description 2",
+                  "cardNumber": 16,
+                  "cardStatus": "Open",
+                  "cardTitle": "This is title2",
+                  "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/16",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

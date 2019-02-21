@@ -1,0 +1,216 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectCard should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ProjectCard
+    project={
+      Object {
+        "createdAt": "Created1",
+        "projectTitle": "Title1",
+        "repoName": "RepoName1",
+        "updatedAt": "Updated1",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="ProjectTitle"
+        >
+          Title1
+        </div>,
+        <div
+          className="RepoName"
+        >
+          RepoName1
+        </div>,
+        <div
+          className="Updated"
+        >
+          Updated1
+        </div>,
+        <div
+          className="Created"
+        >
+          Created1
+        </div>,
+      ],
+      "className": "ProjectCard",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Title1",
+          "className": "ProjectTitle",
+        },
+        "ref": null,
+        "rendered": "Title1",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "RepoName1",
+          "className": "RepoName",
+        },
+        "ref": null,
+        "rendered": "RepoName1",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Updated1",
+          "className": "Updated",
+        },
+        "ref": null,
+        "rendered": "Updated1",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Created1",
+          "className": "Created",
+        },
+        "ref": null,
+        "rendered": "Created1",
+        "type": "div",
+      },
+    ],
+    "type": "span",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="ProjectTitle"
+          >
+            Title1
+          </div>,
+          <div
+            className="RepoName"
+          >
+            RepoName1
+          </div>,
+          <div
+            className="Updated"
+          >
+            Updated1
+          </div>,
+          <div
+            className="Created"
+          >
+            Created1
+          </div>,
+        ],
+        "className": "ProjectCard",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Title1",
+            "className": "ProjectTitle",
+          },
+          "ref": null,
+          "rendered": "Title1",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "RepoName1",
+            "className": "RepoName",
+          },
+          "ref": null,
+          "rendered": "RepoName1",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Updated1",
+            "className": "Updated",
+          },
+          "ref": null,
+          "rendered": "Updated1",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Created1",
+            "className": "Created",
+          },
+          "ref": null,
+          "rendered": "Created1",
+          "type": "div",
+        },
+      ],
+      "type": "span",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

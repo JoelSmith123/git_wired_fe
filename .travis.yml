@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- node
+notifications:
+  email: false
+deploy:
+  provider: heroku
+  api_key:
+    secure: Q6lQUtXw9hG2TV5O5AZUWfwbCkcgrwHUm54q9tJ1oiynZ6KT8bL3CHJHIHI0obIMl5yGjZWfiQhRk7fkg7MbXIF+MSwwsEfEyNynGmRoMUgXIDdniCHKe0Y96ylbm29QPbdoK3Z8+jMH9CcL7Uw7buJC5pPlI4+U/7ABfs7nv++8ikM+0z19eidlUE3Wn5fN34U2I/kowyHXrp0cuTg3effzm5mzjNg9v5pElZDC6QjXCRgj+WjwbQyQ5Wla+8NNJ4xChB/As0o18Y06LbNvEJsDk5RHSwPWJjp6Vnw1CVbXaXU7Dw820+3Lp9hpSIJCHSl18esz1tFc3XtiOt576YoaFtmhaGt9E6iyyk4kP4Lpc7riPOgCFalK3zXWrHmDcb2XdF0sksALR/HoF3827b0GuAwwvY3YOYlvquwvYv1cuJ3XSDmPZttRqRcZAfaLumukadEcfVV7Qtgv0Vxhc6xFDOB5oT9CttuTTDBuiCfmx3wSq9oREm0tZ7redIVGI2JSBitmVBT+/6sayQbePg/zUEEfEsqfdd9oWyzXAHLxR6MQFhT3aSje02vsK7qFuK+mQin8kbhtK/V6sg5gvOiAAC4fveW+NRoi8FcPd91sekyluGH3Mer7ieeuOgqe/OaBDAMxz3x07MNZ2Vsj+muTJMaLgf2VJGormWdsXFs=
+  app: git-wired
+  skip_cleanup: true
