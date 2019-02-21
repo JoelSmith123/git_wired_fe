@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 import App from './App';
-import WireframeEditView from '../Wireframe/WireframeEditView.js'
+import Profile from '../Profile/Profile.js'
 import Welcome from '../Welcome/Welcome.js'
 import UserSession from '../Tools/UserSession.js'
 
@@ -52,12 +52,12 @@ describe('App', () => {
     expect(wrapper.state('template')).toEqual('')
   })
 
-  it('should render WireframeEditView if loggedIn state is true', () => {
+  it('should render Profile if loggedIn state is true', () => {
     const wrapper = mount(<App user={new UserSession}/>)
 
     wrapper.setState({ loggedIn: true })
 
-    expect(wrapper.instance().selectComponentRender()).toEqual(<WireframeEditView template=""/>)
+    expect(wrapper.instance().selectComponentRender()).toEqual(<Profile changeViewPageState={wrapper.instance().changeViewPageState}/>)
   })
 
   it('should render Welcome if loggedIn state is false', () => {

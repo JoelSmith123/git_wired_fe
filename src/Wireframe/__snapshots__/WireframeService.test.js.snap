@@ -4,6 +4,10 @@ exports[`WireframeService should match snapshot 1`] = `
 WireframeService {
   "getGithub": [Function],
   "getWireframe": [Function],
+  "props": Object {
+    "project_id": 2,
+    "wireframe_id": 2,
+  },
   "user": UserSession {
     "getURLToken": [Function],
     "isLoggedIn": [Function],

@@ -30,6 +30,7 @@ ShallowWrapper {
       "children": Array [
         <Header
           changeLoggedInState={[Function]}
+          changeViewPageState={[Function]}
           loggedIn={false}
           selectTemplate={[Function]}
           user={
@@ -57,6 +58,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "changeLoggedInState": [Function],
+          "changeViewPageState": [Function],
           "loggedIn": false,
           "selectTemplate": [Function],
           "user": UserSession {
@@ -103,6 +105,7 @@ ShallowWrapper {
         "children": Array [
           <Header
             changeLoggedInState={[Function]}
+            changeViewPageState={[Function]}
             loggedIn={false}
             selectTemplate={[Function]}
             user={
@@ -130,6 +133,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "changeLoggedInState": [Function],
+            "changeViewPageState": [Function],
             "loggedIn": false,
             "selectTemplate": [Function],
             "user": UserSession {

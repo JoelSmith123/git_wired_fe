@@ -50,6 +50,7 @@ ShallowWrapper {
         </div>,
       ],
       "className": "ProjectCard",
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -133,6 +134,7 @@ ShallowWrapper {
           </div>,
         ],
         "className": "ProjectCard",
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [

@@ -2,11 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 import WireframeService from './WireframeService'
+import UserSession from '../Tools/UserSession.js'
+
 
 describe('WireframeService', () => {
   let wireframeService
+  let user
   beforeEach(() => {
     wireframeService = new WireframeService()
+    wireframeService.props = { project_id: 2, wireframe_id: 2 }
+    user = new UserSession
+
+    window.fetch = jest.fn().mockImplementation(() => {
+      Promise.resolve({ok: true, json: () => Promise.resolve()})})
   })
 
   it('should match snapshot', () => {
@@ -38,8 +46,21 @@ describe('WireframeService', () => {
     expect(wrapper.stubGithub().data.attributes.cards[1]).toEqual(mockStubCards[1])
   }) 
 
-  it.skip('should fetch GitHub cards', () => {
+  it('should fetch GitHub cards', () => {
+    const wrapper = wireframeService
+    const parseFunc = jest.fn()
+    const id  = wrapper.props.project_id
+    const expected = [
+      `https://git-wired-be.herokuapp.com/api/v1/repositories/${id}/issues`,
+      {
+        method:  "GET",
+        headers: { "Content-Type": "application/json", },
+        body:    JSON.stringify(user.getGitWiredToken()),
+      } 
+    ]
 
+    wrapper.getGithub(parseFunc)
+    expect(window.fetch).toHaveBeenCalledWith(...expected)
   })
 
   it('should return stub on stubWireframe invocation', () => {
@@ -59,8 +80,22 @@ describe('WireframeService', () => {
     expect(wrapper.stubWireframe()).toEqual(mockStub)
   })
 
-  it.skip('should fetch wireframes', () => {
-    
+  it('should fetch wireframes', () => {
+    const wrapper = wireframeService
+    const parseFunc = jest.fn()
+    const id  = wrapper.props.wireframe_id
+    let repo
+    const expected = [
+      `https://git-wired-be.herokuapp.com/api/v1/repositories/${repo}/wireframes/${id}`,
+      {
+        method:  "GET",
+        headers: { "Content-Type": "application/json", },
+        body:    JSON.stringify(user.getGitWiredToken()),
+      } 
+    ]
+
+    wrapper.getWireframe(parseFunc)
+    expect(window.fetch).toHaveBeenCalledWith(...expected)    
   })
 
 })

@@ -35,7 +35,7 @@ export default class RecentProjectsService {
     // TO DO - Confirm ENDPOINT
     // let url = 'https://git-wired-be.herokuapp.com/api/v1/projects'
     let url = 'https://git-wired-be.herokuapp.com/api/v1/wireframes'
-    return fetch(url, {
+    fetch(url, {
         method:  "GET",
         headers: { "Content-Type": "application/json", },
         body:    JSON.stringify(this.user.getGitWiredToken()),
