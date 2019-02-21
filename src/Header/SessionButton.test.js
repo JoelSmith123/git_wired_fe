@@ -23,4 +23,12 @@ describe('SessionButton', () => {
 
     expect(JSON.stringify(wrapper.instance().loginButton())).toEqual(mockButton)
   })
+
+  it('should return logoutButton', () => {
+    const wrapper = shallow(<SessionButton user={new UserSession} changeLoggedInState={jest.fn()}/>)
+    const mockButton = "{\"type\":\"input\",\"key\":null,\"ref\":null,\"props\":{\"type\":\"button\",\"className\":\"header-btn header-logout-btn\",\"value\":\"Logout\"},\"_owner\":null,\"_store\":{}}"
+
+    expect(JSON.stringify(wrapper.instance().logoutButton())).toEqual(mockButton)
+  })
+
 })
