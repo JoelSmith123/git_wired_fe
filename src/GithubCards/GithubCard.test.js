@@ -46,12 +46,16 @@ describe('GithubCard', () => {
     expect(wrapper.instance().renderDescription()).toEqual(<div className="CardDescription">{mockData.cardDescription}</div>)
   })
 
-  xit('gets card number from card', () => {
-    // TO DO - TEST ME
+  it('gets card url from card', () => {
+    const wrapper = shallow(<GithubCard card={ mockData }/>)
+    
+    expect(wrapper.instance().getCardURL()).toEqual(mockData.cardURL)        
   })
 
-  xit('gets card url from card', () => {
-    // TO DO - TEST ME
+  it('gets card number from card', () => {
+    const wrapper = shallow(<GithubCard card={ mockData }/>)
+    
+    expect(wrapper.instance().getNumber()).toEqual(mockData.cardNumber)
   })
 
   xit('gets card status from card', () => {
