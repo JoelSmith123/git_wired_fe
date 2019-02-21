@@ -1,0 +1,465 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GithubCard should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <GithubCard
+    card={
+      Object {
+        "cardDescription": "This is lots of long text from the body of my issue",
+        "cardNumber": 13,
+        "cardStatus": "Open",
+        "cardTitle": "This is the title",
+        "cardURL": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="GithubCardMinimum"
+        >
+          <span
+            className="GithubCardHeaders"
+          >
+            <div
+              className="CardTitle"
+            >
+              This is the title
+            </div>
+            <div
+              className="CardNumber"
+            >
+              <a
+                href="https://github.com/JoelSmith123/git_wired_fe/issues/23"
+              >
+                #
+                13
+              </a>
+            </div>
+          </span>
+          <span
+            className="GithubCardLabels"
+          >
+            <div
+              className="CardStatus"
+            >
+              Open
+            </div>
+          </span>
+        </div>,
+        <div
+          className="CardDescription"
+        >
+          This is lots of long text from the body of my issue
+        </div>,
+      ],
+      "className": "GithubCard",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              className="GithubCardHeaders"
+            >
+              <div
+                className="CardTitle"
+              >
+                This is the title
+              </div>
+              <div
+                className="CardNumber"
+              >
+                <a
+                  href="https://github.com/JoelSmith123/git_wired_fe/issues/23"
+                >
+                  #
+                  13
+                </a>
+              </div>
+            </span>,
+            <span
+              className="GithubCardLabels"
+            >
+              <div
+                className="CardStatus"
+              >
+                Open
+              </div>
+            </span>,
+          ],
+          "className": "GithubCardMinimum",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="CardTitle"
+                >
+                  This is the title
+                </div>,
+                <div
+                  className="CardNumber"
+                >
+                  <a
+                    href="https://github.com/JoelSmith123/git_wired_fe/issues/23"
+                  >
+                    #
+                    13
+                  </a>
+                </div>,
+              ],
+              "className": "GithubCardHeaders",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "This is the title",
+                  "className": "CardTitle",
+                },
+                "ref": null,
+                "rendered": "This is the title",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <a
+                    href="https://github.com/JoelSmith123/git_wired_fe/issues/23"
+                  >
+                    #
+                    13
+                  </a>,
+                  "className": "CardNumber",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "#",
+                      13,
+                    ],
+                    "href": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "#",
+                    13,
+                  ],
+                  "type": "a",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="CardStatus"
+              >
+                Open
+              </div>,
+              "className": "GithubCardLabels",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Open",
+                "className": "CardStatus",
+              },
+              "ref": null,
+              "rendered": "Open",
+              "type": "div",
+            },
+            "type": "span",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "This is lots of long text from the body of my issue",
+          "className": "CardDescription",
+        },
+        "ref": null,
+        "rendered": "This is lots of long text from the body of my issue",
+        "type": "div",
+      },
+    ],
+    "type": "span",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="GithubCardMinimum"
+          >
+            <span
+              className="GithubCardHeaders"
+            >
+              <div
+                className="CardTitle"
+              >
+                This is the title
+              </div>
+              <div
+                className="CardNumber"
+              >
+                <a
+                  href="https://github.com/JoelSmith123/git_wired_fe/issues/23"
+                >
+                  #
+                  13
+                </a>
+              </div>
+            </span>
+            <span
+              className="GithubCardLabels"
+            >
+              <div
+                className="CardStatus"
+              >
+                Open
+              </div>
+            </span>
+          </div>,
+          <div
+            className="CardDescription"
+          >
+            This is lots of long text from the body of my issue
+          </div>,
+        ],
+        "className": "GithubCard",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                className="GithubCardHeaders"
+              >
+                <div
+                  className="CardTitle"
+                >
+                  This is the title
+                </div>
+                <div
+                  className="CardNumber"
+                >
+                  <a
+                    href="https://github.com/JoelSmith123/git_wired_fe/issues/23"
+                  >
+                    #
+                    13
+                  </a>
+                </div>
+              </span>,
+              <span
+                className="GithubCardLabels"
+              >
+                <div
+                  className="CardStatus"
+                >
+                  Open
+                </div>
+              </span>,
+            ],
+            "className": "GithubCardMinimum",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="CardTitle"
+                  >
+                    This is the title
+                  </div>,
+                  <div
+                    className="CardNumber"
+                  >
+                    <a
+                      href="https://github.com/JoelSmith123/git_wired_fe/issues/23"
+                    >
+                      #
+                      13
+                    </a>
+                  </div>,
+                ],
+                "className": "GithubCardHeaders",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "This is the title",
+                    "className": "CardTitle",
+                  },
+                  "ref": null,
+                  "rendered": "This is the title",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <a
+                      href="https://github.com/JoelSmith123/git_wired_fe/issues/23"
+                    >
+                      #
+                      13
+                    </a>,
+                    "className": "CardNumber",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "#",
+                        13,
+                      ],
+                      "href": "https://github.com/JoelSmith123/git_wired_fe/issues/23",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "#",
+                      13,
+                    ],
+                    "type": "a",
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="CardStatus"
+                >
+                  Open
+                </div>,
+                "className": "GithubCardLabels",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Open",
+                  "className": "CardStatus",
+                },
+                "ref": null,
+                "rendered": "Open",
+                "type": "div",
+              },
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "This is lots of long text from the body of my issue",
+            "className": "CardDescription",
+          },
+          "ref": null,
+          "rendered": "This is lots of long text from the body of my issue",
+          "type": "div",
+        },
+      ],
+      "type": "span",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

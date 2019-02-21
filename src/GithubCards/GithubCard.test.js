@@ -1,52 +1,80 @@
-import React    from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-
-const chai   = require('chai');
-const should = chai.should;
-const expect = chai.expect;
-
+import { shallow, mount } from 'enzyme';
 import GithubCard from './GithubCard.js'
-
-
-var card = new GithubCard
-
-const data = {
-   'cardTitle':       'This is the title',
-   'cardDescription': 'This is lots of long text from the body of my issue',
-   'cardNumber':       13,
-   'cardURL':         'https://github.com/JoelSmith123/git_wired_fe/issues/23',
-   'cardStatus':      'Open',
- }
 
 
 
 describe('GithubCard', () => {
-
+  let mockData
+  beforeEach(() => {
+    mockData = {
+       'cardTitle':       'This is the title',
+       'cardDescription': 'This is lots of long text from the body of my issue',
+       'cardNumber':       13,
+       'cardURL':         'https://github.com/JoelSmith123/git_wired_fe/issues/23',
+       'cardStatus':      'Open',
+     }  
+  })
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<GithubCard card={ data } />, div);
+    ReactDOM.render(<GithubCard card={ mockData } />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
-  xit('gets title from card', () => {
-    // TO DO - TEST ME
+  it('should match snapshot', () => {
+    const wrapper = shallow(<GithubCard card={ mockData }/>)
+    expect(wrapper).toMatchSnapshot()
   })
 
-  xit('gets description from card', () => {
-    // TO DO - TEST ME
+  it('gets title from card', () => {
+    const wrapper = shallow(<GithubCard card={ mockData }/>)
+    
+    expect(wrapper.instance().getTitle()).toEqual(mockData.cardTitle)
   })
 
-  xit('gets card number from card', () => {
-    // TO DO - TEST ME
+  it('gets description from card', () => {
+    const wrapper = shallow(<GithubCard card={ mockData }/>)
+
+    expect(wrapper.instance().getDescription()).toEqual(mockData.cardDescription)    
   })
 
-  xit('gets card url from card', () => {
-    // TO DO - TEST ME
+  it('renders card description element', () => {
+    const wrapper = shallow(<GithubCard card={ mockData }/>)
+
+    expect(wrapper.instance().renderDescription()).toEqual(<div className="CardDescription">{mockData.cardDescription}</div>)
   })
 
-  xit('gets card status from card', () => {
-    // TO DO - TEST ME
+  it('gets card url from card', () => {
+    const wrapper = shallow(<GithubCard card={ mockData }/>)
+    
+    expect(wrapper.instance().getCardURL()).toEqual(mockData.cardURL)        
   })
+
+  it('gets card number from card', () => {
+    const wrapper = shallow(<GithubCard card={ mockData }/>)
+    
+    expect(wrapper.instance().getNumber()).toEqual(mockData.cardNumber)
+  })
+
+  it('renders card number element', () => {
+    const wrapper = shallow(<GithubCard card={ mockData }/>)
+
+    expect(wrapper.instance().renderNumber()).toEqual(<div className="CardNumber"><a href={wrapper.instance().getCardURL()}>#{wrapper.instance().getNumber()}</a></div>)
+  })
+
+  it('gets card status from card', () => {
+    const wrapper = shallow(<GithubCard card={ mockData }/>)
+    
+    expect(wrapper.instance().getStatus()).toEqual(mockData.cardStatus)
+  })
+
+  it('renders card status element', () => {
+    const wrapper = shallow(<GithubCard card={ mockData }/>)
+
+    expect(wrapper.instance().renderStatus()).toEqual(<div className='CardStatus'>{ wrapper.instance().getStatus() }</div>)
+  })
+
 
 });

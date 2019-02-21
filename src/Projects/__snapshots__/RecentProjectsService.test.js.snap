@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecentProjectsService should match snapshot 1`] = `
+RecentProjectsService {
+  "getRecents": [Function],
+  "user": UserSession {
+    "getURLToken": [Function],
+    "isLoggedIn": [Function],
+    "login": [Function],
+    "tokenKey": "userToken",
+  },
+}
+`;
