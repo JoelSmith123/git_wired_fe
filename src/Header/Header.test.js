@@ -46,7 +46,16 @@ describe('Header', () => {
   it('should conditionally render header based on loggedIn state false', () => {
     const wrapper = mount(<Header user={ new UserSession } selectTemplate={jest.fn()} loggedIn={false} changeLoggedInState={jest.fn()}/>)
 
-    expect(wrapper.find('.header-recent-projects-btn-dropdown-container')).toHaveLength(0)
-  })  
+    expect(wrapper.find('.header-title-container')).toHaveLength(1)
+  }) 
+
+  it('should call handleTemplateSelection on button click', () => {
+    const wrapper = mount(<Header user={ new UserSession } selectTemplate={jest.fn()} loggedIn={false} changeLoggedInState={jest.fn()}/>)
+    wrapper.setState({ loggedIn: true, showDropdown: true })
+    wrapper.find('.header-recent-projects-btn-dropdown-btn').forEach((btn) => {
+      btn.simulate('click')
+      expect(wrapper.instance().handleTemplateSelection()).toHaveBeenCalled()
+    })
+  }) 
 
 });
