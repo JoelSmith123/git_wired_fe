@@ -1,18 +1,25 @@
-const chai   = require('chai');
-const should = chai.should;
-const expect = chai.expect;
-
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { shallow, mount } from 'enzyme';
 import ProjectCard from './ProjectCard.js'
 
 
-const stubProject = {
-    'projectTitle': 'Title1',
-    'repoName':     'RepoName1',
-    'createdAt':    'Created1',
-    'updatedAt':    'Updated1',
-  }
 
 describe('ProjectCard', () => {
+  let mockProject
+  beforeEach(() => {
+    mockProject = {
+      'projectTitle': 'Title1',
+      'repoName':     'RepoName1',
+      'createdAt':    'Created1',
+      'updatedAt':    'Updated1',
+    }
+  })
+
+  it('should match snapshot', () => {
+    const wrapper = shallow(<ProjectCard project={mockProject} />)
+    expect(wrapper).toMatchSnapshot()
+  }) 
 
   describe('Title', () => {
     it.skip('gets project title', done => {
